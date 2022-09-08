@@ -1,0 +1,95 @@
+body{
+	font-family: "Poppins";
+	overflow: hidden;
+}
+
+h1{
+	margin: 40px auto;
+	text-align: center;
+	font-size: 40px;
+}
+
+.materiais{
+	margin: 15% auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.material{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: lightgray;
+	width: 10%;
+	border-radius: 30px;
+	margin-left: 4%;
+	padding: 30px;
+	font-size: 25px;
+}
+
+.materiais section:first-of-type{
+	margin-left: 0;
+}
+
+.materiais h2{
+	margin-top: 20px;
+}
+
+#papel{
+	background-color: blue;
+}
+
+#plastico{
+	background-color: red;
+}
+
+#vidro{
+	background-color: green;
+}
+
+#metal{
+	background-color: yellow;
+}
+
+.materiais section:hover{
+	transform: scale(1.1);
+}
+
+.materiais section:hover img{
+	transform: rotate(360deg);
+	transition: 1s;
+}
+
+.materiais section:hover h2{
+	transform: scale(1.1);
+	transition: 0.7s;
+}
+
+.materiais section:hover h2{
+    padding-right: 20px;
+	transition: 0.7s;
+    
+}
+
+.materiais h2:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+	transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.materiais section:hover h2:after {
+    opacity: 1;
+    right: 0;
+}
+
+.materiais section:active{
+    box-shadow: 0 5px rgb(38, 37, 37);
+    transform: translateY(4px);
+}
