@@ -4,8 +4,8 @@ body{
 
 nav{
 	height: 3em;
-	background-color: #2196d1;
-	padding-top: 2.5%;
+	background-color: #E16A3D;
+	padding-top: 2%;
 	display: flex;
 	justify-content: end;
 	
@@ -16,10 +16,13 @@ nav a:last-of-type{
 }
 
 nav a{
+	height: 50%;
+	text-align: center;
 	text-decoration: none;
 	color: #263238;
 	margin-right: 3%;
 	font-size: 20px;
+	padding: 0.2%;
 }
 
 .firstview{
@@ -34,6 +37,8 @@ nav a{
 	display: inline-block;
 	text-align: center;
 	margin-right: 5%;
+	background-color: rgba(225, 106, 61, 0.28);
+	border-radius: 70% 40% 60% 53%;
 }
 
 h1{
@@ -54,7 +59,6 @@ img{
 }
 
 nav a:hover{
-	background-color: #E16A3D;
 	border-radius: 10px;
 	color: white;
 	transform: scale(1.2);
