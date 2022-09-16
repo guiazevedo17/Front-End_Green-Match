@@ -1,11 +1,66 @@
-    .leftSideLogin {
-      background-color: #13695A;
-      width: 50%;
-      height: 100%;
-      position: absolute;
-    }
-    .rightSideLogin {
-      background-color: #ffffff;
-      width: 50%;
-      height: 100%;
-    }
+body {
+  font-family: 'Poppins';
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  min-height: 80vh;
+}
+
+.fundo {
+  padding: 5% 10%;
+  background-image: linear-gradient(#043E52, #016A6D);
+}
+
+.leftSideLogin {
+  background-color: #13695a;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leftSideLogin h1 {
+  margin-left: 10%;
+  font-size: 70px;
+  color: #90C31F;
+  text-align: left;
+}
+
+.rightSideLogin {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 70px;
+}
+
+.rightSideLogin legend {
+  margin-left: 10px;
+  font-size: 50px;
+  color: #13695A;
+}
+
+img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rightSideLogin form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 3%;
+}
+
+.rightSideLogin form label:last-of-type{
+  margin-top: 3%;
+}
+
+.rightSideLogin form label{
+  font-size: 22px;
+}
+
+.rightSideLogin form input {
+  border-radius: 4px;
+}
