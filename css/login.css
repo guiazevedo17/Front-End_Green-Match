@@ -1,0 +1,11 @@
+    .leftSideLogin {
+      background-color: #13695A;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+    }
+    .rightSideLogin {
+      background-color: #ffffff;
+      width: 50%;
+      height: 100%;
+    }
