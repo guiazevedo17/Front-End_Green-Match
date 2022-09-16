@@ -1,0 +1,85 @@
+body {
+  font-family: 'Poppins';
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  min-height: 80vh;
+}
+
+.fundo {
+  padding: 5% 10%;
+  background-image: linear-gradient(#043E52, #016A6D);
+}
+
+.leftSideLogin {
+  background-color: #13695a;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leftSideLogin h1 {
+  margin-left: 10%;
+  font-size: 70px;
+  color: #90C31F;
+  text-align: left;
+}
+
+.rightSideLogin {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 70px;
+}
+
+.rightSideLogin legend {
+  margin-left: 3%;
+  font-size: 50px;
+  color: #13695A;
+}
+
+img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rightSideLogin form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 3%;
+}
+
+.password{
+  margin-top: 3%;
+}
+
+.rightSideLogin form label{
+  font-size: 22px;
+}
+
+.rightSideLogin form input {
+  width: 100%;
+  height: 2.5em;
+  border: 3px solid black;
+  border-radius: 12px;
+  margin-top: 10px
+}
+
+fieldset{
+  margin-top: 4%;
+  display: inline-flex;
+  align-items: center;
+}
+
+fieldset label{
+  width: 60%;
+}
+
+fieldset label input[type="checkbox"]{
+  width: 4%;
+  margin-right: 2%;
+}
