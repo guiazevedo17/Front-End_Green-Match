@@ -3,46 +3,53 @@ body{
 	
 }
 
-header{
-	width: 100%;
-	background-color: #E16A3D;
+html{
+	scroll-behavior: smooth;
+}
+
+section{
+	min-height: 100vh;
+	padding-top: 7vh;
+}
+
+nav{
+	width: 100vw;
+	height: 14vh;
 	display: flex;
 	align-items: center;
+	color: #263238;
+	background-color: #E16A3D;
+	position: fixed;
 }
 
-header p{
-	width: 4%;
-	padding-left: 2%;
-}
-
-header h1{
-	font-size: 5em;
+nav h1{
+	font-size: min(80px, 12vw);
 	padding: 1% 0;
 	color: #263238;
 	text-transform: uppercase;
 }
 
-header nav{
-	width: 60%;
-	text-align: right;
-	padding-left: 16%;
+nav ul{
+	margin-left: auto;
+	margin-right: 3%;
+	display: flex;
+	list-style: none;
+	color: #263238;
+	gap: 2rem;
+	font-size: 20px;
 }
 
 nav a{
 	text-decoration: none;
-	color: #263238;
-	margin-right: 3%;
-	font-size: 20px;
 }
 
-.firstview{
+#inicio{
 	display: flex;
-	margin: 4% auto;
 	justify-content: center;
 	align-items: center;
 }
 
-.textaside{
+.textAside{
 	width: 45%;
 	display: inline-block;
 	text-align: center;
@@ -51,11 +58,13 @@ nav a{
 	border-radius: 57% 40% 50% 40%;
 }
 
-.firstview .textaside h1{
-	font-size: 4em;
+#inicio .textAside h1, #sobre h1, #contato h1{
+	font-size: min(60px, 9vw);
 	font-weight: bold;
 	margin-bottom: 4%;
+	text-align: center;
 	color: #263238;
+	
 }
 
 p{
@@ -79,8 +88,34 @@ nav a:not(:hover){
 	transition: 0.7s;
 }
 
+#sobre{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#contato{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+#contato .form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 @media screen and (max-width: 1140px){
-	.firstview{
+	section{
+		padding-top: 16vh;
+	}
+	
+	#inicio{
 		display: flex;
 		flex-direction: column;
 	}
@@ -92,7 +127,7 @@ nav a:not(:hover){
 }
 
 @media screen and (max-width: 780px){
-	nav{
+	nav ul{
 		opacity: 0;
 	}
 }
