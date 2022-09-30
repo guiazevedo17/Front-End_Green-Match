@@ -8,47 +8,55 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/login.css" />
   </head>
 
   <body>
-
     <div class="fundo">
-
       <div class="row">
-
         <div class="leftSideLogin">
           <h1>Nome</h1>
           <img src="assets/images/arvore.png" />
         </div>
 
         <div class="rightSideLogin">
-
           <legend>Login</legend>
           <form action="">
             <label for="name">Nome de usuário</label>
-            <input type="text" id="name">
+            <input type="text" id="name" />
             <label class="password" for="password">Senha</label>
-            <input type="password" id="password">
-            
-            <fieldset>
-              <label><input type="checkbox"> Lembrar de mim</label>
+            <input type="password" id="password" />
 
-              <a href="">Esqueceu a senha ?</a>
-            </fieldset>
+            <div class="rememberForget">
+              <div class="rememberPassword">
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1">Lembrar de mim</label>
+              </div>
+              <div class="ForgetPassword">
+                <a href="">Esqueceu sua senha</a>
+              </div>
+            </div>
 
             
           </form>
+          
+          <button>Entrar</button>
 
+          <div class="div">
+
+          </div>
+
+          <a href="">Não tem uma conta ?</a>
+
+          <button>Criar Conta</button>
         </div>
-
       </div>
-
     </div>
-
   </body>
-
 </html>

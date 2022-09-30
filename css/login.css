@@ -1,7 +1,8 @@
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: bold;
   overflow: hidden;
+  
 }
 
 .row {
@@ -11,7 +12,7 @@ body {
 
 .fundo {
   padding: 5% 10%;
-  background-image: linear-gradient(#043E52, #016A6D);
+  background-color: lightgray;
 }
 
 .leftSideLogin {
@@ -20,25 +21,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 5% 0 0 5%;
+  
 }
 
 .leftSideLogin h1 {
   margin-left: 10%;
   font-size: 70px;
-  color: #90C31F;
+  color: #90c31f;
   text-align: left;
 }
 
 .rightSideLogin {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   background-color: #ffffff;
   padding: 70px;
+  border-radius: 0 5% 5% 0;
 }
 
 .rightSideLogin legend {
   margin-left: 3%;
   font-size: 50px;
-  color: #13695A;
+  color: #13695a;
 }
 
 img {
@@ -53,11 +59,11 @@ img {
   padding: 5% 3%;
 }
 
-.password{
+.password {
   margin-top: 3%;
 }
 
-.rightSideLogin form label{
+.rightSideLogin form label {
   font-size: 22px;
 }
 
@@ -66,20 +72,79 @@ img {
   height: 2.5em;
   border: 3px solid black;
   border-radius: 12px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
-fieldset{
-  margin-top: 4%;
-  display: inline-flex;
+.rememberPassword {
+  display: flex;
+  justify-content: start;
+  width: 50%;
+}
+
+.rememberPassword input[type="checkbox"] {
+  width: 5%;
+  align-items: center;
+  margin-right: 3%;
+}
+
+.ForgetPassword {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+}
+
+.rememberPassword {
+  align-items: center;
+  justify-content: left;
+  width: 50%;
+}
+
+form .rememberPassword label {
+  font-size: 15px;
+}
+.ForgetPassword a {
+  font-size: 15px;
   align-items: center;
 }
 
-fieldset label{
-  width: 60%;
+.rememberForget {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
 }
 
-fieldset label input[type="checkbox"]{
-  width: 4%;
-  margin-right: 2%;
+.ForgetPassword a {
+  display: flex;
+  align-items: center;
+}
+
+button{
+  background-color: #13695a;
+  color: white;
+  width: 40%;
+  height: 9%;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1.2em;
+  margin: 0 auto;
+  font-family: 'Poppins';
+}
+
+.rightSideLogin .div{
+  width: 100%;
+  height: 0.18em;
+  background-color: grey;
+  margin: 5% 0;
+}
+
+.rightSideLogin form .ForgetPassword a{
+  text-decoration: none;
+  color: black;
+}
+
+.rightSideLogin a:last-of-type{
+  text-decoration: none;
+  text-align: center;
+  color: #13695a;
+  margin: 3% 0;
 }
