@@ -12,6 +12,8 @@ section{
 	padding-top: 7vh;
 }
 
+/* MENU - Barra de Navegação */
+
 nav{
 	width: 100vw;
 	height: 14vh;
@@ -23,6 +25,7 @@ nav{
 }
 
 nav h1{
+	margin-left: 2%;
 	font-size: min(80px, 12vw);
 	padding: 1% 0;
 	color: #263238;
@@ -43,7 +46,27 @@ nav a{
 	text-decoration: none;
 }
 
+p{
+	font-size: 1.2em;
+	width: 70%;
+	margin: 0 auto;
+}
+
+nav a:hover{
+	color: white;
+	transition: 0.7s;
+	font-size: 1.5em;
+}
+
+nav a:not(:hover){
+	color: #263238;
+	transition: 0.7s;
+}
+
+/* INICIO */
+
 #inicio{
+	padding-top: 7vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,35 +81,20 @@ nav a{
 	border-radius: 57% 40% 50% 40%;
 }
 
+img{
+	width: 40%;
+	max-width: 760px;
+}
+
 #inicio .textAside h1, #sobre h1, #contato h1{
 	font-size: min(60px, 9vw);
 	font-weight: bold;
 	margin-bottom: 4%;
 	text-align: center;
 	color: #263238;
-	
 }
 
-p{
-	font-size: 1.2em;
-	width: 70%;
-	margin: 0 auto;
-}
-
-img{
-	width: 40%;
-}
-
-nav a:hover{
-	color: white;
-	transition: 0.7s;
-	font-size: 1.5em;
-}
-
-nav a:not(:hover){
-	color: #263238;
-	transition: 0.7s;
-}
+/* SOBRE */
 
 #sobre{
 	display: flex;
@@ -96,6 +104,24 @@ nav a:not(:hover){
 	text-align: center;
 }
 
+#sobre h1{
+	margin-bottom: 0;
+	padding-bottom: 2%;
+}
+
+#sobre p a{
+	text-decoration: none;
+	color: #E16A3D;
+	text-transform: uppercase;
+}
+
+#sobre img{
+	width: 25%;
+	padding-bottom: 2%;
+}
+
+/* CONTATO */
+
 #contato{
 	display: flex;
 	flex-direction: column;
@@ -104,20 +130,127 @@ nav a:not(:hover){
 }
 
 #contato .form{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	width: 40vw;
+	padding: 3% 1.5%;
+	box-shadow: 0 0 9px #E16A3D;
+	/*font-size: min(30px, 3.8vw);*/
 }
 
+#contato .form .single-input{
+	position: relative;
+	margin: 3% 0;
+}
+
+#contato .form .single-input label{
+	position: absolute;
+	bottom: 30%;
+	left: 0;
+	cursor: text;
+	transition: all 0.5s ease-in-out;
+	font-size: max(20px, 1.5vw);
+}
+
+#contato .form .single-input input{
+	width: 97%;
+	padding: 2% 0;
+	margin-bottom: 2%;	
+	border: 0;
+	border-bottom: 4px solid #444444;
+	outline: 0;
+	font-size: max(18px ,1.2vw);
+	transition: all 0.5s ease-in-out;
+}
+
+#contato .form .single-input input:focus,
+#contato .form .single-input input:valid{
+	border-bottom: 4px solid rgba(225, 106, 61, 0.4);
+	
+}
+
+#contato .form .single-input input:focus ~ label,
+#contato .form .single-input input:valid ~ label{ 
+	transform: translateY(-2.5em);	
+	font-size: max(14px ,1vw);
+	color: #E16A3D;
+}
+
+button {
+	margin: 0 auto;
+	font-family: inherit;
+	font-size: 20px;
+	background: #E16A3D;
+	color: white;
+	padding: 0.7em 1em;
+	padding-left: 0.9em;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.2s;
+	cursor: pointer;
+   }
+   
+   button span {
+	display: block;
+	margin-left: 0.3em;
+	transition: all 0.3s ease-in-out;
+   }
+   
+   button svg {
+	display: block;
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+   }
+   
+   button:hover .svg-wrapper {
+	animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   button:hover svg {
+	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   button:hover span {
+	transform: translateX(5em);
+   }
+   
+   button:active {
+	transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+	from {
+	 transform: translateY(0.1em);
+	}
+   
+	to {
+	 transform: translateY(-0.1em);
+	}
+   }
+
+/* Footer */
+
+footer p{
+	color: #E16A3D;
+	text-align: center;
+	padding: 2vh 0;
+}
+
+/* RESPONSIVIDADE */
 @media screen and (max-width: 1140px){
 	section{
 		padding-top: 16vh;
 	}
 	
 	#inicio{
+		padding-top: 20vh;
 		display: flex;
 		flex-direction: column;
+	}
+
+	#contato{
+		padding-top: 3vh;
 	}
 
 	img{
@@ -127,6 +260,8 @@ nav a:not(:hover){
 }
 
 @media screen and (max-width: 780px){
+	
+	
 	nav ul{
 		opacity: 0;
 	}
