@@ -1,150 +1,140 @@
-body {
-  font-family: "Poppins";
-  font-weight: bold;
-  overflow: hidden;
-  
+body{
+	height: 100%;
+	font-family: 'Poppins';
+	overflow: hidden;
 }
 
-.row {
-  display: flex;
-  min-height: 80vh;
+main{
+	width: 70vw;
+	height: 60vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: auto;
+	padding: 20vh 0;
 }
 
-.fundo {
-  padding: 5% 10%;
-  background-color: lightgray;
+/* Partes (Lados) - Esquerda e Direita */
+.part{
+	width: 50%;
+	height: 60vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	box-shadow: 20px 20px 100px 10px #171717;
+	box-sizing: content-box;
 }
 
-.leftSideLogin {
-  background-color: #13695a;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 5% 0 0 5%;
-  
+/* Lado Esquerdo - Apresentação */
+#leftSide{
+	border-radius: 6% 0 0 6%;
+	background-color: #1c5407;
 }
 
-.leftSideLogin h1 {
-  margin-left: 10%;
-  font-size: 70px;
-  color: #90c31f;
-  text-align: left;
+#leftSide h1{
+	text-align: left;
+	text-transform: uppercase;
+
+	font-size: min(50px, 6vw);
+	color: #90C336;
+
+	padding: 5%;
+	margin-bottom: 3%;
 }
 
-.rightSideLogin {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  background-color: #ffffff;
-  padding: 70px;
-  border-radius: 0 5% 5% 0;
+#leftSide img{
+	width: 55%;
+	margin: 0 auto;
 }
 
-.rightSideLogin legend {
-  margin-left: 3%;
-  font-size: 50px;
-  color: #13695a;
+/* Lado Direito - LOGIN */
+#rightSide{
+	border-radius: 0 6% 6% 0;
+	background-color: #edebe4;
 }
 
-img {
-  width: 80%;
-  margin: 0 auto;
+#rightSide h1{
+	text-align: left;
+
+	font-size: min(50px, 6vw);
+
+	padding: 5%;
 }
 
-.rightSideLogin form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5% 3%;
+#rightSide .form{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	width: 70%;
+	
+	margin: 0 auto;
+	line-height: 1.5;
+	padding-bottom: 3%;
 }
 
-.password {
-  margin-top: 3%;
+#rightSide .form label{
+	font-size: min(30px, 4vw);
+	margin-left: 1%;
 }
 
-.rightSideLogin form label {
-  font-size: 22px;
+#rightSide .form input[type="text"], #rightSide .form input[type="password"]{
+	width: 100%;
+	height: 3vh;
+
+	border: 1px solid black;
+	border-radius: 50px;
+
+	margin-bottom: 3%;
 }
 
-.rightSideLogin form input {
-  width: 100%;
-  height: 2.5em;
-  border: 3px solid black;
-  border-radius: 12px;
-  margin-top: 10px;
+#rightSide .form .helpLine{
+	width: 95%;
+	margin: 0 auto;
 }
 
-.rememberPassword {
-  display: flex;
-  justify-content: start;
-  width: 50%;
+#rightSide .form .helpLine label{
+	font-size: 16px;
+	margin-left: 0;
+	margin-right: 7%;
 }
 
-.rememberPassword input[type="checkbox"] {
-  width: 5%;
-  align-items: center;
-  margin-right: 3%;
+#rightSide .form .helpLine a{
+	text-decoration: none;
+	color: black;
 }
 
-.ForgetPassword {
-  display: flex;
-  justify-content: end;
-  width: 50%;
+#rightSide .form button{
+	margin: 3% auto;
+
+	width: 60%;
+
+	padding: 3%;
+	border: 0;
+	border-radius: 6em;
+
+	color: white;
+	background-color: #1c5407;
+
+	font-size: 20px;
 }
 
-.rememberPassword {
-  align-items: center;
-  justify-content: left;
-  width: 50%;
+#rightSide .form .div{
+	width: 100%;
+	height: 2.2px;
+	margin: 2% 0;
+	background-color: grey;
 }
 
-form .rememberPassword label {
-  font-size: 15px;
-}
-.ForgetPassword a {
-  font-size: 15px;
-  align-items: center;
+#rightSide .form p{
+	margin: 0 auto;
+	color: #1c5407;
 }
 
-.rememberForget {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-.ForgetPassword a {
-  display: flex;
-  align-items: center;
-}
-
-button{
-  background-color: #13695a;
-  color: white;
-  width: 40%;
-  height: 9%;
-  border: 0;
-  border-radius: 10px;
-  font-size: 1.2em;
-  margin: 0 auto;
-  font-family: 'Poppins';
-}
-
-.rightSideLogin .div{
-  width: 100%;
-  height: 0.18em;
-  background-color: grey;
-  margin: 5% 0;
-}
-
-.rightSideLogin form .ForgetPassword a{
-  text-decoration: none;
-  color: black;
-}
-
-.rightSideLogin a:last-of-type{
-  text-decoration: none;
-  text-align: center;
-  color: #13695a;
-  margin: 3% 0;
+#rightSide .form button:hover{
+	cursor: pointer;
 }

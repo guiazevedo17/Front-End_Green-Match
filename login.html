@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+<html lang="pt-br">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/login.css" />
-  </head>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
 
-  <body>
-    <div class="fundo">
-      <div class="row">
-        <div class="leftSideLogin">
-          <h1>Nome</h1>
-          <img src="assets/images/arvore.png" />
-        </div>
+	<title>Login</title>
+</head>
 
-        <div class="rightSideLogin">
-          <legend>Login</legend>
-          <form action="">
-            <label for="name">Nome de usuário</label>
-            <input type="text" id="name" />
-            <label class="password" for="password">Senha</label>
-            <input type="password" id="password" />
+<body>
 
-            <div class="rememberForget">
-              <div class="rememberPassword">
-                <input type="checkbox" id="checkbox1" />
-                <label for="checkbox1">Lembrar de mim</label>
-              </div>
-              <div class="ForgetPassword">
-                <a href="">Esqueceu sua senha</a>
-              </div>
-            </div>
+	<main>
+		<div class="part" id="leftSide">
 
-            
-          </form>
-          
-          <button>Entrar</button>
+			<h1>trash</h1>
 
-          <div class="div">
+			<img src="assets/images/arvore.png" alt="">
 
-          </div>
+		</div>
 
-          <a href="">Não tem uma conta ?</a>
+		<div class="part" id="rightSide">
 
-          <button>Criar Conta</button>
-        </div>
-      </div>
-    </div>
-  </body>
+			<h1>Login</h1>
+
+			<div class="form">
+
+				<label for="name">Nome de usuário</label>
+				<input type="text" id="name">
+
+				<label for="password">Senha</label>
+				<input type="password" id="password">
+
+				<div class="helpLine">
+
+					<label for="remember"><input type="checkbox" name="" id="remember">Lembrar de mim</label>
+
+					<a href="">Esqueceu sua senha?</a>
+
+				</div>
+
+				<button>Entrar</button>
+
+				<div class="div">	</div>
+
+				<p>Não tem uma conta?</p>
+
+				<button>Criar nova conta</button>
+
+			</div>
+
+		</div>
+	</main>
+
+</body>
+
 </html>
