@@ -1,0 +1,60 @@
+body{
+	font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #136A5A;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px 2px #90C320;
+    padding: 7%;
+}
+
+main h2{
+    color: #90C320;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+main h2:first-of-type{
+    padding-top: 0;
+}
+
+main ul.materiais, main ul.dias{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+main ul.periodo{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+main ul.periodo li{
+    padding-right:2%;
+}
+
+button{
+    width: 300px;
+    padding: 2%;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 30px;
+    margin-top: 10%;
+    text-transform: uppercase;
+    font-size: 2em;
+}
