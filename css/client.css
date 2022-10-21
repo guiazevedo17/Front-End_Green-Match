@@ -5,6 +5,7 @@ body{
     grid-template-rows: 1;
     grid-template-areas: "side main";
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Barra Lateral */
