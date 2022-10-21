@@ -15,7 +15,7 @@ main{
     border: 3px solid #136A5A;
     border-radius: 10%;
     box-shadow: 10px 10px 5px 2px #90C320;
-    padding: 7%;
+    padding: 3%;
 }
 
 main h2{
@@ -54,7 +54,55 @@ button{
     background-color: #90C320;
     border: 0;
     border-radius: 30px;
-    margin-top: 10%;
+    margin-top: 5%;
     text-transform: uppercase;
     font-size: 2em;
+}
+
+/**/
+.single-input{
+    width: 100%;
+	position: relative;
+	margin-top: 8%;
+}
+
+.single-input label{
+	position: absolute;
+	bottom: 40%;
+	left: 0;
+	cursor: text;
+	transition: all 0.5s ease-in-out;
+	font-size: max(20px, 1.5vw);
+}
+
+.single-input input{
+	width: 100%;
+	
+	margin-bottom: 2%;	
+	border: 0;
+	border-bottom: 2px solid #444444;
+	outline: 0;
+	font-size: max(18px ,1.2vw);
+	transition: all 0.5s ease-in-out;
+}
+
+.single-input input:focus,
+.single-input input:valid{
+	border-bottom: 4px solid rgba(144, 135, 32, 0.4);
+	
+}
+
+.single-input input:focus ~ label,
+.single-input input:valid ~ label{ 
+	transform: translateY(-2.5em);	
+	font-size: max(14px ,1vw);
+	color: #90C320;
+}
+
+#peso{
+    width: 45%;
+}
+
+button:hover{
+    cursor: pointer;
 }
