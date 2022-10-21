@@ -1,0 +1,82 @@
+body{
+	font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #136A5A;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px 2px #90C320;
+    padding: 1%;
+}
+
+main h2{
+    color: #90C320;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.address{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    padding: 1%;
+    border: 1px solid #90C320;
+    line-height: 1.2em;
+}
+
+.address:first-of-type{
+    margin-top: 0;
+}
+
+.address h3{
+    color: #90C320;
+    font-size: 1.1em;
+    padding: 1%;
+}
+
+.address strong{
+    font-weight: bold;
+}
+
+.line{
+    margin: 2% 0;
+    color: #136A5A;
+    font-size: 1.1em;
+}
+
+.line button{
+    color: white;
+    background-color: #136A5A;
+    border: 0;
+    border-radius: 60%;
+}
+
+main > button{
+    width: 200px;
+    padding: 1%;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 2% 0;
+}
