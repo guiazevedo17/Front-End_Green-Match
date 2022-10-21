@@ -1,0 +1,89 @@
+body{
+	font-family: 'Poppins';
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 1;
+    grid-template-areas: "side main";
+    height: 100vh;
+}
+
+/* Barra Lateral */
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #136A5A;
+    text-align: center;
+    color: white;
+    line-height: 2em;
+}
+
+.sideBar img{
+    margin: 10% 0;
+    width: 80px;
+}
+
+.sideBar h2{
+    font-size: 1.7em;
+}
+
+.sideBar nav ul li p{
+    color: #90C320;
+    margin-top: 50%;
+    font-size: 1em;
+}
+
+.sideBar nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Parte Principal (Nova Coleta) */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main img{
+
+}
+
+main .text{
+    color: #888888;
+    margin: 3% 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main .line{
+    width: 100%;
+    text-align: center;
+}
+
+main .line button{
+    display: inline;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 100%;
+    width: 1.2em;
+    height: -1em;
+    font-size: 2.5em;
+
+}
+
+main .line label{
+    display: inline;
+    color: #90C320;
+    font-size: 2.5em;
+    margin-left: 1%;
+}
+
+main .line button:hover, main .line label:hover{
+    cursor: pointer;
+}
