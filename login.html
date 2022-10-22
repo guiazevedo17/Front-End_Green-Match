@@ -21,7 +21,7 @@
 	<main>
 		<div class="part" id="leftSide">
 
-			<h1>trash</h1>
+			<h1>green match</h1>
 
 			<img src="assets/images/arvore.png" alt="">
 
@@ -47,18 +47,64 @@
 
 				</div>
 
-				<button>Entrar</button>
+				<button onclick="logIn()">Entrar</button>
 
 				<div class="div">	</div>
 
 				<p>Não tem uma conta?</p>
 
-				<button>Criar nova conta</button>
+				<button class="newAccount">Criar nova conta</button>
+
+				<div class="popup-wrapper"><!-- Início Wrapper -->
+
+					<div class="contas"><!-- Contas -->
+
+						<div class="popup-close">x</div>
+
+						<div class="popup-content">
+
+							<button class="popup-cliente">cliente</button>
+
+							<button class="popup-catador">catador</button>
+
+						</div>
+
+					</div>
+
+					<div class="cliente">
+
+						<div class="popup-return">	
+							&#8592;</div>
+
+						<div class="popup-content">
+
+							<h1>CLIENTE</h1>
+
+						</div>
+
+					</div>
+
+					<div class="catador">
+
+						<div class="popup-return">	
+							&#8592;</div>
+
+						<div class="popup-content">
+
+							<h1>CATADOR</h1>
+
+						</div>
+
+					</div>
+
+				</div><!-- Fim Wrapper -->
 
 			</div>
 
 		</div>
 	</main>
+
+	<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 

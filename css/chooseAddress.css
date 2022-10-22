@@ -15,7 +15,7 @@ main{
     justify-content: center;
     border: 3px solid #136A5A;
     border-radius: 5%;
-    box-shadow: 10px 10px 5px 2px #90C320;
+    box-shadow: 0px 0px 20px 10px #90C320;
     padding: 1%;
 }
 
@@ -83,4 +83,9 @@ main > button{
 
 label:hover , button:hover{
     cursor: pointer;
+}
+
+input:checked + .address{
+    background-color: #e6e6e6;
+    border: 1px solid #136A5A;
 }
