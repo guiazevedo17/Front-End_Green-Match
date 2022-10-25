@@ -93,17 +93,21 @@ main{
 }
 
 #rightSide .form .helpLine{
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
+	margin-left: 5%;
 }
 
 #rightSide .form .helpLine label{
-	font-size: 16px;
-	margin-left: 0;
-	margin-right: 7%;
+	width: 40%;
+	font-size: 14px;
+	margin-left: -5%;
+	margin-right: 11.5%;
 }
 
 #rightSide .form .helpLine a{
+	width: 40%;
+	font-size: 14px;
 	text-decoration: none;
 	color: black;
 }
@@ -150,12 +154,11 @@ main{
 	height: 100%;
 }
 
-.contas, .cliente, .catador{
+/* Padrão Início dos Popup's */
+.contas, .cliente, .catador, .catador2{
 	display: none;
 	text-align: center;
 	width: 100%;
-	max-width: 300px;
-	margin: 22.5% auto;
 	padding: 20px;
 	background-color: white;
 	position: relative;
@@ -163,9 +166,158 @@ main{
 	box-shadow: 0px 0px 40px 10px black;
 }
 
+/* CONTAS */
+.contas{
+	display: flex;
+	flex-direction: column;
+	max-width: 15vw;
+	margin: 23.5% auto;
+}
+
+.contas button{
+	background-color: #1c5407;
+	color: white;
+	width: 70%;
+	padding: 2%;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	border: 0;
+	border-radius: 10px;
+	margin: 5% 0;
+	cursor: pointer;
+}
+
+/* CLIENTE | CATADOR*/
+.cliente, .catador, .catador2{
+	margin: 4vh auto;
+	max-width: 35vw;
+}
+
+.cliente .popup-content, .catador .popup-content{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#rightSide .popup-wrapper .cliente .popup-content h1{
+	width: 100%;
+	color: #1c5407;
+	font-size: 2.3em;
+	margin: 0 auto;
+	padding: 4% 0;
+}
+
+#rightSide .popup-wrapper .catador .popup-content h1{
+	width: 109%;
+	color: #1c5407;
+	font-size: 2.3em;
+	margin: 0 auto;
+	padding: 4% 0;
+	margin-left: -4%;
+}
+
+.cliente .popup-content label, .catador .popup-content label{
+	padding: 1% 0;
+	font-size: 1.2em;
+}
+
+.cliente .popup-content label:nth-of-type(3), .cliente .popup-content label:nth-of-type(4), .cliente .popup-content label:nth-of-type(5), .cliente .popup-content label:nth-of-type(7), .cliente .popup-content label:nth-of-type(9), .cliente .popup-content label:nth-of-type(10), .catador .popup-content label:nth-of-type(3), .catador .popup-content label:nth-of-type(4), .catador .popup-content label:nth-of-type(5), .catador .popup-content label:nth-of-type(7), .catador .popup-content label:nth-of-type(9), .catador .popup-content label:nth-of-type(10){
+	margin-top: 3%;
+}
+
+.cliente .popup-content label:nth-of-type(10), .catador .popup-content label:nth-of-type(10){
+	padding: 10px 0;
+	text-align: center;
+}
+
+.cliente .popup-content input:not(input[type="radio"]), .catador .popup-content input:not(input[type="radio"]){
+	border: 1px solid #888888;
+	border-radius: 10px;
+}
+
+.gender{
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.cliente .popup-content button, .catador .popup-content button, .catador2 .popup-content button{
+	cursor: pointer;
+	background-color: #1c5407;
+	color: white;
+	width: 45%;
+	border: 0;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	padding: 2%;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+
+/* x para fechar os Popup's */
 .popup-close{
 	position: absolute;
-	top: 5px;
+	top: 10px;
 	right: 15px;
 	cursor: pointer;
+}
+
+/* <- para retornar para o Popup de contas */
+.popup-return, .popup-return-catador2{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	cursor: pointer;
+}
+
+/* CATADOR2 - Segunda Tela criação de conta Catador */
+.catador2{
+	margin: 13vh auto;
+}
+
+.catador2 h2, .catador2 .popup-content label:first-child{
+	width: 100%;
+    color: #1c5407;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.catador2 .popup-content label:first-child{
+	display: block;
+}
+
+.catador2 ul.materiais, .catador2 ul.dias{
+    width: 62%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.catador2 ul.periodo{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+	margin: 0 auto;
+}
+
+.catador2 ul.periodo li{
+    padding-right:2%;
+	margin: 0 auto;
+}
+
+.catador2 .popup-content select{
+	font-family: 'Poppins';
+	width: 50%;
+	background-color: #1c5407;
+	color: white;
+	height: 2em;
+	font-size: 1em;
+	border: 0;
+	border-radius: 10px;
+	text-align: center;
 }
