@@ -1,0 +1,108 @@
+body{
+	font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #136A5A;
+    border-radius: 10%;
+    box-shadow: 0px 0px 20px 10px #90C320;
+    padding: 3%;
+}
+
+main h2{
+    color: #90C320;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+main h2:first-of-type{
+    padding-top: 0;
+}
+
+main ul.materiais, main ul.dias{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+main ul.periodo{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+main ul.periodo li{
+    padding-right:2%;
+}
+
+button{
+    width: 200px;
+    padding: 1%;
+    margin-top: 5%;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+/**/
+.single-input{
+    width: 100%;
+	position: relative;
+	margin-top: 8%;
+}
+
+.single-input label{
+	position: absolute;
+	bottom: 40%;
+	left: 0;
+	cursor: text;
+	transition: all 0.5s ease-in-out;
+	font-size: max(20px, 1.5vw);
+}
+
+.single-input input{
+	width: 100%;
+	
+	margin-bottom: 2%;	
+	border: 0;
+	border-bottom: 2px solid #444444;
+	outline: 0;
+	font-size: max(18px ,1.2vw);
+	transition: all 0.5s ease-in-out;
+}
+
+.single-input input:focus,
+.single-input input:valid{
+	border-bottom: 4px solid rgba(144, 135, 32, 0.4);
+	
+}
+
+.single-input input:focus ~ label,
+.single-input input:valid ~ label{ 
+	transform: translateY(-2.5em);	
+	font-size: max(14px ,1vw);
+	color: #90C320;
+}
+
+#peso{
+    width: 45%;
+}
+
+button:hover{
+    cursor: pointer;
+}

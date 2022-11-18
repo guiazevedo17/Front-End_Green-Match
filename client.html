@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/client.css">
+
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <div class="sideBar">
+        <img src="assets/images/user.png" alt="">
+
+        <h3>Bem-vindo</h3>
+        <h2>Usuário</h2>
+
+        <nav>
+            <ul>
+                <li><p>Dados</p></li>
+                <li><a href="">Meus Dados</a></li>
+                <li><a href="">Endereços</a></li>
+                <li><p>Coletas</p></li>
+                <li><a href="">Solicitadas</a></li>
+                <li><a href="">Agendadas</a></li>
+                <li><a href="">Histórico</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <main>
+        
+        <img src="assets/images/arvore.png" width="256px" alt="">
+
+        <div class="text">
+
+            <p>Tem material pra descartar ai?</p>
+            <p>Clique em Nova Coleta para que alguém possa efetuar a retirada dele</p>
+
+        </div>
+
+        <div class="line">
+            
+            <button id="newCollect" onclick="newCollect()">+</button>
+            <label for="newCollect">Nova Coleta</label>
+            
+        </div>
+
+
+    </main>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>
