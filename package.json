@@ -1,0 +1,23 @@
+{
+  "name": "front-end_green-match",
+  "version": "1.0.0",
+  "description": "Projeto Integrador IV",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guiazevedo17/ProjIntegrador4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guiazevedo17/ProjIntegrador4/issues"
+  },
+  "homepage": "https://github.com/guiazevedo17/ProjIntegrador4#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
