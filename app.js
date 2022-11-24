@@ -29,12 +29,16 @@ app.get("/client", (req, res) => {
 });
 
 app.post("/createClient", (req, res) => {
-  var name = req.body.name + req.body.lastName;
-  var userName = req.body.userName;
-  var phone = req.body.tel;
-  var email = req.body.email;
-  var password = req.body.password;
-  var birthDay = req.body.birthDay;
+
+  JSON.stringify({
+    name: req.body.name + req.body.lastName,
+    username: req.body.userName,
+    phone: req.body.tel,
+    email: req.body.email,
+    password: req.body.password,
+    birthday: req.body.birthDay,
+  })
+  
 });
 
 app.listen(port, () =>
