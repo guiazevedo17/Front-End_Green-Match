@@ -1,9 +1,5 @@
 body{
 	font-family: 'Poppins';
-    display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    grid-template-rows: 1;
-    grid-template-areas: "side main";
     height: 100vh;
     overflow: hidden;
 }
@@ -19,6 +15,13 @@ body{
     text-align: center;
     color: white;
     line-height: 2em;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 20vw;
+    height: 100vh;
 }
 
 .sideBar img{
@@ -40,47 +43,4 @@ body{
     text-decoration: none;
     color: white;
     font-size: 1.2em;
-}
-
-/* Parte Principal (Nova Coleta) */
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-main .text{
-    color: #888888;
-    margin: 3% 0;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-main .line{
-    width: 100%;
-    text-align: center;
-}
-
-main .line button{
-    display: inline;
-    color: white;
-    background-color: #90C320;
-    border: 0;
-    border-radius: 100%;
-    width: 1.2em;
-    height: -1em;
-    font-size: 2.5em;
-
-}
-
-main .line label{
-    display: inline;
-    color: #90C320;
-    font-size: 2.5em;
-    margin-left: 1%;
-}
-
-main .line button:hover, main .line label:hover{
-    cursor: pointer;
 }

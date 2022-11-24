@@ -12,13 +12,20 @@ app.use(express.static(path.join(__dirname, "public")));
 // recebe dados de um formulário html, intercede
 app.use(express.urlencoded());
 
-// ROTAS
+// --- ROTAS ---
+// Homepage
 app.get("/", (req, res) => {
   res.render("home");
 });
 
+// Login
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+// Client
+app.get("/client", (req, res) => {
+  res.render("client");
 });
 /*
 app.post("/createClient", (req, res) => {
