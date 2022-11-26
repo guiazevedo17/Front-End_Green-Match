@@ -189,7 +189,7 @@ main{
 
 /* CLIENTE | CATADOR*/
 .cliente, .catador, .catador2{
-	margin: 4vh auto;
+	margin: 3vh auto;
 	max-width: 35vw;
 }
 

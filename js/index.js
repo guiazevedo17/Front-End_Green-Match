@@ -74,21 +74,32 @@ popup.addEventListener('click', event => {
 })
 
 // Integração com o BACK-END
-const form = document.querySelector("form");
+const registerClient = document.querySelector(".registerClient");
+
 
 const Iname = document.querySelector(".name");
 const IlastName = document.querySelector(".lastName");
 const IuserName = document.querySelector(".userName");
-const Itel = document.querySelector(".tel");
+const Iphone = document.querySelector(".phone");
 const Iemail = document.querySelector(".email");
 const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 const IbirthDay = document.querySelector(".birthDay");
 
-function register() {
+const InameScavenger = document.querySelector(".nameScavenger");
+const IlastNameScavenger = document.querySelector(".lastNameScavenger");
+const IuserNameScavenger = document.querySelector(".userNameScavenger");
+const IphoneScavenger = document.querySelector(".phoneScavenger");
+const IemailScavenger = document.querySelector(".emailScavenger");
+const IemailConfScavenger = document.querySelector(".emailConfScavenger");
+const IpasswordScavenger = document.querySelector(".passwordScavenger");
+const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
+const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
 
-    fetch("http://localhost:8080/usuarios",
+function register_client() {
+
+    fetch("http://localhost:8080/registerClient",
         {
             headers: {
                 'Accept': 'application/json',
@@ -98,7 +109,7 @@ function register() {
             body: JSON.stringify({
                 name: Iname.value + IlastName.value,
                 username: IuserName.value,
-                phone: Itel.value,
+                phone: Iphone.value,
                 email: Iemail.value,
                 password: Ipassword.value,
                 birthday: IbirthDay.value
@@ -109,11 +120,34 @@ function register() {
 
 };
 
-function clear() {
+function register_scavenger() {
+
+    fetch("http://localhost:8080/registerScavenger",
+        {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                name: InameScavenger.value + IlastNameScavenger.value,
+                username: IuserNameScavenger.value,
+                phone: IphoneScavenger.value,
+                email: IemailScavenger.value,
+                password: IpasswordScavenger.value,
+                birthday: IbirthDayScavenger.value
+            })
+        })
+        .then(function (res) { console.log(res) })
+        .then(function (res) { console.log(res) })
+
+};
+
+function clear_client() {
     Iname.value = "";
     IlastName.value = "";
     IuserName.value = "";
-    Itel.value = "";
+    Iphone.value = "";
     Iemail.value = "";
     IemailConf.value = "";
     Ipassword.value = "";
@@ -121,9 +155,28 @@ function clear() {
     IbirthDay.value = "";
 };
 
-form.addEventListener('submit', function (event) {
+function clear_scavenger() {
+    InameScavenger.value = "";
+    IlastNameScavenger.value = "";
+    IuserNameScavenger.value = "";
+    IphoneScavenger.value = "";
+    IemailScavenger.value = "";
+    IemailConfScavenger.value = "";
+    IpasswordScavenger.value = "";
+    IpasswordConfScavenger.value = "";
+    IbirthDayScavenger.value = "";
+};
+
+registerClient.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    register();
-    clear();
+    register_client();
+    clear_client();
+})
+
+registerScavenger.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    register_scavenger();
+    clear_scavenger();
 })
