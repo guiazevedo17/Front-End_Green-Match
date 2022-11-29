@@ -1,0 +1,30 @@
+#data{
+    border-bottom: 1px solid #90C320;
+}
+
+main a{
+    color: grey;
+    font-size: 1em;
+    text-decoration: none;
+    position: absolute;
+    top: 15%;
+}
+
+main .box{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15vh 15vh 15vh 15vh;
+}
+
+main .box span p.dado{
+    color: #90C320;
+    margin-bottom: 3%;
+    font-size: 1em;
+}
+
+main .box span{
+    color: #263238;
+    font-size: 1.3em;
+    text-align: center;
+}
