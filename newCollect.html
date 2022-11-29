@@ -18,51 +18,74 @@
 
 <body>
 
+    <div class="sideBar">
+        <img src="assets/images/user.png" alt="">
+
+        <h3>Bem-vindo</h3>
+        <h2>Cliente</h2>
+
+        <nav>
+            <ul>
+                <li><p>Dados</p></li>
+                <li><a href="">Meus Dados</a></li>
+                <li><a href="">Endereços</a></li>
+                <li><p>Coletas</p></li>
+                <li><a href="">Solicitadas</a></li>
+                <li><a href="">Agendadas</a></li>
+                <li><a href="">Histórico</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
     <main>
 
-        <h2>Quais materiais deseja que sejam coletados?</h2>
-        <ul class="materiais">
-            <li><input type="checkbox" id="papel"><label for="papel">Papel</label></li>
-            <li><input type="checkbox" id="plastico"><label for="plastico">Plastico</label></li>
-            <li><input type="checkbox" id="metal"><label for="metal">Metal</label></li>
-            <li><input type="checkbox" id="vidro"><label for="vidro">Vidro</label></li>
-            <li><input type="checkbox" id="entulho"><label for="entulho">Entulho</label></li>
-            <li><input type="checkbox" id="eletronico"><label for="eletronico">Eletrônico</label></li>
-            <li><input type="checkbox" id="moveis"><label for="moveis">Móveis</label></li>
-            <li><input type="checkbox" id="outros"><label for="outros">Outros</label></li>
-        </ul>
+        <div class="box">
 
-
-        <h2>Qual dia seria melhor para realizar a coleta?</h2>
-        <ul class="dias">
-            <li><input type="radio" id="segunda" name="dia"><label for="segunda">Segunda-Feira</label></li>
-            <li><input type="radio" id="terca" name="dia"><label for="terca">Terça-Feira</label></li>
-            <li><input type="radio" id="quarta" name="dia"><label for="quarta">Quarta-Feira</label></li>
-            <li><input type="radio" id="quinta" name="dia"><label for="quinta">Quinta-Feira</label></li>
-            <li><input type="radio" id="sexta" name="dia"><label for="sexta">Sexta-Feira</label></li>
-            <li><input type="radio" id="sabado" name="dia"><label for="sabado">Sábado</label></li>
-            <li><input type="radio" id="domingo" name="dia"><label for="domingo">Domingo</label></li>
-            <li><input type="radio" id="feriado" name="dia"><label for="feriado">Feriados</label></li>
-        </ul>
-
-        <h2>Qual período mais adequado?</h2>
-        <ul class="periodo">
-            <li><input type="radio" id="manha" name="periodo"><label for="manha">Manhã</label></li>
-            <li><input type="radio" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
-            <li><input type="radio" id="noite" name="periodo"><label for="noite">Noite</label></li>
-        </ul>
-
-        <div class="single-input">
-            <input type="text" name="" id="obs" placeholder="                           ex: Vidro quebrado" required>
-            <label for="obs">Observação</label>
+            <h2>Quais materiais deseja que sejam coletados?</h2>
+            <ul class="materiais">
+                <li><input type="checkbox" id="papel"><label for="papel">Papel</label></li>
+                <li><input type="checkbox" id="plastico"><label for="plastico">Plastico</label></li>
+                <li><input type="checkbox" id="metal"><label for="metal">Metal</label></li>
+                <li><input type="checkbox" id="vidro"><label for="vidro">Vidro</label></li>
+                <li><input type="checkbox" id="entulho"><label for="entulho">Entulho</label></li>
+                <li><input type="checkbox" id="eletronico"><label for="eletronico">Eletrônico</label></li>
+                <li><input type="checkbox" id="moveis"><label for="moveis">Móveis</label></li>
+                <li><input type="checkbox" id="outros"><label for="outros">Outros</label></li>
+            </ul>
+    
+    
+            <h2>Qual dia seria melhor para realizar a coleta?</h2>
+            <ul class="dias">
+                <li><input type="radio" id="segunda" name="dia"><label for="segunda">Segunda-Feira</label></li>
+                <li><input type="radio" id="terca" name="dia"><label for="terca">Terça-Feira</label></li>
+                <li><input type="radio" id="quarta" name="dia"><label for="quarta">Quarta-Feira</label></li>
+                <li><input type="radio" id="quinta" name="dia"><label for="quinta">Quinta-Feira</label></li>
+                <li><input type="radio" id="sexta" name="dia"><label for="sexta">Sexta-Feira</label></li>
+                <li><input type="radio" id="sabado" name="dia"><label for="sabado">Sábado</label></li>
+                <li><input type="radio" id="domingo" name="dia"><label for="domingo">Domingo</label></li>
+                <li><input type="radio" id="feriado" name="dia"><label for="feriado">Feriados</label></li>
+            </ul>
+    
+            <h2>Qual período mais adequado?</h2>
+            <ul class="periodo">
+                <li><input type="radio" id="manha" name="periodo"><label for="manha">Manhã</label></li>
+                <li><input type="radio" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
+                <li><input type="radio" id="noite" name="periodo"><label for="noite">Noite</label></li>
+            </ul>
+    
+            <div class="single-input" >
+                <input type="text" name="" id="obs" placeholder="                           ex: Vidro quebrado" required>
+                <label for="obs">Observação</label>
+            </div>
+    
+            <div class="single-input" id="peso">
+                <input type="number" name="" id="qntd" placeholder="" required>
+                <label for="qntd">Peso aproximado (kg)</label>
+            </div>
+    
+            <button onclick="chooseAddress()">continuar</button>
         </div>
-
-        <div class="single-input" id="peso">
-            <input type="number" name="" id="qntd" placeholder="" required>
-            <label for="qntd">Peso aproximado (kg)</label>
-        </div>
-
-        <button onclick="chooseAddress()">continuar</button>
 
     </main>
 

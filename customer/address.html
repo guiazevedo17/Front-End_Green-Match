@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/customer/address.css">
+
+    <title>Nova Coleta</title>
+</head>
+
+<body>
+
+    <div class="sideBar">
+        <img src="../assets/images/user.png" alt="">
+
+        <h3>Bem-vindo</h3>
+        <h2>Cliente</h2>
+
+        <nav>
+            <ul>
+                <li><p>Dados</p></li>
+                <li><a href="data.html"> Meus Dados </a></li>
+                <li><a href="" id="address"> Endereços </a></li>
+                <li><p>Coletas</p></li>
+                <li><a href="requested.html"> Solicitadas </a></li>
+                <li><a href="scheduled.html"> Agendadas </a></li>
+                <li><a href="historic.html"> Histórico </a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <main>
+
+        <div class="box">
+            
+            <h2>Qual endereço de coleta?</h2>
+    
+            <input type="checkbox" id="address1">
+            <label class="address" for="address1">
+                <h3>Endereço 1</h3>
+                <ul>
+                    <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
+                    <li><strong>Número: </strong>820</li>
+                    <li><strong>Complemento: </strong>Apto 202</li>
+                    <li><strong>Bairro: </strong>Parque das Universidades</li>
+                    <li><strong>CEP: </strong>13087-571</li>
+                    <li><strong>Cidade: </strong>Campinas <strong>Estado: </strong>SP</li>
+                </ul>
+            </label>
+    
+            <input type="checkbox" id="address2">
+            <label class="address" for="address2">
+                <h3>Endereço 2</h3>
+                <ul>
+                    <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
+                    <li><strong>Número: </strong>820</li>
+                    <li><strong>Complemento: </strong>Apto 202</li>
+                    <li><strong>Bairro: </strong>Parque das Universidades</li>
+                    <li><strong>CEP: </strong>13087-571</li>
+                    <li><strong>Cidade: </strong>Campinas <strong>Estado: </strong>SP</li>
+                </ul>
+            </label>
+    
+            <div class="line">
+                
+                <button id="newAddress">+</button>
+                <label for="newAddress">Adicionar Endereço</label>
+                
+            </div>
+    
+            <button>finalizar</button>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 function logIn() {
-    window.location = "client.html";
+    window.location = "customer.html";
 }
 
 function newCollect() {
@@ -7,7 +7,7 @@ function newCollect() {
 }
 
 function chooseAddress() {
-    window.location = "chooseAddress.html";
+    window.location = "customer/chooseAddress.html";
 }
 
 const popup = document.querySelector('.popup-wrapper')
@@ -74,7 +74,8 @@ popup.addEventListener('click', event => {
 })
 
 // Integração com o BACK-END
-const registerClient = document.querySelector(".registerClient");
+const registerCustomer = document.querySelector(".registerCustomer");
+const registerScavenger = document.querySelector(".registerScavenger");
 
 
 const Iname = document.querySelector(".name");
@@ -97,9 +98,9 @@ const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
 const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
 
-function register_client() {
+function register_customer() {
 
-    fetch("http://localhost:8080/registerClient",
+    fetch("http://localhost:8080/registerCustomer",
         {
             headers: {
                 'Accept': 'application/json',
@@ -143,7 +144,7 @@ function register_scavenger() {
 
 };
 
-function clear_client() {
+function clear_customer() {
     Iname.value = "";
     IlastName.value = "";
     IuserName.value = "";
@@ -167,14 +168,14 @@ function clear_scavenger() {
     IbirthDayScavenger.value = "";
 };
 
-registerClient.addEventListener('submit', function (event) {
+registerCustomer.addEventListener('click', function (event) {
     event.preventDefault();
 
-    register_client();
-    clear_client();
+    register_customer();
+    clear_customer();
 })
 
-registerScavenger.addEventListener('submit', function (event) {
+registerScavenger.addEventListener('click', function (event) {
     event.preventDefault();
 
     register_scavenger();

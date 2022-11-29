@@ -193,7 +193,7 @@ main{
 	max-width: 35vw;
 }
 
-.cliente .popup-content form, .catador .popup-content form{
+.cliente .popup-content form, .catador .popup-content .formCatador{
 	display: flex;
 	flex-direction: column;
 	text-align: left;
@@ -218,21 +218,21 @@ main{
 	margin-left: -4%;
 }
 
-.cliente .popup-content form label, .catador .popup-content form label{
+.cliente .popup-content form label, .catador .popup-content .formCatador label{
 	padding: 1% 0;
 	font-size: 1.2em;
 }
 
-.cliente .popup-content form label:nth-of-type(3), .cliente .popup-content form label:nth-of-type(4), .cliente .popup-content form label:nth-of-type(5), .cliente .popup-content form label:nth-of-type(7), .cliente .popup-content form label:nth-of-type(9), .cliente .popup-content form label:nth-of-type(10), .catador .popup-content form label:nth-of-type(3), .catador .popup-content form label:nth-of-type(4), .catador .popup-content form label:nth-of-type(5), .catador .popup-content form label:nth-of-type(7), .catador .popup-content form label:nth-of-type(9), .catador .popup-content form label:nth-of-type(10){
+.cliente .popup-content form label:nth-of-type(3), .cliente .popup-content form label:nth-of-type(4), .cliente .popup-content form label:nth-of-type(5), .cliente .popup-content form label:nth-of-type(7), .cliente .popup-content form label:nth-of-type(9), .cliente .popup-content form label:nth-of-type(10), .catador .popup-content .formCatador label:nth-of-type(3), .catador .popup-content .formCatador label:nth-of-type(4), .catador .popup-content .formCatador label:nth-of-type(5), .catador .popup-content .formCatador label:nth-of-type(7), .catador .popup-content .formCatador label:nth-of-type(9), .catador .popup-content .formCatador label:nth-of-type(10){
 	margin-top: 3%;
 }
 
-.cliente .popup-content form label:nth-of-type(10), .catador .popup-content form label:nth-of-type(10){
+.cliente .popup-content form label:nth-of-type(10), .catador .popup-content .formCatador label:nth-of-type(10){
 	padding: 10px 0;
 	text-align: center;
 }
 
-.cliente .popup-content form input:not(input[type="radio"]), .catador .popup-content form input:not(input[type="radio"]){
+.cliente .popup-content form input:not(input[type="radio"]), .catador .popup-content .formCatador input:not(input[type="radio"]){
 	border: 1px solid #888888;
 	border-radius: 10px;
 }
@@ -242,7 +242,7 @@ main{
 	font-size: 0.8em;
 }
 
-.cliente .popup-content form button, .catador .popup-content form button, .catador2 .popup-content form button{
+.cliente .popup-content form button, .catador .popup-content .formCatador button, .catador2 .popup-content form button{
 	cursor: pointer;
 	background-color: #1c5407;
 	color: white;
