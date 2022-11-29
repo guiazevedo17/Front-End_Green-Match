@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/customer/data.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/customer/data.css" />
 
     <title>Perfil Cliente</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="sideBar">
-        <img src="../assets/images/user.png" alt="">
+      <img src="../assets/images/user.png" alt="" />
 
-        <h3>Bem-vindo</h3>
-        <h2>Cliente</h2>
+      <h3>Bem-vindo</h3>
+      <h2>Cliente</h2>
 
-        <nav>
-            <ul>
-                <li><p>Dados</p></li>
-                <li><a href="" id="data"> Meus Dados </a></li>
-                <li><a href="address.html"> Endereços </a></li>
-                <li><p>Coletas</p></li>
-                <li><a href="requested.html"> Solicitadas </a></li>
-                <li><a href="scheduled.html"> Agendadas </a></li>
-                <li><a href="historic.html"> Histórico </a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><p>Dados</p></li>
+          <li><a href="" id="data"> Meus Dados </a></li>
+          <li><a href="address.html"> Endereços </a></li>
+          <li><p>Coletas</p></li>
+          <li><a href="requested.html"> Solicitadas </a></li>
+          <li><a href="scheduled.html"> Agendadas </a></li>
+          <li><a href="historic.html"> Histórico </a></li>
+        </ul>
+      </nav>
 
-        <a href="../customer.html"> Nova Coleta</a>
+      <a href="../customer.html"> Nova Coleta</a>
 
-        <a href="../login.html">&#8592; sair</a>
-
+      <a href="../login.html">&#8592; sair</a>
     </div>
 
     <section class="top">
-        <h1>Meus Dados</h1>
+      <h1>Meus Dados</h1>
     </section>
 
     <main>
-        
-        <a href="">&#128393; Alterar</a>
+      <a href="">&#128393; Alterar</a>
 
-        <div class="box">
-            
-            <span>
-                <p class="dado">Nome</p>
-                Guilherme
-            </span>
-            <span>
-                <p class="dado">Sobrenome</p>
-                Azevedo
-            </span>
-            <span>
-                <p class="dado">Nome de Usuário</p>
-                guiazevedo
-            </span>
-            <span>
-                <p class="dado">E-mail</p>
-                gui.azevedo@ymail.com
-            </span>
-            <span>
-                <p class="dado">Telefone</p>
-                14 997170127
-            </span>
-            <span>
-                <p class="dado">Data de Nascimento</p>
-                17/01/2001
-            </span>
+      <div class="box">
+        <span>
+          <p class="dado">Nome</p>
+          Guilherme
+        </span>
+        <span>
+          <p class="dado">Sobrenome</p>
+          Azevedo
+        </span>
+        <span>
+          <p class="dado">Nome de Usuário</p>
+          guiazevedo
+        </span>
+        <span>
+          <p class="dado">E-mail</p>
+          gui.azevedo@ymail.com
+        </span>
+        <span>
+          <p class="dado">Telefone</p>
+          14 997170127
+        </span>
+        <span>
+          <p class="dado">Data de Nascimento</p>
+          17/01/2001
+        </span>
+      </div>
 
-        </div>
-        
+      <button class="chat" onclick="chat()">
+        <img src="../assets/images/chat.png" alt="" />
+      </button>
     </main>
 
     <script type="text/javascript" src="js/index.js"></script>
-
-</body>
-
+  </body>
 </html>

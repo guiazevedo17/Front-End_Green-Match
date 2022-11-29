@@ -96,3 +96,22 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+.chat{
+    background-color: #136A5A;
+    border: 0;
+    border-radius: 40px;
+    width: 65px;
+    height: 65px;
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+}
+
+.chat img{
+    width: 80%;
+}
+
+.chat:hover{
+    cursor: pointer;
+}

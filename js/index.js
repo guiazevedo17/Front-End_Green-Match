@@ -1,9 +1,10 @@
-/*function logIn() {
+function logIn() {
     window.location = "customer.html";
-}*/
+}
+/*
 function logIn() {
     window.location = "scavenger.html";
-}
+}*/
 
 const popup = document.querySelector('.popup-wrapper')
 
