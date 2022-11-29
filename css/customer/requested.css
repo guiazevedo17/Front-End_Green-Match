@@ -38,6 +38,11 @@ body{
     font-size: 1.7em;
 }
 
+.sideBar a{
+    text-decoration: none;
+    color: white;
+}
+
 .sideBar nav ul li p{
     color: #90C320;
     margin-top: 50%;
@@ -48,6 +53,21 @@ body{
     text-decoration: none;
     color: white;
     font-size: 1.2em;
+}
+
+.sideBar > a:last-of-type{
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0;
+    width: 60%;
+
+    margin-top: 20%;
+
+    color: white;
+    background-color: #90C320;
+    font-family: 'Poppins';
+    font-size: 1.1em;
+    border: 0;
 }
 
 #requested{
