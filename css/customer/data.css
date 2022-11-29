@@ -70,7 +70,7 @@ body{
     border: 0;
 }
 
-#historic{
+#data{
     border-bottom: 1px solid #90C320;
 }
 
@@ -89,12 +89,11 @@ main{
 }
 
 main .box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: "";
+}
 
-    width: 80%;
-    box-shadow: 0 0 33px 10px #90C320;
-    border-radius: 20px;
+main .box .dado{
+    color: #90C320;
+    margin-bottom: 2%;
 }
