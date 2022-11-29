@@ -1,0 +1,47 @@
+.collect{
+    border: 3px solid green;
+    width: 80%;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px grey;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collect:nth-child(1){
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+.collect:nth-child(2){
+    margin-top: 5%;
+}
+
+.collect img{
+    width: 16%;
+}
+
+.collect .content{
+    display: inline-block;
+    margin-left: 10%;
+    width: 100%;
+}
+
+.collect .content h1{
+    color: #136A5A;
+    font-size: 1.5em;
+    padding-bottom: 1.5%;
+}
+
+.collect .content ul li{
+    color: #90C320;
+    font-size: 1.2em;
+}
+
+.collect .content ul li span{
+    color: #263238;
+    margin-left: 1%;
+    font-size: 1em;
+}

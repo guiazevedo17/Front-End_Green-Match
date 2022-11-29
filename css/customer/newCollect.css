@@ -1,77 +1,10 @@
-body{
-	font-family: 'Poppins';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Barra Lateral */
-.sideBar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #136A5A;
-    text-align: center;
-    color: white;
-    line-height: 2em;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 20vw;
-    height: 100vh;
-}
-
-.sideBar img{
-    margin: 10% 0;
-    width: 80px;
-}
-
-.sideBar h2{
-    font-size: 1.7em;
-}
-
-.sideBar nav ul li p{
-    color: #90C320;
-    margin-top: 50%;
-    font-size: 1em;
-}
-
-.sideBar nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-/* Pa{rte Principal (Nova Coleta) */
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-    left: 20vw;
-    width: 80vw;
-    height: 100vh;
-    
-}
-
 main .box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    width: 80%;
-    box-shadow: 0 0 33px 10px #90C320;
-    border-radius: 20px;
+    width: 100%;
 }
 
 main .box h2{
@@ -103,20 +36,19 @@ main .box h2{
 }
 
 .box button{
-    width: 200px;
-    padding: 1%;
-    margin: 2%;
+    padding: 1% 2%;
     color: white;
     background-color: #90C320;
     border: 0;
     border-radius: 30px;
     text-transform: uppercase;
     font-size: 1.5em;
+    margin: 4% auto;
 }
 
 /**/
 .single-input{
-    width: 90%;
+    width: 70%;
 	position: relative;
 	margin-top: 8%;
 }
@@ -155,7 +87,7 @@ main .box h2{
 }
 
 #peso{
-    width: 45%;
+    width: 30%;
 }
 
 button:hover{

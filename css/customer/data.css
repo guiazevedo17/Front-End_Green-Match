@@ -1,99 +1,30 @@
-body{
-	font-family: 'Poppins';
-    display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    grid-template-rows: 1;
-    grid-template-areas: "side main";
-    height: 100vh;
-    
-    overflow-x: hidden;
-}
-
-/* Barra Lateral */
-.sideBar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #136A5A;
-    text-align: center;
-    color: white;
-    line-height: 2em;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 20vw;
-    height: 100vh;
-}
-
-.sideBar img{
-    margin: 10% 0;
-    width: 80px;
-}
-
-.sideBar h2{
-    font-size: 1.7em;
-}
-
-.sideBar a{
-    text-decoration: none;
-    color: white;
-}
-
-.sideBar nav ul li p{
-    color: #90C320;
-    margin-top: 50%;
-    font-size: 1em;
-}
-
-.sideBar nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-.sideBar > a:last-of-type{
-    text-decoration: none;
-    border-radius: 10px;
-    border: 0;
-    width: 60%;
-
-    margin-top: 20%;
-
-    color: white;
-    background-color: #90C320;
-    font-family: 'Poppins';
-    font-size: 1.1em;
-    border: 0;
-}
-
 #data{
     border-bottom: 1px solid #90C320;
 }
 
-/* Parte Principal (Nova Coleta) */
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+main a{
+    color: grey;
+    font-size: 1em;
+    text-decoration: none;
     position: absolute;
-    top: 0;
-    left: 20vw;
-    width: 80vw;
-    height: 100vh;
+    top: 21%;
 }
 
 main .box{
     display: grid;
-    grid-template-areas: "";
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20vh 20vh;
 }
 
-main .box .dado{
+main .box span p.dado{
     color: #90C320;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    font-size: 1em;
+}
+
+main .box span{
+    color: #263238;
+    font-size: 1.3em;
+    text-align: center;
 }

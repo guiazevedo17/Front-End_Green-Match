@@ -1,0 +1,91 @@
+body{
+    grid-template-areas: "side top"
+                         "side main"
+                         "side bottom"
+}
+
+main .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+}
+
+main .box h2{
+    color: #90C320;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.address{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    padding: 1%;
+    border: 1px solid #90C320;
+    border-radius: 20px;
+    line-height: 1.2em;
+}
+
+.address:first-of-type{
+    margin-top: 0;
+}
+
+.address h3{
+    color: #90C320;
+    font-size: 1.1em;
+    padding: 1%;
+}
+
+.address strong{
+    font-weight: bold;
+}
+
+.bottom{
+    grid-area: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 20vw; 
+    text-align: center;  
+    width: 80vw;
+    height: 10vh;
+    background-color: white; 
+}
+
+.bottom button{
+    padding: 1% 2%;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.returnNewCollect{
+    border: 0;
+    background-color: white;
+    color: #136A5A;
+    font-size: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 20vw;
+}

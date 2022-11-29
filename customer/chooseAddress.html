@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/customer/sidebar.css" />
-    <link rel="stylesheet" href="../css/customer/address.css" />
+    <link rel="stylesheet" href="../css/customer/chooseAddress.css" />
 
     <title>Nova Coleta</title>
   </head>
@@ -30,7 +30,7 @@
         <ul>
           <li><p>Dados</p></li>
           <li><a href="data.html"> Meus Dados </a></li>
-          <li><a href="" id="address"> Endereços </a></li>
+          <li><a href="address.html" id="address"> Endereços </a></li>
           <li><p>Coletas</p></li>
           <li><a href="requested.html"> Solicitadas </a></li>
           <li><a href="scheduled.html"> Agendadas </a></li>
@@ -44,13 +44,11 @@
     </div>
 
     <section class="top">
-      <h1>Endereços</h1>
+      <h1>Qual endereço de coleta ?</h1>
     </section>
 
     <main>
-      <div class="newAddress">
-        <a href="newAddress.html">&#43; Adicionar Endereço</a>
-      </div>
+      <button class="returnNewCollect" onclick="returnNewCollect()">&#8592;</button>
 
       <div class="address">
         <h3>Endereço 1</h3>
@@ -89,7 +87,7 @@
       </div>
 
       <div class="address">
-        <h3>Endereço 4</h3>
+        <h3>Endereço 3</h3>
         <ul>
           <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
           <li><strong>Número: </strong>820</li>
@@ -101,7 +99,7 @@
       </div>
 
       <div class="address">
-        <h3>Endereço 5</h3>
+        <h3>Endereço 3</h3>
         <ul>
           <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
           <li><strong>Número: </strong>820</li>
@@ -112,17 +110,11 @@
         </ul>
       </div>
 
-      <div class="address">
-        <h3>Endereço 6</h3>
-        <ul>
-          <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
-          <li><strong>Número: </strong>820</li>
-          <li><strong>Complemento: </strong>Apto 202</li>
-          <li><strong>Bairro: </strong>Parque das Universidades</li>
-          <li><strong>CEP: </strong>13087-571</li>
-          <li><strong>Cidade: </strong>Campinas <strong>Estado: </strong>SP</li>
-        </ul>
+      <div class="bottom">
+        <button>finalizar</button>
       </div>
     </main>
+
+    <script type="text/javascript" src="../js/customer/newCollect.js"></script>
   </body>
 </html>

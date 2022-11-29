@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/customer/sidebar.css" />
+    <link rel="stylesheet" href="../css/customer/newAddress.css" />
+
+    <title>Novo Endereço</title>
+  </head>
+
+  <body>
+    <div class="sideBar">
+      <img src="../assets/images/user.png" alt="" />
+
+      <h3>Bem-vindo</h3>
+      <h2>Cliente</h2>
+
+      <nav>
+        <ul>
+          <li><p>Dados</p></li>
+          <li><a href="data.html"> Meus Dados </a></li>
+          <li><a href="" id="address"> Endereços </a></li>
+          <li><p>Coletas</p></li>
+          <li><a href="requested.html"> Solicitadas </a></li>
+          <li><a href="scheduled.html"> Agendadas </a></li>
+          <li><a href="historic.html"> Histórico </a></li>
+        </ul>
+      </nav>
+
+      <a href="../customer.html"> Nova Coleta</a>
+
+      <a href="../login.html">&#8592; sair</a>
+    </div>
+
+    <section class="top">
+      <h1>Novo Endereço</h1>
+    </section>
+
+    <main>
+      <button class="returnAddress" onclick="returnAddress()">&#8592;</button>
+
+      <form class="registerAddress">
+        <label for="">Rua</label>
+        <input type="text" name="" id="" class="street" />
+
+        <label for="">Número</label>
+        <input type="number" name="" id="" class="number" />
+
+        <label for="">Complemento</label>
+        <input type="text" name="" id="" class="complement" />
+
+        <label for="">Bairro</label>
+        <input type="text" name="" id="" class="district" />
+
+        <label for="">CEP</label>
+        <input type="number" name="" id="" class="cep" />
+
+        <label for="">Cidade</label>
+        <input type="text" name="" id="" class="city" />
+
+        <label for="">Estado</label>
+        <input type="text" name="" id="" class="state" />
+
+        <button>cadastrar</button>
+      </form>
+    </main>
+
+    <script type="text/javascript" src="../js/customer/newAddress.js"></script>
+  </body>
+</html>

@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/newCollect.css">
+	<link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/customer/sidebar.css">
+    <link rel="stylesheet" href="../css/customer/newCollect.css">
 
     <title>Nova Coleta</title>
 </head>
@@ -19,7 +20,7 @@
 <body>
 
     <div class="sideBar">
-        <img src="assets/images/user.png" alt="">
+        <img src="../assets/images/user.png" alt="">
 
         <h3>Bem-vindo</h3>
         <h2>Cliente</h2>
@@ -27,14 +28,18 @@
         <nav>
             <ul>
                 <li><p>Dados</p></li>
-                <li><a href="">Meus Dados</a></li>
-                <li><a href="">Endereços</a></li>
+                <li><a href="data.html">Meus Dados</a></li>
+                <li><a href="address.html">Endereços</a></li>
                 <li><p>Coletas</p></li>
-                <li><a href="">Solicitadas</a></li>
-                <li><a href="">Agendadas</a></li>
-                <li><a href="">Histórico</a></li>
+                <li><a href="requested.html">Solicitadas</a></li>
+                <li><a href="scheduled.html">Agendadas</a></li>
+                <li><a href="historic.html">Histórico</a></li>
             </ul>
         </nav>
+
+        <a href="../customer.html" id="#nova_coleta"> Nova Coleta</a>
+
+        <a href="../login.html">&#8592; sair</a>
 
     </div>
 
@@ -89,7 +94,7 @@
 
     </main>
 
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="../js/customer/customer.js"></script>
 
 </body>
 

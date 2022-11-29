@@ -1,129 +1,48 @@
 body{
-	font-family: 'Poppins';
-    display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    grid-template-rows: 1;
-    grid-template-areas: "side main";
-    height: 100vh;
-    
-    overflow-x: hidden;
-}
-
-/* Barra Lateral */
-.sideBar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #136A5A;
-    text-align: center;
-    color: white;
-    line-height: 2em;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 20vw;
-    height: 100vh;
-}
-
-.sideBar img{
-    margin: 10% 0;
-    width: 80px;
-}
-
-.sideBar h2{
-    font-size: 1.7em;
-}
-
-.sideBar a{
-    text-decoration: none;
-    color: white;
-}
-
-.sideBar nav ul li p{
-    color: #90C320;
-    margin-top: 50%;
-    font-size: 1em;
-}
-
-.sideBar nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-.sideBar > a:last-of-type{
-    text-decoration: none;
-    border-radius: 10px;
-    border: 0;
-    width: 60%;
-
-    margin-top: 20%;
-
-    color: white;
-    background-color: #90C320;
-    font-family: 'Poppins';
-    font-size: 1.1em;
-    border: 0;
+    grid-template-rows: 12vh;
 }
 
 #address{
     border-bottom: 1px solid #90C320;
 }
 
-/* Parte Principal (Nova Coleta) */
-main{
+.newAddress{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    position: absolute;
-    top: 0;
-    left: 20vw;
+    position: fixed;
+    left: 20vw; 
+    text-align: center;  
     width: 80vw;
-    height: 100vh;
+    height: 7vh;
+    top: 10vh;
+    background-color: white;
 }
 
-main .box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 80%;
-    box-shadow: 0 0 33px 10px #90C320;
-    border-radius: 20px;
-}
-
-main .box h2{
-    color: #90C320;
-    font-size: 1.5em;
-    padding-top: 5%;
-    padding-bottom: 3%;
-    text-align: center;
-}
-
-input[type="checkbox"]{
-    display: none;
+.newAddress a{
+    text-decoration: none;
+    background-color: #90C320;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 10px;
+    padding: 5px 15px;
 }
 
 .address{
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4%;
     padding: 1%;
     border: 1px solid #90C320;
+    border-radius: 20px;
     line-height: 1.2em;
 }
 
-.address:first-of-type{
-    margin-top: 0;
+.address:nth-child(2){
+    margin-top: 7%;
 }
 
 .address h3{
@@ -134,38 +53,4 @@ input[type="checkbox"]{
 
 .address strong{
     font-weight: bold;
-}
-
-.line{
-    margin: 2% 0;
-    color: #136A5A;
-    font-size: 1.1em;
-}
-
-.line button{
-    color: white;
-    background-color: #136A5A;
-    border: 0;
-    border-radius: 60%;
-}
-
-.box > button{
-    width: 200px;
-    padding: 1%;
-    color: white;
-    background-color: #90C320;
-    border: 0;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    margin: 2% 0;
-}
-
-label:hover , button:hover{
-    cursor: pointer;
-}
-
-input:checked + .address{
-    background-color: #e6e6e6;
-    border: 1px solid #136A5A;
 }

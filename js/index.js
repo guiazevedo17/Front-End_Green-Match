@@ -2,14 +2,6 @@ function logIn() {
     window.location = "customer.html";
 }
 
-function newCollect() {
-    window.location = "newCollect.html";
-}
-
-function chooseAddress() {
-    window.location = "customer/chooseAddress.html";
-}
-
 const popup = document.querySelector('.popup-wrapper')
 
 const buttonNewAccount = document.querySelector('.newAccount')
