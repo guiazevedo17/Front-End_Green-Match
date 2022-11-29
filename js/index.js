@@ -74,9 +74,9 @@ popup.addEventListener('click', event => {
 })
 
 // Integração com o BACK-END
-const registerCustomer = document.querySelector(".registerCustomer");
+const registerCustomer = document.querySelector(".registerClient");
 const registerScavenger = document.querySelector(".registerScavenger");
-
+const loginUser = document.querySelector(".loginUser");
 
 const Iname = document.querySelector(".name");
 const IlastName = document.querySelector(".lastName");
@@ -98,9 +98,11 @@ const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
 const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
 
-function register_customer() {
+const IusernameLogin = document.querySelector(".usernameLogin");
+const IpasswordLogin = document.querySelector(".passwordLogin");
 
-    fetch("http://localhost:8080/registerCustomer",
+function loginValidation() {
+    fetch("http://localhost:8080/api/auth/signin",
         {
             headers: {
                 'Accept': 'application/json',
@@ -108,12 +110,50 @@ function register_customer() {
             },
             method: "POST",
             body: JSON.stringify({
-                name: Iname.value + IlastName.value,
+            username: IusernameLogin.value,
+            password: IpasswordLogin.value
+            })
+        })
+        .then(function (res) { 
+            if(res.ok){
+                logIn();
+                clear_login();
+            }else {
+                window.alert("Usuario ou senha incorretos");
+                clear_login();
+            }
+         })
+        .then(function (res) { console.log(res) })
+        
+
+};
+
+function register_client() {
+
+    fetch("http://localhost:8080/api/auth/registerClient",
+        {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                /*name: Iname.value + IlastName.value,
                 username: IuserName.value,
                 phone: Iphone.value,
                 email: Iemail.value,
                 password: Ipassword.value,
-                birthday: IbirthDay.value
+                birthDate: IbirthDay.value,
+                gender: "masculino",
+                roles: ["user"]*/
+            "username": "jzanholo",
+            "password": "123456",
+            "email":"joaozanholo2002@gmail.com",
+            "name": "guilherme azevedo",
+            "phone": "11998946835",
+            "birthDate": "14/07/2002",
+            "gender": "masculino",
+            "roles": ["user"]
             })
         })
         .then(function (res) { console.log(res) })
@@ -123,7 +163,7 @@ function register_customer() {
 
 function register_scavenger() {
 
-    fetch("http://localhost:8080/registerScavenger",
+    fetch("http://localhost:8080/api/auth/registerScavenger",
         {
             headers: {
                 'Accept': 'application/json',
@@ -131,12 +171,17 @@ function register_scavenger() {
             },
             method: "POST",
             body: JSON.stringify({
-                name: InameScavenger.value + IlastNameScavenger.value,
-                username: IuserNameScavenger.value,
-                phone: IphoneScavenger.value,
-                email: IemailScavenger.value,
-                password: IpasswordScavenger.value,
-                birthday: IbirthDayScavenger.value
+                "username": "guiazeddd",
+            "password": "123456qwertyy",
+            "email":"guiazve@gmail.com",
+            "name": "guilherme azevedo",
+            "phone": "11998946835",
+            "birthDate": "14/07/2002",
+            "gender": "masculino",
+            "materials": ["PET","madeira","vidro","entuho","bateria"],
+            "dayWeek": ["segunda-feira", "terça-feira","quarta-feira","quinta-feira","sexta-feira"],
+            "dayPeriod": ["manha","tarde","noite"],
+            "roles": ["catador"]
             })
         })
         .then(function (res) { console.log(res) })
@@ -168,10 +213,14 @@ function clear_scavenger() {
     IbirthDayScavenger.value = "";
 };
 
+function clear_login() {
+    IusernameLogin.value = "";
+    IpasswordLogin.value = "";
+}
 registerCustomer.addEventListener('click', function (event) {
     event.preventDefault();
 
-    register_customer();
+    register_client();
     clear_customer();
 })
 
@@ -180,4 +229,9 @@ registerScavenger.addEventListener('click', function (event) {
 
     register_scavenger();
     clear_scavenger();
+})
+
+loginUser.addEventListener('click', function (event) {
+    event.preventDefault();
+    loginValidation();
 })
