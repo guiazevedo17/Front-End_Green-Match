@@ -9,6 +9,10 @@ html{
 section{
 	min-height: 100vh;
 	padding-top: 7vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* MENU - Barra de Navegação */
@@ -19,15 +23,20 @@ nav{
 	display: flex;
 	align-items: center;
 	color: #263238;
-	background-color: #E16A3D;
+	background-color: #136A5A;
 	position: fixed;
 }
 
+nav img{
+	width: 6vw;
+	margin-left: 1%;
+}
+
 nav h1{
-	margin-left: 2%;
+	margin-left: 1%;
 	font-size: min(80px, 12vw);
 	padding: 1% 0;
-	color: #263238;
+	color: #90C320;
 	text-transform: uppercase;
 }
 
@@ -36,7 +45,7 @@ nav ul{
 	margin-right: 3%;
 	display: flex;
 	list-style: none;
-	color: #263238;
+	color: #90C320;
 	gap: 2rem;
 	font-size: 20px;
 }
@@ -52,7 +61,7 @@ p{
 }
 
 nav a:hover{
-	color: white;
+	color: #90C320;
 	transition: 0.7s;
 	font-size: 1.5em;
 }
@@ -62,21 +71,67 @@ nav a:not(:hover){
 	transition: 0.7s;
 }
 
-/* INICIO */
-
-#inicio{
-	padding-top: 7vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* . */
+#inicio, #recycle{
+	flex-direction: row;
 }
 
-.textAside{
+#inicio .textAside{
+	order: 2;
+	text-align: center;
+	margin: 0 3%;
+}
+
+#inicio h1{
+	color: #90C320;
+	font-size: 2.5em;
+	width: 100%;
+	font-weight: bold;
+}
+
+#inicio h2{
+	padding: 1.5% 0;
+	color: #136A5A;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#inicio p{
+	font-size: 1.1em;
+	line-height: 1.3em;
+	color: #263238;
+}
+
+#inicio p a, #sobre p a{
+	text-decoration: none;
+	color: #90C320;
+	text-transform: uppercase;
+}
+
+#inicio .textAside p:last-of-type{
+	color: #136A5A;
+	width: 100%;
+	border-radius: 20px;
+	font-size: 1.22em;
+}
+
+#inicio img{
+	order: 1;
+	margin-left: 5%;
+}
+
+/* recycle */
+#recycle{
+	padding-top: 7vh;
+}
+
+.textAside2{
+	order: 1;
 	width: 45%;
 	display: inline-block;
 	text-align: center;
 	margin-right: 5%;
-	background-color: rgba(225, 106, 61, 0.28);
+	background-color: rgba(144, 195, 32, 0.28);
 	border-radius: 57% 40% 50% 40%;
 }
 
@@ -85,7 +140,11 @@ img{
 	max-width: 760px;
 }
 
-#inicio .textAside h1, #sobre h1, #contato h1{
+#recycle img{
+	order: 2;
+}
+
+#recycle .textAside2 h1, #sobre h1, #contato h1{
 	font-size: min(60px, 9vw);
 	font-weight: bold;
 	margin-bottom: 4%;
@@ -96,10 +155,6 @@ img{
 /* SOBRE */
 
 #sobre{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	text-align: center;
 }
 
@@ -108,30 +163,16 @@ img{
 	padding-bottom: 2%;
 }
 
-#sobre p a{
-	text-decoration: none;
-	color: #E16A3D;
-	text-transform: uppercase;
-}
-
 #sobre img{
 	width: 25%;
 	padding-bottom: 2%;
 }
 
 /* CONTATO */
-
-#contato{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;	
-}
-
 #contato .form{
 	width: 52vw;
 	padding: 3% 1.5%;
-	box-shadow: 0 0 9px #E16A3D;
+	box-shadow: 0 0 9px #90C320;
 	/*font-size: min(30px, 3.8vw);*/
 }
 
@@ -162,7 +203,7 @@ img{
 
 #contato .form .single-input input:focus,
 #contato .form .single-input input:valid{
-	border-bottom: 4px solid rgba(225, 106, 61, 0.4);
+	border-bottom: 4px solid #90C320;
 	
 }
 
@@ -170,14 +211,14 @@ img{
 #contato .form .single-input input:valid ~ label{ 
 	transform: translateY(-2.5em);	
 	font-size: max(14px ,1vw);
-	color: #E16A3D;
+	color: #90C320;
 }
 
 button {
 	margin: 0 auto;
 	font-family: inherit;
 	font-size: 20px;
-	background: #E16A3D;
+	background: #90C320;
 	color: white;
 	padding: 0.7em 1em;
 	padding-left: 0.9em;
@@ -231,7 +272,7 @@ button {
 /* Footer */
 
 footer p{
-	color: #E16A3D;
+	color: #136A5A;
 	text-align: center;
 	padding: 2vh 0;
 }
@@ -242,7 +283,7 @@ footer p{
 		padding-top: 16vh;
 	}
 	
-	#inicio{
+	#recycle{
 		padding-top: 20vh;
 		display: flex;
 		flex-direction: column;
