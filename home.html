@@ -29,21 +29,65 @@
 		</ul>
 	</nav>
 
+	<div class="popup-wrapper">
+
+		<div class="signup">
+
+			<button class="popup-close" onclick="closeSignUp()">x</button>
+
+			<div class="customer">
+
+				<h1>Cliente</h1>
+
+				<img src="assets/images/customer.png" width="" alt="">
+
+				<ul>
+					<li>benficio</li>
+					<li>benficio</li>
+					<li>benficio</li>
+				</ul>
+
+				<button>reciclar</button>
+
+			</div>
+
+			<div class="div"></div>
+
+			<div class="scavenger">
+
+				<h1>Catador</h1>
+
+				<img src="assets/images/scavenger.png" alt="">
+
+				<ul>
+					<li>benficio</li>
+					<li>benficio</li>
+					<li>benficio</li>
+				</ul>
+
+				<button>coletar</button>
+
+			</div>
+			
+		</div>
+
+	</div>
+
 	<main>
 		<section id="inicio">
 			<img src="assets/images/green_match.png" alt="">
 			<div class="textAside">
 				<h1>Tem material reciclavel em casa ?</h1>
-				<h2>Reciclar NUNCA foi tão simples</h2>
+				<h2>Reciclar agora ficou simples</h2>
 				<p>Sabe aquelas latinhas, garrafas e monte de papeis que ficam acumulando em casa e você nunca joga fora por não ter segurança de que serão reciclados, então, é neles que estamos de olho.</p>
-				<p>A Green Match garante a <a href="#recycle">reciclagem</a> pra você ligando você a um catador que trabalha especificamente com o tipo de material que deseja descartar e o melhor no momento que lhe convem.</p>
-				<p class="atention">Clique em ENTRAR, cadastre-se e contribua com a reciclagem!</p>
+				<p>A Green Match garante a <a href="#recycle">reciclagem</a> pra você ligando você a um catador que trabalha especificamente com o tipo de material que deseja descartar e o melhor no momento de sua preferência.</p>
+				<button class="signup" onclick="openSignUp()">Cadastre-se e contribua com a RECICLAGEM</button>
 			</div>
 		</section>
 
 		<section id="recycle">	
 			
-			<div class="textAside2">
+			<div class="textAside">
 				
 				<h1>Reciclagem</h1>
 				<p>A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a produção de lixo, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas.</p>
@@ -60,7 +104,12 @@
 
 			<img src="assets/images/office.png" alt="">
 
-			<p>Fundada em 2022 a partir de um projeto acadêmico a/o "NOME" é constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a ideia de aplicar a Sustentabilidade no dia a dia das pessoas por meio da <a href="#recycle">reciclagem</a>, que apesar de muito comentada é pouco executada. Por conta disso dispertou nosso interesse em fazer a diferença e exercitar diariamente isto que deve-se tornar hábito na vida de todos.</p>
+			<div class="text">
+				
+				<p>Fundada em 2022 a partir de um projeto acadêmico a Green Match é constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a ideia de aplicar a Sustentabilidade no dia a dia das pessoas por meio da <a href="#recycle">reciclagem</a>, que apesar de muito comentada é pouco executada. Por conta disso dispertou nosso interesse em fazer a diferença e exercitar diariamente isto que deve-se tornar hábito na vida de todos.</p>
+
+			</div>
+
 	
 		</section>
 	
@@ -101,12 +150,14 @@
 			</div>
 	
 		</section>
+
 	</main>
 
 	<footer>
 		<p>&#169; Todos os direitos reservados</p>
 	</footer>
 
+	<script type="text/javascript" src="js/home.js"></script>
 </body>
 
 </html>
