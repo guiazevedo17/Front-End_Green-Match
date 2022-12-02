@@ -1,163 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/home.css" />
 
-	<title>Green Match</title>
-</head>
+    <title>Green Match</title>
+  </head>
 
-<body>
-	<nav>
-		<img src="assets/images/arvore.png" alt="">
-		<h1>green match</h1>
+  <body>
+    <nav>
+      <img src="assets/images/arvore.png" alt="" />
+      <h1>green match</h1>
 
-		<ul>
-			<li><a href="#inicio">Início</a></li>
-			<li><a href="#sobre">Sobre Nós</a></li>
-			<li><a href="#contato">Contato</a></li>
-			<li><a href="login.html">Entrar</a></li>
-		</ul>
-	</nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="login.html">Entrar</a></li>
+      </ul>
+    </nav>
 
-	<div class="popup-wrapper">
+    <div class="popup-wrapper">
+      	<div class="signup">
+        	<div class="popup-content">
+          	<button class="popup-close">x</button>
 
-		<div class="signup">
+          	<div class="customer">
+            	<h1>Cliente</h1>
 
-			<button class="popup-close" onclick="closeSignUp()">x</button>
+            	<img src="assets/images/customer.png" width="" alt="" />
 
-			<div class="customer">
+            	<ul>
+              	<li>Possui material reciclavel acumulado</li>
+              	<li>benficio</li>
+              	<li>benficio</li>
+            	</ul>
 
-				<h1>Cliente</h1>
+            	<button onclick="openSignUpCustomer()">reciclar</button>
+          	</div>
 
-				<img src="assets/images/customer.png" width="" alt="">
+          	<div class="div"></div>
 
-				<ul>
-					<li>benficio</li>
-					<li>benficio</li>
-					<li>benficio</li>
-				</ul>
+          	<div class="scavenger">
+            	<h1>Coletor</h1>
 
-				<button>reciclar</button>
+            	<img src="assets/images/scavenger.png" alt="" />
 
-			</div>
+            	<ul>
+              	<li>Possibilidade de renda extra</li>
+              	<li>benficio</li>
+              	<li>benficio</li>
+            	</ul>
 
-			<div class="div"></div>
+            	<button onclick="openSignUpScavenger()">coletar</button>
+          	</div>
+        </div>
+      </div>
 
-			<div class="scavenger">
+      	<div class="signupCustomer">
+        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
 
-				<h1>Catador</h1>
+        	<button class="popup-close">x</button>
 
-				<img src="assets/images/scavenger.png" alt="">
+        	<div class="popup-content">
+				<h1>Nova Conta - CLIENTE</h1>
+						
+						<form>
+							<div class="background">
 
-				<ul>
-					<li>benficio</li>
-					<li>benficio</li>
-					<li>benficio</li>
-				</ul>
-
-				<button>coletar</button>
-
-			</div>
+								<div class="table">
+									
+									<label for="">Nome</label>
+									<input type="text" name="" id="name" class="name">
+									<label for="">Sobrenome</label>
+									<input type="text" name="" id="" class="lastName">
 			
-		</div>
-
-	</div>
-
-	<main>
-		<section id="inicio">
-			<img src="assets/images/green_match.png" alt="">
-			<div class="textAside">
-				<h1>Tem material reciclavel em casa ?</h1>
-				<h2>Reciclar agora ficou simples</h2>
-				<p>Sabe aquelas latinhas, garrafas e monte de papeis que ficam acumulando em casa e você nunca joga fora por não ter segurança de que serão reciclados, então, é neles que estamos de olho.</p>
-				<p>A Green Match garante a <a href="#recycle">reciclagem</a> pra você ligando você a um catador que trabalha especificamente com o tipo de material que deseja descartar e o melhor no momento de sua preferência.</p>
-				<button class="signup" onclick="openSignUp()">Cadastre-se e contribua com a RECICLAGEM</button>
-			</div>
-		</section>
-
-		<section id="recycle">	
+									<label for="">Nome de usuário</label>
+									<input type="text" name="" id="" class="userName">
 			
-			<div class="textAside">
-				
-				<h1>Reciclagem</h1>
-				<p>A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a produção de lixo, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas.</p>
-			</div>
+									<label for="">Telefone</label>
+									<input type="tel" name="" id="" class="phone">
 			
-			<img src="assets/images/recycling.png" alt="">
-	
-		</section>
-	
+									<label for="">E-mail</label>
+									<input type="email" name="" id="" class="email">
+									<label for="">Confirmação de E-mail</label>
+									<input type="email" name="" id="" class="emailConf">
+			
+									<label for="">Senha</label>
+									<input type="password" name="" id="" class="password">
+									<label for="">Confirmação de Senha</label>
+									<input type="password" name="" id="" class="passwordConf">
+
+								</div>
+
+								<div class="bot">
+									
+									<label for="">Data de Nascimento</label>
+									<input type="date" name="" id="" class="birthDay">
+			
+									<label for="">Gênero</label>
+									<div class="gender">
+			
+										<input type="radio" name="gen" id="male"><label for="male">Masculino</label>
+										<input type="radio" name="gen" id="female"><label for="female">Femenino</label>
+										<input type="radio" name="gen" id="other"><label for="other">Outro</label>
+			
+									</div>
+
+								</div>
+								
 		
-		<section id="sobre">
+
+							</div>
 	
-			<h1>Sobre Nós</h1> 
+							<button class="registerClient">cadastrar</button>
 
-			<img src="assets/images/office.png" alt="">
+						</form>
+        	</div>
+      	</div>
 
-			<div class="text">
-				
-				<p>Fundada em 2022 a partir de um projeto acadêmico a Green Match é constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a ideia de aplicar a Sustentabilidade no dia a dia das pessoas por meio da <a href="#recycle">reciclagem</a>, que apesar de muito comentada é pouco executada. Por conta disso dispertou nosso interesse em fazer a diferença e exercitar diariamente isto que deve-se tornar hábito na vida de todos.</p>
+      	<div class="signupScavenger">
+        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
 
-			</div>
+        	<button class="popup-close">x</button>
 
-	
-		</section>
-	
-		
-		<section id="contato">
-	
-			<h1>Contato</h1>
+        	<div class="popup-content">
+         		<h1>Cadastro Coletor</h1>
+        	</div>
+      	</div>
+	  </div>
+    </div>
 
-			<div class="form">
+    <main>
+      <section id="inicio">
+        <img src="assets/images/green_match.png" alt="" />
+        <div class="textAside">
+          <h1>Tem material reciclavel em casa ?</h1>
+          <h2>Reciclar agora ficou simples</h2>
+          <p>
+            Sabe aquelas latinhas, garrafas e monte de papeis que ficam
+            acumulando em casa e você nunca joga fora por não ter segurança de
+            que serão reciclados, então, é neles que estamos de olho.
+          </p>
+          <p>
+            A Green Match garante a <a href="#recycle">reciclagem</a> pra você
+            ligando você a um catador que trabalha especificamente com o tipo de
+            material que deseja descartar e o melhor no momento de sua
+            preferência.
+          </p>
+          <button class="signup" onclick="openSignUp()">
+            Cadastre-se e contribua com a RECICLAGEM
+          </button>
+        </div>
+      </section>
 
-				<div class="single-input">
-					<input type="text" name="" id="nome" required>
-					<label for="nome">Nome</label>
-				</div>
+      <section id="recycle">
+        <div class="textAside">
+          <h1>Reciclagem</h1>
+          <p>
+            A reciclagem é o processo de reaproveitamento de materiais
+            descartados. Seu objetivo é reintroduzi-los na cadeia produtiva a
+            fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a
+            produção de lixo, aumentando a preservação dos recursos naturais e
+            melhorando a qualidade de vida das pessoas.
+          </p>
+        </div>
 
-				<div class="single-input">
-					<input type="email" name="" id="mail" required>
-					<label for="mail">E-mail</label>
-				</div>
+        <img src="assets/images/recycling.png" alt="" />
+      </section>
 
-				<div class="single-input">
-					<input type="text" name="" id="mensagem" required>
-					<label for="mensagem">Mensagem</label>
-				</div>
+      <section id="sobre">
+        <h1>Sobre Nós</h1>
 
-				<button>
-					<div class="svg-wrapper-1">
-					  <div class="svg-wrapper">
-						<svg viewBox="0 0 24 24" width="24" height="24">
-						  <path fill="none" d="M0 0h24v24H0z"></path>
-						  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-						</svg>
-					  </div>
-					</div>
-					<span>Enviar</span>
-				  </button>
+        <img src="assets/images/office.png" alt="" />
 
-			</div>
-	
-		</section>
+        <div class="text">
+          <p>
+            Fundada em 2022 a partir de um projeto acadêmico a Green Match é
+            constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a
+            ideia de aplicar a Sustentabilidade no dia a dia das pessoas por
+            meio da <a href="#recycle">reciclagem</a>, que apesar de muito
+            comentada é pouco executada. Por conta disso dispertou nosso
+            interesse em fazer a diferença e exercitar diariamente isto que
+            deve-se tornar hábito na vida de todos.
+          </p>
+        </div>
+      </section>
 
-	</main>
+      <section id="contato">
+        <h1>Contato</h1>
 
-	<footer>
-		<p>&#169; Todos os direitos reservados</p>
-	</footer>
+        <div class="form">
+          <div class="single-input">
+            <input type="text" name="" id="nome" required />
+            <label for="nome">Nome</label>
+          </div>
 
-	<script type="text/javascript" src="js/home.js"></script>
-</body>
+          <div class="single-input">
+            <input type="email" name="" id="mail" required />
+            <label for="mail">E-mail</label>
+          </div>
 
+          <div class="single-input">
+            <input type="text" name="" id="mensagem" required />
+            <label for="mensagem">Mensagem</label>
+          </div>
+
+          <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>Enviar</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&#169; Todos os direitos reservados</p>
+    </footer>
+
+    <script type="text/javascript" src="js/home.js"></script>
+  </body>
 </html>

@@ -105,11 +105,11 @@ nav a:not(:hover) {
 }
 
 #inicio .textAside p:nth-last-of-type(1) {
-	margin-top: 0;
-	margin-bottom: 4%;
-  }
+  margin-top: 0;
+  margin-bottom: 4%;
+}
 
-#inicio p a{
+#inicio p a {
   text-decoration: none;
   color: #90c320;
   text-transform: uppercase;
@@ -120,9 +120,9 @@ nav a:not(:hover) {
   margin-left: 5%;
 }
 
-#inicio button{
-	background-color: #136a5a;
-	font-size: 1.6em;
+#inicio button {
+  background-color: #136a5a;
+  font-size: 1.6em;
 }
 
 /* recycle */
@@ -175,21 +175,21 @@ img {
   padding-bottom: 2%;
 }
 
-#sobre .text{
-	background-color: rgba(144, 195, 32, 0.28);
-	width: 70%;
-	border-radius: 20% 60% 30% 70%;
+#sobre .text {
+  background-color: rgba(144, 195, 32, 0.28);
+  width: 70%;
+  border-radius: 20% 60% 30% 70%;
 }
 
-#sobre .text p{
-	width: 80%;
+#sobre .text p {
+  width: 80%;
 }
 
-#sobre .text p a{
-	text-decoration: none;
-	color: #093f35;
-	text-transform: uppercase;
-	font-weight: bold;
+#sobre .text p a {
+  text-decoration: none;
+  color: #093f35;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* CONTATO */
@@ -301,7 +301,7 @@ footer p {
 }
 
 .popup-wrapper {
-  display: flex;
+  display: flex; /* mudar depois */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -319,23 +319,19 @@ footer p {
   height: 50vw;
   border-radius: 30px;
   box-shadow: 0 0 25px 15px black;
+  display: none;
+}
+
+.popup-wrapper .signup .popup-content {
+  width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.popup-wrapper .popup-close{
-	position: absolute;
-	top: 12%;
-	right: 10.5%;
-	color: #136a5a;
-	background-color: white;
-	width: 1%;
-	height: 1%;
-}
-
-.signup .customer,
-.signup .scavenger {
+.signup .popup-content .customer,
+.signup .popup-content .scavenger {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,53 +340,163 @@ footer p {
   height: 100%;
 }
 
-.signup .customer {
+.signup .popup-content .customer {
   border-radius: 30px 0 0 30px;
 }
 
-.signup .scavenger {
+.signup .popup-content .scavenger {
   border-radius: 0 30px 30px 0;
 }
 
-.customer h1,  .scavenger h1{
-	color: #90c320;
-	font-size: 2.5em;
-	padding-top: 5%;
+.customer h1,
+.scavenger h1 {
+  color: #90c320;
+  font-size: 2.5em;
+  padding-top: 5%;
 }
 
-.customer img,  .scavenger img{
-	width: 77%;
-	position: relative;
+.customer img,
+.scavenger img {
+  width: 77%;
+  position: relative;
 }
 
-.customer img{
-	right: 28%;
+.customer img {
+  right: 28%;
 }
 
-.scavenger img{
-	left: 20%;
+.scavenger img {
+  left: 20%;
 }
 
-.customer ul,  .scavenger ul{
-	list-style-type: disc;
-	margin-bottom: 3%;
-	line-height: 1.3em;
-	font-size: 1.1em;
-	color: grey;
+.customer ul,
+.scavenger ul {
+  list-style-type: disc;
+  margin-bottom: 3%;
+  line-height: 1.3em;
+  font-size: 1.1em;
+  color: grey;
 }
 
-.customer button,  .scavenger button{
-	background-color: #136a5a;
-	margin: 3% 0 5% 0;
-	padding: 6% 10%;
-	font-size: 1.8em;
+.customer button,
+.scavenger button {
+  background-color: #136a5a;
+  margin: 3% 0 5% 0;
+  padding: 6% 10%;
+  font-size: 1.8em;
 }
-
 
 .signup .div {
   width: 0.3%;
   height: 90%;
   background-color: grey;
+}
+
+.popup-wrapper .signupCustomer,
+.popup-wrapper .signupScavenger {
+  display: none; /* mudar depois */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  width: 40vw;
+  height: 50vw;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 15px black;
+  color: #136a5a;
+}
+
+.popup-wrapper .signup .popup-close,
+.popup-wrapper .signupCustomer .popup-close,
+.popup-wrapper .signupScavenger .popup-close,
+.popup-wrapper .signupCustomer .returnSignup,
+.popup-wrapper .signupScavenger .returnSignup {
+  color: #136a5a;
+  position: absolute;
+  width: 2vw;
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+.popup-wrapper .signup .popup-close {
+  top: 5%;
+  left: 87%;
+}
+
+.popup-wrapper .signupCustomer .popup-close,
+.popup-wrapper .signupScavenger .popup-close {
+  top: 6%;
+  left: 67%;
+}
+
+.popup-wrapper .signupCustomer .returnSignup,
+.popup-wrapper .signupScavenger .returnSignup {
+  top: 6%;
+  right: 67%;
+}
+
+.popup-wrapper .signupCustomer .popup-content,
+.popup-wrapper .signupScavenger .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.popup-wrapper .signupCustomer .popup-content h1,
+.popup-wrapper .signupScavenger .popup-content h1 {
+  color: #90c320;
+  font-size: 2.2em;
+}
+
+.popup-wrapper .signupCustomer .popup-content form,
+.popup-wrapper .signupScavenger .popup-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background,
+.popup-wrapper .signupScavenger .popup-content form .background {
+  display: grid;
+  grid-template-areas: " table "
+                       " bot ";
+  width: 80%;
+  border-radius: 20px 260px 30px 360px;
+  background-color: rgba(144, 195, 32, 0.28);
+  margin: 10% 0;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .table,
+.popup-wrapper .signupScavenger .popup-content form .background .table{
+  grid-area: table;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 10% 10% 10%;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .bot,
+.popup-wrapper .signupScavenger .popup-content form .background .bot{
+  grid-area: bot;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.popup-wrapper .signupCustomer {
+  display: flex;
 }
 
 /* RESPONSIVIDADE */
