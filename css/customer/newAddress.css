@@ -1,46 +1,56 @@
-.registerAddress{
-    margin-top: 2%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.registerAddress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.registerAddress input{
-    border-radius: 10px;
-    border: 2px solid #136A5A;
-    margin-bottom: 3%;
-    font-size: 1em;
-    
+.registerAddress .background {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  column-gap: 5%;
+  margin: 7% 0;
+  padding: 3%;
+  border-radius: 20px 260px 30px 360px;
+  background-color: rgba(144, 195, 32, 0.28);
 }
 
-.registerAddress label{
-    color: #136A5A;
-    font-size: 1.5em;
-    margin-bottom: 2%;
+.registerAddress input {
+  border: 1.5px solid black;
+  border-radius: 4px;
+  margin-bottom: 4%;
+  font-size: 1em;
 }
 
-.registerAddress button{
-    border: 0;
-    border-radius: 20px;
-    background-color: #90C320;
-    color: white;
-    margin: 4% auto 0 auto;
-    font-size: 2em;
-    text-transform: uppercase;
-    padding: 1.5% 3%;
+.registerAddress label {
+  color: #136a5a;
+  font-size: 1.5em;
+  margin-bottom: 2%;
 }
 
-.registerAddress button:hover, .returnAddress:hover{
-    cursor: pointer;
+.registerAddress button {
+  border: 0;
+  border-radius: 20px;
+  background-color: #90c320;
+  color: white;
+  margin: 4% auto 0 auto;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 1.5% 3%;
 }
 
-.returnAddress{
-    border: 0;
-    background-color: white;
-    color: #136A5A;
-    font-size: 1.5em;
-    position: absolute;
-    top: 0;
-    left: 20vw;
+.registerAddress input:focus{
+    border: 2px solid #136a5a;
+}
+
+.returnAddress {
+  border: 0;
+  background-color: white;
+  color: #136a5a;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 20vw;
 }

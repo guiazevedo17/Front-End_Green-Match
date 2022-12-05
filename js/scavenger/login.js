@@ -6,7 +6,7 @@ const Iusername = document.querySelector(".username");
 const Ipassword = document.querySelector(".password");
 
 function login() {
-  fetch("http://localhost:8080/api/auth/signin", {
+  /*fetch("http://localhost:8080/api/auth/signin", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -23,18 +23,19 @@ function login() {
         /*
         IusernameLogin.value = "";
         IpasswordLogin.value = "";
-        */
+        
       } else {
         window.alert("Usuario ou senha incorretos");
         /*
         IusernameLogin.value = "";
         IpasswordLogin.value = "";
-        */
+        
       }
     })
     .then(function (res) {
       console.log(res);
-    });
+    });*/
+    window.location = "../../scavenger.html";
 }
 
 function openSignUp() {

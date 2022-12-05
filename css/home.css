@@ -599,7 +599,7 @@ a:active {
 }
 
 .checkbox-wrapper {
-  opacity: 0;
+  display: none;
 }
 
 .signinCliente,
@@ -616,7 +616,7 @@ a:active {
 }
 
 #signin:checked + .checkbox-wrapper {
-  opacity: 1;
+  display: block;
   transition-duration: 2s;
 }
 
@@ -635,7 +635,7 @@ a:active {
 }
 
 #signin:not(:checked) + .checkbox-wrapper {
-  opacity: 0;
+  display: none;
   transition-duration: 2s;
 }
 
