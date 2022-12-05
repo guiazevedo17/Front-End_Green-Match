@@ -27,46 +27,50 @@
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre Nós</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a href="login.html">Entrar</a></li>
+        <li><input type="checkbox" id="signin"><div class="checkbox-wrapper">
+          <a href="customer/login.html" class="signinCliente">Cliente</a>
+		      <a href="scavengers/login.html" class="signinColetor">Coletor</a>
+        </div><label for="signin"><a class="signin">Entrar</a></label></li>
       </ul>
     </nav>
 
     <div class="popup-wrapper">
       	<div class="signup">
-        	<div class="popup-content">
           	<button class="popup-close">x</button>
+        	
+			      <div class="popup-content">
 
-          	<div class="customer">
-            	<h1>Cliente</h1>
+          	  <div class="customer">
+            	  <h1>Cliente</h1>
 
-            	<img src="assets/images/customer.png" width="" alt="" />
+            	  <img src="assets/images/customer.png" width="" alt="" />
 
-            	<ul>
-              	<li>Possui material reciclavel acumulado</li>
-              	<li>benficio</li>
-              	<li>benficio</li>
-            	</ul>
+            	  <ul>
+              	  <li>Possui material reciclavel acumulado</li>
+              	  <li>benficio</li>
+              	  <li>benficio</li>
+            	  </ul>
 
-            	<button onclick="openSignUpCustomer()">reciclar</button>
-          	</div>
+            	  <button onclick="openSignUpCustomer()">reciclar</button>
+          	  </div>
 
-          	<div class="div"></div>
+          	  <div class="div"></div>
 
-          	<div class="scavenger">
-            	<h1>Coletor</h1>
+          	  <div class="scavenger">
+            	  <h1>Coletor</h1>
 
-            	<img src="assets/images/scavenger.png" alt="" />
+            	  <img src="assets/images/scavenger.png" alt="" />
 
-            	<ul>
-              	<li>Possibilidade de renda extra</li>
-              	<li>benficio</li>
-              	<li>benficio</li>
-            	</ul>
+            	  <ul>
+              	  <li>Possibilidade de renda extra</li>
+              	  <li>benficio</li>
+              	  <li>benficio</li>
+            	  </ul>
 
-            	<button onclick="openSignUpScavenger()">coletar</button>
-          	</div>
-        </div>
-      </div>
+            	  <button onclick="openSignUpScavenger()">coletar</button>
+          	  </div>
+            </div>
+          </div>
 
       	<div class="signupCustomer">
         	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
@@ -74,33 +78,90 @@
         	<button class="popup-close">x</button>
 
         	<div class="popup-content">
-				<h1>Nova Conta - CLIENTE</h1>
+				    <h1>Nova Conta - CLIENTE</h1>
 						
 						<form>
 							<div class="background">
 
 								<div class="table">
 									
-									<label for="">Nome</label>
+									<label for="name">Nome</label>
+									<label for="lastName">Sobrenome</label>
 									<input type="text" name="" id="name" class="name">
-									<label for="">Sobrenome</label>
-									<input type="text" name="" id="" class="lastName">
+									<input type="text" name="" id="lastName" class="lastName">
 			
-									<label for="">Nome de usuário</label>
-									<input type="text" name="" id="" class="userName">
+									<label for="userName">Nome de usuário</label>
+									<label for="phone">Telefone</label>
+									<input type="text" name="" id="userName" class="userName">
+									<input type="tel" name="" id="phone" class="phone">
 			
-									<label for="">Telefone</label>
-									<input type="tel" name="" id="" class="phone">
+									<label for="email">E-mail</label>
+									<label for="emailConf">Confirmação E-mail</label>
+									<input type="email" name="" id="email" class="email">
+									<input type="email" name="" id="emailConf" class="emailConf">
 			
-									<label for="">E-mail</label>
-									<input type="email" name="" id="" class="email">
-									<label for="">Confirmação de E-mail</label>
-									<input type="email" name="" id="" class="emailConf">
+									<label for="password">Senha</label>
+									<label for="passwordConf">Confirmação Senha</label>
+									<input type="password" name="" id="password" class="password">
+									<input type="password" name="" id="passwordConf" class="passwordConf">
+
+								</div>
+
+								<div class="bot">
+									
+									<label for="">Data de Nascimento</label>
+									<input type="date" name="" id="" class="birthDay">
 			
-									<label for="">Senha</label>
-									<input type="password" name="" id="" class="password">
-									<label for="">Confirmação de Senha</label>
-									<input type="password" name="" id="" class="passwordConf">
+									<label for="">Gênero</label>
+									<div class="gender">
+			
+										<input type="radio" name="gen" id="male"><label for="male">Masculino</label>
+										<input type="radio" name="gen" id="female"><label for="female">Femenino</label>
+										<input type="radio" name="gen" id="other"><label for="other">Outro</label>
+			
+									</div>
+
+								</div>		
+
+							</div>
+	
+							<button onclick="signup_customer()">cadastrar</button>
+
+						</form>
+        	</div>
+      	</div>
+
+      	<div class="signupScavenger">
+        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
+
+        	<button class="popup-close">x</button>
+
+        	<div class="popup-content">
+         		<h1>Nova Conta - COLETOR</h1>
+
+							<div class="background">
+
+								<div class="table">
+									
+									<label for="name">Nome</label>
+									<label for="lastName">Sobrenome</label>
+									<input type="text" name="" id="name" class="name">
+									<input type="text" name="" id="lastName" class="lastName">
+			
+									<label for="userName">Nome de usuário</label>
+									<label for="phone">Telefone</label>
+									<input type="text" name="" id="userName" class="userName">
+									<input type="tel" name="" id="phone" class="phone">
+			
+									<label for="email">E-mail</label>
+									<label for="emailConf">Confirmação E-mail</label>
+									<input type="email" name="" id="email" class="email">
+									<input type="email" name="" id="emailConf" class="emailConf">
+			
+									<label for="password">Senha</label>
+									<label for="passwordConf">Confirmação Senha</label>
+									<input type="password" name="" id="password" class="password">
+									<input type="password" name="" id="passwordConf" class="passwordConf">
 
 								</div>
 
@@ -119,27 +180,76 @@
 									</div>
 
 								</div>
-								
-		
-
+					
 							</div>
 	
-							<button class="registerClient">cadastrar</button>
+							<button class="registerClient" onclick="continueSignUpScavenger()">continuar</button>
 
-						</form>
         	</div>
       	</div>
 
-      	<div class="signupScavenger">
-        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
+        <div class="signupScavenger2">
+        	<button class="returnSignupScavenger" onclick="returnSignUpScavenger()">&#8592;</button>
 
         	<button class="popup-close">x</button>
 
         	<div class="popup-content">
-         		<h1>Cadastro Coletor</h1>
+         		<h1>Nova Conta - COLETOR</h1>
+
+            <form action="">
+
+              <div class="background">
+                
+                <select name="" id="">
+                  <option value="">Selecione o tipo de catador</option>
+                  <option value="">Independente</option>
+                  <option value="">Cooperativa</option>
+                </select>
+    
+                <h2>Quais materiais deseja coletar?</h2>
+                <ul class="materiais">
+                  <li><input type="checkbox" id="papel"><label for="papel">Papel</label></li>
+                  <li><input type="checkbox" id="plastico"><label for="plastico">Plastico</label></li>
+                  <li><input type="checkbox" id="metal"><label for="metal">Metal</label></li>
+                  <li><input type="checkbox" id="vidro"><label for="vidro">Vidro</label></li>
+                  <li><input type="checkbox" id="entulho"><label for="entulho">Entulho</label></li>
+                  <li><input type="checkbox" id="eletronico"><label for="eletronico">Eletrônico</label></li>
+                  <li><input type="checkbox" id="moveis"><label for="moveis">Móveis</label></li>
+                  <li><input type="checkbox" id="outros"><label for="outros">Outros</label></li>
+                </ul>
+    
+    
+                <h2>Qual melhor dia para realizar a coleta?</h2>
+                <ul class="dias">
+                  <li><input type="radio" id="segunda" name="dia"><label for="segunda">Segunda-Feira</label>
+                  </li>
+                  <li><input type="radio" id="terca" name="dia"><label for="terca">Terça-Feira</label></li>
+                  <li><input type="radio" id="quarta" name="dia"><label for="quarta">Quarta-Feira</label></li>
+                  <li><input type="radio" id="quinta" name="dia"><label for="quinta">Quinta-Feira</label></li>
+                  <li><input type="radio" id="sexta" name="dia"><label for="sexta">Sexta-Feira</label></li>
+                  <li><input type="radio" id="sabado" name="dia"><label for="sabado">Sábado</label></li>
+                  <li><input type="radio" id="domingo" name="dia"><label for="domingo">Domingo</label></li>
+                  <li><input type="radio" id="feriado" name="dia"><label for="feriado">Feriados</label></li>
+                </ul>
+    
+                <h2>Qual período mais adequado?</h2>
+                <ul class="periodo">
+                  <li><input type="radio" id="manha" name="periodo"><label for="manha">Manhã</label></li>
+                  <li><input type="radio" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
+                  <li><input type="radio" id="noite" name="periodo"><label for="noite">Noite</label></li>
+                </ul>
+
+              </div>
+             
+ 
+             <button onclick="signup_scavenger()">cadastrar</button>
+             
+           </form> 
+
+
         	</div>
       	</div>
-	  </div>
+	    </div>
     </div>
 
     <main>

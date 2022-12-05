@@ -1,323 +1,341 @@
-body{
-	height: 100%;
-	font-family: 'Poppins';
-	overflow: hidden;
+body {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-main{
-	width: 70vw;
-	height: 60vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	margin: auto;
-	padding: 20vh 0;
+.popup-wrapper {
+  display: none;
 }
 
-/* Partes (Lados) - Esquerda e Direita */
-.part{
-	width: 50%;
-	height: 60vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	box-shadow: 20px 20px 100px 10px #171717;
-	box-sizing: content-box;
+main {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 75vw;
+  height: 65vh;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 20px grey;
 }
 
-/* Lado Esquerdo - Apresentação */
-#leftSide{
-	border-radius: 6% 0 0 6%;
-	background-color: #1c5407;
+main .leftSide,
+main .rightSide {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#leftSide h1{
-	text-align: left;
-	text-transform: uppercase;
-
-	font-size: min(50px, 6vw);
-	color: #90C336;
-
-	padding: 5%;
-	margin-bottom: 3%;
+.leftSide {
+  border-radius: 30px 0 0 30px;
+  background-color: #136a5a;
+  color: #90c320;
+  font-weight: 500;
 }
 
-#leftSide img{
-	width: 55%;
-	margin: 0 auto;
+.leftSide h1 {
+  font-size: 3em;
 }
 
-/* Lado Direito - LOGIN */
-#rightSide{
-	border-radius: 0 6% 6% 0;
-	background-color: #edebe4;
+#customerLeft img{
+  width: 90%;
+  margin-right: 60%;
 }
 
-#rightSide h1{
-	text-align: left;
-
-	font-size: min(50px, 6vw);
-
-	padding: 5%;
+#scavengerLeft img{
+  width: 90%;
+  margin-left: 45%;
 }
 
-#rightSide .form{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-
-	width: 70%;
-	
-	margin: 0 auto;
-	line-height: 1.5;
-	padding-bottom: 3%;
+.leftSide h2 {
+  font-size: 2em;
 }
 
-#rightSide .form label{
-	font-size: min(30px, 4vw);
-	margin-left: 1%;
+.rightSide {
+  border-radius: 0 30px 30px 0;
+  background-color: rgb(245, 245, 245);
 }
 
-#rightSide .form input[type="text"], #rightSide .form input[type="password"]{
-	width: 100%;
-	height: 3vh;
-
-	border: 1px solid black;
-	border-radius: 50px;
-
-	margin-bottom: 3%;
+.rightSide .content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
-#rightSide .form .helpLine{
-	width: 90%;
-	margin: 0 auto;
-	margin-left: 5%;
+.rightSide .content h1 {
+  font-size: 3em;
+  margin: 10% 0;
 }
 
-#rightSide .form .helpLine label{
-	width: 40%;
-	font-size: 14px;
-	margin-left: -5%;
-	margin-right: 11.5%;
+.rightSide .content label {
+  color: #136a5a;
+  margin: 5% 0;
+  font-size: 1.3em;
 }
 
-#rightSide .form .helpLine a{
-	width: 40%;
-	font-size: 14px;
-	text-decoration: none;
-	color: black;
+.rightSide .content label:first-of-type {
+  margin-top: 0;
 }
 
-#rightSide .form button{
-	margin: 3% auto;
-
-	width: 60%;
-
-	padding: 3%;
-	border: 0;
-	border-radius: 6em;
-
-	color: white;
-	background-color: #1c5407;
-
-	font-size: 20px;
+button {
+  margin: 7% auto;
+  font-size: 20px;
+  background: #136a5a;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#rightSide .form .div{
-	width: 100%;
-	height: 2.2px;
-	margin: 2% 0;
-	background-color: grey;
+button:active {
+  transform: scale(0.95);
 }
 
-#rightSide .form p{
-	margin: 0 auto;
-	color: #1c5407;
+.rightSide .content .div {
+  width: 130%;
+  height: 0.5%;
+  margin-left: -15%;
+  margin-bottom: 6%;
+  background-color: grey;
 }
 
-#rightSide .form button:hover{
-	cursor: pointer;
+.rightSide .content p {
+  color: #90c320;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1em;
 }
 
-/* POPUP Criar Conta */
-.popup-wrapper{
-	display: block;
-	background: rgba(0,0,0, 0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-/* Padrão Início dos Popup's */
-.contas, .cliente, .catador, .catador2{
-	display: none;
-	text-align: center;
-	width: 100%;
-	padding: 20px;
-	background-color: white;
-	position: relative;
-	border-radius: 5%;
-	box-shadow: 0px 0px 40px 10px black;
-}
-
-/* CONTAS */
-.contas{
-	display: flex;
-	flex-direction: column;
-	max-width: 15vw;
-	margin: 23.5% auto;
-}
-
-.contas button{
-	background-color: #1c5407;
-	color: white;
-	width: 70%;
-	padding: 2%;
-	text-transform: uppercase;
-	font-size: 1.5em;
-	border: 0;
-	border-radius: 10px;
-	margin: 5% 0;
-	cursor: pointer;
-}
-
-/* CLIENTE | CATADOR*/
-.cliente, .catador, .catador2{
-	margin: 3vh auto;
-	max-width: 35vw;
-}
-
-.cliente .popup-content form, .catador .popup-content .formCatador{
-	display: flex;
-	flex-direction: column;
-	text-align: left;
-	width: 80%;
-	margin: 0 auto;
-}
-
-#rightSide .popup-wrapper .cliente .popup-content h1{
-	width: 100%;
-	color: #1c5407;
-	font-size: 2.3em;
-	margin: 0 auto;
-	padding: 4% 0;
-}
-
-#rightSide .popup-wrapper .catador .popup-content h1{
-	width: 109%;
-	color: #1c5407;
-	font-size: 2.3em;
-	margin: 0 auto;
-	padding: 4% 0;
-	margin-left: -4%;
-}
-
-.cliente .popup-content form label, .catador .popup-content .formCatador label{
-	padding: 1% 0;
-	font-size: 1.2em;
-}
-
-.cliente .popup-content form label:nth-of-type(3), .cliente .popup-content form label:nth-of-type(4), .cliente .popup-content form label:nth-of-type(5), .cliente .popup-content form label:nth-of-type(7), .cliente .popup-content form label:nth-of-type(9), .cliente .popup-content form label:nth-of-type(10), .catador .popup-content .formCatador label:nth-of-type(3), .catador .popup-content .formCatador label:nth-of-type(4), .catador .popup-content .formCatador label:nth-of-type(5), .catador .popup-content .formCatador label:nth-of-type(7), .catador .popup-content .formCatador label:nth-of-type(9), .catador .popup-content .formCatador label:nth-of-type(10){
-	margin-top: 3%;
-}
-
-.cliente .popup-content form label:nth-of-type(10), .catador .popup-content .formCatador label:nth-of-type(10){
-	padding: 10px 0;
-	text-align: center;
-}
-
-.cliente .popup-content form input:not(input[type="radio"]), .catador .popup-content .formCatador input:not(input[type="radio"]){
-	border: 1px solid #888888;
-	border-radius: 10px;
-}
-
-.gender{
-	text-align: center;
-	font-size: 0.8em;
-}
-
-.cliente .popup-content form button, .catador .popup-content .formCatador button, .catador2 .popup-content form button{
-	cursor: pointer;
-	background-color: #1c5407;
-	color: white;
-	width: 45%;
-	border: 0;
-	border-radius: 10px;
-	text-transform: uppercase;
-	font-size: 1.5em;
-	padding: 2%;
-	margin: 0 auto;
-	margin-top: 5%;
-}
-
-/* x para fechar os Popup's */
-.popup-close{
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	cursor: pointer;
-}
-
-/* <- para retornar para o Popup de contas */
-.popup-return, .popup-return-catador2{
-	position: absolute;
-	top: 10px;
-	left: 15px;
-	cursor: pointer;
-}
-
-/* CATADOR2 - Segunda Tela criação de conta Catador */
-.catador2{
-	margin: 13vh auto;
-}
-
-.catador2 h2, .catador2 .popup-content form label:first-child{
-	width: 100%;
-    color: #1c5407;
-    font-size: 1.5em;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
-
-.catador2 .popup-content form label:first-child{
-	display: block;
-}
-
-.catador2 ul.materiais, .catador2 ul.dias{
-    width: 62%;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-	text-align: left;
-	margin: 0 auto;
-}
-
-.catador2 ul.periodo{
-    width: 60%;
-    display: flex;
+.popup-wrapper {
+    display: none; /* mudar depois */
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-	margin: 0 auto;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.popup-wrapper .signupCustomer,
+.popup-wrapper .signupScavenger,
+.popup-wrapper .signupScavenger2 {
+  display: none; /* mudar depois */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  width: 40vw;
+  height: 50vw;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 15px black;
+  color: #136a5a;
 }
 
-.catador2 ul.periodo li{
-    padding-right:2%;
-	margin: 0 auto;
+.popup-wrapper .signup .popup-close,
+.popup-wrapper .signupCustomer .popup-close,
+.popup-wrapper .signupScavenger .popup-close,
+.popup-wrapper .signupScavenger2 .popup-close,
+.popup-wrapper .signupCustomer .returnSignup,
+.popup-wrapper .signupScavenger .returnSignup,
+.popup-wrapper .signupScavenger2 .returnSignupScavenger {
+  color: #136a5a;
+  position: relative;
+  width: 2vw;
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
-.catador2 .popup-content form select{
-	font-family: 'Poppins';
-	width: 50%;
-	background-color: #1c5407;
-	color: white;
-	height: 2em;
-	font-size: 1em;
-	border: 0;
-	border-radius: 10px;
-	text-align: center;
+.popup-wrapper .signupCustomer .popup-close,
+.popup-wrapper .signupScavenger .popup-close,
+.popup-wrapper .signupScavenger2 .popup-close {
+  bottom: 0.5%;
+  left: 45.5%;
+}
+
+.popup-wrapper .signupCustomer .returnSignup,
+.popup-wrapper .signupScavenger .returnSignup,
+.popup-wrapper .signupScavenger2 .returnSignupScavenger {
+  top: 14.6%;
+  right: 45.5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content,
+.popup-wrapper .signupScavenger .popup-content,
+.popup-wrapper .signupScavenger2 .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.popup-wrapper .signupCustomer .popup-content h1,
+.popup-wrapper .signupScavenger .popup-content h1,
+.popup-wrapper .signupScavenger2 .popup-content h1 {
+  color: #90c320;
+  font-size: 2.2em;
+}
+
+.popup-wrapper .signupCustomer .popup-content form,
+.popup-wrapper .signupScavenger .popup-content,
+.popup-wrapper .signupScavenger2 .popup-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background,
+.popup-wrapper .signupScavenger .popup-content .background {
+  display: grid;
+  grid-template-areas:
+    " table "
+    " bot ";
+  width: 90%;
+  border-radius: 20px 260px 30px 360px;
+  background-color: rgba(144, 195, 32, 0.28);
+  margin: 7%;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .table,
+.popup-wrapper .signupScavenger .popup-content .background .table {
+  grid-area: table;
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 5%;
+  margin-top: 5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .bot,
+.popup-wrapper .signupScavenger .popup-content .background .bot {
+  grid-area: bot;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .table input,
+.popup-wrapper .signupScavenger .popup-content .background .table input {
+  margin-bottom: 10%;
+}
+
+.popup-wrapper
+  .signupCustomer
+  .popup-content
+  form
+  .background
+  .bot
+  input[type="date"],
+.popup-wrapper
+  .signupScavenger
+  .popup-content
+  .background
+  .bot
+  input[type="date"] {
+  margin-bottom: 5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content form .background .table > label,
+.popup-wrapper .signupScavenger .popup-content .background .table > label,
+.popup-wrapper .signupCustomer .popup-content form .background .bot > label,
+.popup-wrapper .signupScavenger .popup-content .background .bot > label{
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 1.5%;
+}
+
+.popup-wrapper .signupCustomer .popup-content button,
+.popup-wrapper .signupScavenger .popup-content button,
+.popup-wrapper .signupScavenger2 .popup-content button{
+    background-color: #90c320;
+    margin: 0;
+    margin-bottom: 8%;
+    width: 25%;
+}
+
+.popup-wrapper .signupScavenger2 .popup-content button{
+    margin-bottom: 27%;
+}
+
+.popup-wrapper .signupScavenger2 .popup-content form .background h2{
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+
+.popup-wrapper .signupScavenger2 .popup-content form .background{
+  width: 90%;
+  border-radius: 20px 260px 30px 360px;
+  background-color: rgba(144, 195, 32, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 6.8% 0;
+}
+
+.popup-wrapper .signupScavenger2 ul.materiais,
+.popup-wrapper .signupScavenger2 ul.dias {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  
+}
+
+.popup-wrapper .signupScavenger2 ul.periodo {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.popup-wrapper .signupScavenger2 ul.periodo li {
+  padding-right: 2%;
+  margin: 0 auto;
+}
+
+.popup-wrapper .signupScavenger2 .popup-content form select {
+  font-family: "Poppins";
+  width: 80%;
+  background-color: #1c5407;
+  color: white;
+  height: 2em;
+  font-size: 1em;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5%;
 }
