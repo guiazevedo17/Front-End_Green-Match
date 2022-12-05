@@ -98,7 +98,7 @@ const IusernameLogin = document.querySelector(".usernameLogin");
 const IpasswordLogin = document.querySelector(".passwordLogin");
 
 function loginValidation() {
-    fetch("http://localhost:8080/api/auth/signin",
+    fetch("http://localhost:8080/api/auth/signinClient",
         {
             headers: {
                 'Accept': 'application/json',
@@ -142,9 +142,9 @@ function register_client() {
                 birthDate: IbirthDay.value,
                 gender: "masculino",
                 roles: ["user"]*/
-            "username": "jzanholo",
+            "username": "guiazevedo",
             "password": "123456",
-            "email":"joaozanholo2002@gmail.com",
+            "email":"joaozanholoo2002@gmail.com",
             "name": "guilherme azevedo",
             "phone": "11998946835",
             "birthDate": "14/07/2002",

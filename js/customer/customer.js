@@ -5,3 +5,7 @@ function newCollect() {
 function chooseAddress() {
     window.location = "chooseAddress.html";
 }
+
+function novaColeta() {
+    
+}
