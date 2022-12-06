@@ -79,9 +79,9 @@ function signup_customer() {
               birthDate: IbirthDay.value,
               gender: "masculino",
               roles: ["user"]*/
-      username: "asdasdguiazeasdavedo",
+      username: "asdavedo3",
       password: "123456",
-      email: "joaozasadsnhasdolo2002@gmail.com",
+      email: "3joaozasa2002@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
@@ -128,9 +128,9 @@ function signup_scavenger() {
     },
     method: "POST",
     body: JSON.stringify({
-      username: "guiazasdasdaeddd",
+      username: "sdaeddd2",
       password: "123456qwertyy",
-      email: "guiazvsdaae@gmail.com",
+      email: "2-sdaae@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",

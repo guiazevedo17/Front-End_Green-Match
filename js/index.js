@@ -76,7 +76,7 @@ const IusernameLogin = document.querySelector(".usernameLogin");
 const IpasswordLogin = document.querySelector(".passwordLogin");
 
 function loginValidation() {
-    fetch("http://localhost:8080/api/auth/signin",
+    fetch("http://localhost:8080/api/auth/signinClient",
         {
             headers: {
                 'Accept': 'application/json',
@@ -100,6 +100,91 @@ function loginValidation() {
         .then(function (res) { console.log(res) })
         
 
+};
+
+function register_client() {
+
+    fetch("http://localhost:8080/api/auth/registerClient",
+        {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                /*name: Iname.value + IlastName.value,
+                username: IuserName.value,
+                phone: Iphone.value,
+                email: Iemail.value,
+                password: Ipassword.value,
+                birthDate: IbirthDay.value,
+                gender: "masculino",
+                roles: ["user"]*/
+            "username": "jzanholo",
+            "password": "123456",
+            "email":"joaozanholo2002@gmail.com",
+            "name": "guilherme azevedo",
+            "phone": "11998946835",
+            "birthDate": "14/07/2002",
+            "gender": "masculino",
+            "roles": ["user"]
+            })
+        })
+        .then(function (res) { console.log(res) })
+        .then(function (res) { console.log(res) })
+
+};
+
+function register_scavenger() {
+
+    fetch("http://localhost:8080/api/auth/registerScavenger",
+        {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                "username": "guiazeddd",
+            "password": "123456qwertyy",
+            "email":"guiazve@gmail.com",
+            "name": "guilherme azevedo",
+            "phone": "11998946835",
+            "birthDate": "14/07/2002",
+            "gender": "masculino",
+            "materials": ["PET","madeira","vidro","entuho","bateria"],
+            "dayWeek": ["segunda-feira", "terça-feira","quarta-feira","quinta-feira","sexta-feira"],
+            "dayPeriod": ["manha","tarde","noite"],
+            "roles": ["catador"]
+            })
+        })
+        .then(function (res) { console.log(res) })
+        .then(function (res) { console.log(res) })
+
+};
+
+function clear_customer() {
+    Iname.value = "";
+    IlastName.value = "";
+    IuserName.value = "";
+    Iphone.value = "";
+    Iemail.value = "";
+    IemailConf.value = "";
+    Ipassword.value = "";
+    IpasswordConf.value = "";
+    IbirthDay.value = "";
+};
+
+function clear_scavenger() {
+    InameScavenger.value = "";
+    IlastNameScavenger.value = "";
+    IuserNameScavenger.value = "";
+    IphoneScavenger.value = "";
+    IemailScavenger.value = "";
+    IemailConfScavenger.value = "";
+    IpasswordScavenger.value = "";
+    IpasswordConfScavenger.value = "";
+    IbirthDayScavenger.value = "";
 };
 
 function clear_login() {

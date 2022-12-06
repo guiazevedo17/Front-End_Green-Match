@@ -1,11 +1,12 @@
 const popup = document.querySelector(".popup-wrapper");
 const close = document.querySelector(".popup-close");
 const popupSignup = document.querySelector(".signupCustomer");
-const Iusername = document.querySelector(".username");
-const Ipassword = document.querySelector(".password");
+const Iusername = document.querySelector(".usernameLogin");
+const Ipassword = document.querySelector(".passwordLogin");
 
 function login() {
-  /*fetch("http://localhost:8080/api/auth/signin", {
+  
+  fetch("http://localhost:8080/api/auth/signinClient", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -19,22 +20,23 @@ function login() {
     .then(function (res) {
       if (res.ok) {
         window.location = "../../customer.html";
-        /*
-        IusernameLogin.value = "";
-        IpasswordLogin.value = "";
+        window.alert("Usuario salve");
+
+        //IusernameLogin.value = "";
+        //IpasswordLogin.value = "";
         
       } else {
         window.alert("Usuario ou senha incorretos");
-        /*
-        IusernameLogin.value = "";
-        IpasswordLogin.value = "";
-        */
-      /*}
+        
+        //IusernameLogin.value = "";
+        //IpasswordLogin.value = "";
+        
+      }
     })
     .then(function (res) {
       console.log(res);
-    });*/
-    window.location = "../../customer.html";
+    });
+    
 }
 
 function openSignUp() {
@@ -71,9 +73,9 @@ function signup_customer() {
                 birthDate: IbirthDay.value,
                 gender: "masculino",
                 roles: ["user"]*/
-      username: "asdasdguiazeasdavedo",
+      username: "jzanholo",
       password: "123456",
-      email: "joaozasadsnhasdolo2002@gmail.com",
+      email: "joaozasadsnhasolo2002@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
