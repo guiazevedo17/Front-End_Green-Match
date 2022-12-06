@@ -29,8 +29,25 @@ body{
     padding: 5px 15px;
 }
 
+main .box{
+    /* + de 1 endereço 
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    padding: 5% 0 10% 0; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .address{
-    width: 70%;
+    border: 3px solid green;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px grey;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,18 +56,29 @@ body{
     border: 1px solid #90C320;
     border-radius: 20px;
     line-height: 1.2em;
-}
-
-.address:nth-child(2){
-    margin-top: 7%;
+    /* - de 1 endereço */
+    width: 40%;
+    margin-bottom: 2%;
 }
 
 .address h3{
     color: #90C320;
-    font-size: 1.1em;
-    padding: 1%;
+    font-size: 2em;
+    margin: 4% 0;
 }
 
-.address strong{
-    font-weight: bold;
+.address ul li{
+    color: grey;
+    font-size: 1.15em;
+    line-height: 1.35em;
+}
+
+.address ul li strong{
+    font-weight: 500;
+    color: #136A5A;
+    font-size: 1.2em;
+}
+
+.address ul li strong.st{
+    margin-left: 3%;
 }

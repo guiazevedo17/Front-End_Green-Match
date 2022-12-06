@@ -1,175 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/sidebar.css" />
-    <link rel="stylesheet" href="../css/customer/newCollect.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <title>Nova Coleta</title>
-  </head>
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/customer/newCollect.css" />
 
-  <body>
-    <div class="sideBar">
-      <img src="../assets/images/user.png" alt="" />
+  <title>Nova Coleta</title>
+</head>
 
-      <h3>Bem-vindo</h3>
-      <h2>Cliente</h2>
+<body>
+  <div class="sideBar">
+    <img src="../assets/images/user.png" alt="" />
 
-      <nav>
-        <ul>
-          <li><p>Dados</p></li>
-          <li><a href="data.html">Meus Dados</a></li>
-          <li><a href="address.html">Endereços</a></li>
-          <li><p>Coletas</p></li>
-          <li><a href="requested.html">Solicitadas</a></li>
-          <li><a href="scheduled.html">Agendadas</a></li>
-          <li><a href="historic.html">Histórico</a></li>
-        </ul>
-      </nav>
+    <h3>Bem-vindo</h3>
+    <h2>Cliente</h2>
 
-      <a href="../customer.html" id="#nova_coleta"> Nova Coleta</a>
+    <nav>
+      <ul>
+        <li>
+          <p>Dados</p>
+        </li>
+        <li><a href="data.html">Meus Dados</a></li>
+        <li><a href="address.html">Endereços</a></li>
+        <li>
+          <p>Coletas</p>
+        </li>
+        <li><a href="requested.html">Solicitadas</a></li>
+        <li><a href="scheduled.html">Agendadas</a></li>
+        <li><a href="historic.html">Histórico</a></li>
+      </ul>
+    </nav>
 
-      <a href="../login.html">&#8592; sair</a>
-    </div>
+    <a href="../customer.html" id="#nova_coleta"> Nova Coleta</a>
 
-    <main>
-      <div class="box">
-        <h2>Quais materiais deseja que sejam coletados?</h2>
-        <ul class="materiais">
-          <li>
-            <input type="checkbox" id="papel" /><label for="papel">Papel</label>
-          </li>
-          <li>
-            <input type="checkbox" id="plastico" /><label for="plastico"
-              >Plastico</label
-            >
-          </li>
-          <li>
-            <input type="checkbox" id="metal" /><label for="metal">Metal</label>
-          </li>
-          <li>
-            <input type="checkbox" id="vidro" /><label for="vidro">Vidro</label>
-          </li>
-          <li>
-            <input type="checkbox" id="entulho" /><label for="entulho"
-              >Entulho</label
-            >
-          </li>
-          <li>
-            <input type="checkbox" id="eletronico" /><label for="eletronico"
-              >Eletrônico</label
-            >
-          </li>
-          <li>
-            <input type="checkbox" id="moveis" /><label for="moveis"
-              >Móveis</label
-            >
-          </li>
-          <li>
-            <input type="checkbox" id="outros" /><label for="outros"
-              >Outros</label
-            >
-          </li>
-        </ul>
+    <a href="../home.html">&#8592; sair</a>
+  </div>
 
-        <h2>Qual dia seria melhor para realizar a coleta?</h2>
-        <ul class="dias">
-          <li>
-            <input type="radio" id="segunda" name="dia" /><label for="segunda"
-              >Segunda-Feira</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="terca" name="dia" /><label for="terca"
-              >Terça-Feira</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="quarta" name="dia" /><label for="quarta"
-              >Quarta-Feira</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="quinta" name="dia" /><label for="quinta"
-              >Quinta-Feira</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="sexta" name="dia" /><label for="sexta"
-              >Sexta-Feira</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="sabado" name="dia" /><label for="sabado"
-              >Sábado</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="domingo" name="dia" /><label for="domingo"
-              >Domingo</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="feriado" name="dia" /><label for="feriado"
-              >Feriados</label
-            >
-          </li>
-        </ul>
+  <main>
+    <div class="box">
+      <h2>Quais materiais deseja que sejam coletados?</h2>
+      <ul class="materiais">
+        <li>
+          <input type="checkbox" id="papel" /><label for="papel">Papel</label>
+        </li>
+        <li>
+          <input type="checkbox" id="plastico" /><label for="plastico">Plastico</label>
+        </li>
+        <li>
+          <input type="checkbox" id="metal" /><label for="metal">Metal</label>
+        </li>
+        <li>
+          <input type="checkbox" id="vidro" /><label for="vidro">Vidro</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entulho" /><label for="entulho">Entulho</label>
+        </li>
+        <li>
+          <input type="checkbox" id="eletronico" /><label for="eletronico">Eletrônico</label>
+        </li>
+        <li>
+          <input type="checkbox" id="moveis" /><label for="moveis">Móveis</label>
+        </li>
+        <li>
+          <input type="checkbox" id="outros" /><label for="outros">Outros</label>
+        </li>
+      </ul>
 
-        <h2>Qual período mais adequado?</h2>
-        <ul class="periodo">
-          <li>
-            <input type="radio" id="manha" name="periodo" /><label for="manha"
-              >Manhã</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="tarde" name="periodo" /><label for="tarde"
-              >Tarde</label
-            >
-          </li>
-          <li>
-            <input type="radio" id="noite" name="periodo" /><label for="noite"
-              >Noite</label
-            >
-          </li>
-        </ul>
+      <h2>Qual dia seria melhor para realizar a coleta?</h2>
+      <ul class="dias">
+        <li>
+          <input type="checkbox" id="segunda" /><label for="segunda">Segunda-Feira</label>
+        </li>
+        <li>
+          <input type="checkbox" id="terca" /><label for="terca">Terça-Feira</label>
+        </li>
+        <li>
+          <input type="checkbox" id="quarta" /><label for="quarta">Quarta-Feira</label>
+        </li>
+        <li>
+          <input type="checkbox" id="quinta" /><label for="quinta">Quinta-Feira</label>
+        </li>
+        <li>
+          <input type="checkbox" id="sexta" /><label for="sexta">Sexta-Feira</label>
+        </li>
+        <li>
+          <input type="checkbox" id="sabado" /><label for="sabado">Sábado</label>
+        </li>
+        <li>
+          <input type="checkbox" id="domingo" /><label for="domingo">Domingo</label>
+        </li>
+        <li>
+          <input type="checkbox" id="feriado" /><label for="feriado">Feriados</label>
+        </li>
+      </ul>
 
-        <div class="single-input">
-          <input
-            type="text"
-            name=""
-            id="obs"
-            placeholder="                           ex: Vidro quebrado"
-            required
-          />
-          <label for="obs">Observação</label>
-        </div>
+      <h2>Qual período mais adequado?</h2>
+      <ul class="periodo">
+        <li>
+          <input type="radio" id="manha" name="periodo" /><label for="manha">Manhã</label>
+        </li>
+        <li>
+          <input type="radio" id="tarde" name="periodo" /><label for="tarde">Tarde</label>
+        </li>
+        <li>
+          <input type="radio" id="noite" name="periodo" /><label for="noite">Noite</label>
+        </li>
+      </ul>
 
-        <div class="single-input" id="peso">
-          <input type="number" name="" id="qntd" placeholder="" required />
-          <label for="qntd">Peso aproximado (kg)</label>
-        </div>
-
-        <button onclick="chooseAddress()">continuar</button>
+      <div class="single-input">
+        <input type="text" name="" id="obs" placeholder="                           ex: Vidro quebrado" required />
+        <label for="obs">Observação</label>
       </div>
 
-      <button class="chat" onclick="chat()">
-        <img src="../assets/images/chat.png" alt="" />
-      </button>
-    </main>
+      <div class="single-input" id="peso">
+        <input type="number" name="" id="qntd" placeholder="" required />
+        <label for="qntd">Peso aproximado (kg)</label>
+      </div>
 
-    <script type="text/javascript" src="../js/customer/chooseAddress.js"></script>
-  </body>
+      <button onclick="chooseAddress()">continuar</button>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="../js/customer/chooseAddress.js"></script>
+</body>
+
 </html>

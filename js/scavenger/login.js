@@ -6,35 +6,36 @@ const Iusername = document.querySelector(".username");
 const Ipassword = document.querySelector(".password");
 
 function login() {
-  fetch("http://localhost:8080/api/auth/signinScavenger", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      username: Iusername.value,
-      password: Ipassword.value,
-    }),
-  })
-    .then(function (res) {
-      if (res.ok) {
-        window.location = "../../scavenger.html";
+  // fetch("http://localhost:8080/api/auth/signinScavenger", {
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     username: Iusername.value,
+  //     password: Ipassword.value,
+  //   }),
+  // })
+  //   .then(function (res) {
+  //     if (res.ok) {
+  //       window.location = "../../scavenger.html";
         
-        IusernameLogin.value = "";
-        IpasswordLogin.value = "";
+  //       IusernameLogin.value = "";
+  //       IpasswordLogin.value = "";
         
-      } else {
-        window.alert("Usuario ou senha incorretos");
+  //     } else {
+  //       window.alert("Usuario ou senha incorretos");
         
-        IusernameLogin.value = "";
-        IpasswordLogin.value = "";
+  //       IusernameLogin.value = "";
+  //       IpasswordLogin.value = "";
         
-      }
-    })
-    .then(function (res) {
-      console.log(res);
-    });
+  //     }
+  //   })
+  //   .then(function (res) {
+  //     console.log(res);
+  //   });
+  window.location = "../../scavenger.html";
 }
 
 function openSignUp() {

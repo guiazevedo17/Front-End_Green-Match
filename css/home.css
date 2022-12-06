@@ -506,7 +506,6 @@ a:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
 }
 
 .popup-wrapper .signupCustomer .popup-content form .background .table input,
@@ -539,6 +538,10 @@ a:active {
   margin-bottom: 1.5%;
 }
 
+.popup-wrapper .signupScavenger .popup-content .background .bot ul.gender li{
+  margin: 0 auto;
+}
+
 .popup-wrapper .signupScavenger2 .popup-content form .background h2{
   font-weight: 500;
   font-size: 1.2em;
@@ -566,7 +569,8 @@ a:active {
   
 }
 
-.popup-wrapper .signupScavenger2 ul.periodo {
+.popup-wrapper .signupScavenger2 ul.periodo,
+.popup-wrapper .signupScavenger .popup-content .background .bot ul.gender{
   width: 60%;
   display: flex;
   align-items: center;
@@ -575,7 +579,8 @@ a:active {
   margin-bottom: 5%;
 }
 
-.popup-wrapper .signupScavenger2 ul.periodo li {
+.popup-wrapper .signupScavenger2 ul.periodo li,
+.popup-wrapper .signupScavenger .popup-content .background .bot ul.gender li{
   padding-right: 2%;
   margin: 0 auto;
 }

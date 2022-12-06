@@ -6,6 +6,7 @@
     box-shadow: 0 0 10px 10px grey;
     margin-bottom: 5%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -19,29 +20,119 @@
     margin-top: 5%;
 }
 
-.collect img{
-    width: 16%;
+.collect .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.collect .image img{
+    width: 66px;
+    height: 66px;
 }
 
 .collect .content{
-    display: inline-block;
-    margin-left: 10%;
-    width: 100%;
+    width: 65%;
+    margin: 0 2% 0 3%;
 }
 
-.collect .content h1{
+.collect .content h1,
+.collect .contentHistoric h1{
     color: #136A5A;
     font-size: 1.5em;
     padding-bottom: 1.5%;
 }
 
-.collect .content ul li{
+.collect .content ul li,
+.collect .contentHistoric ul li{
     color: #90C320;
     font-size: 1.2em;
+    line-height: 1.4em;
 }
 
-.collect .content ul li span{
+.collect .content ul li span,
+.collect .contentHistoric ul li span{
     color: #263238;
     margin-left: 1%;
     font-size: 1em;
+}
+
+.collect .buttons{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collect .buttons button{
+    width: 75%;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.collect .buttons button span{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.collect .buttons button img{
+    display: none;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.collect .buttons button.deal img{
+    width: 30px;
+    height: 30px;
+}
+
+.collect .buttons button:nth-of-type(2){
+    margin-top: 15%;
+}
+
+.collect .buttons button:hover{
+    width: 50px;
+    border-radius: 30px;
+    transition-duration: 0.7s;
+}
+
+.collect .buttons button:hover span{
+    display: none;
+    transition-delay: 2s;
+    transition-duration: 1s; 
+}
+
+.collect .buttons button:hover img{
+    display: inline-block;
+    transition-delay: 2s;
+    transition-duration: 1s; 
+}
+
+.collect .buttons button:not(:hover){
+    width: 75%;
+    border-radius: 5px;
+    transition-duration: 0.7s; 
+}
+
+.collect .buttons button:active{
+    transform: scale(0.85);
+}
+
+.collect .buttons button.deal{
+    background-color: #3065ac;
+}
+
+.collect .buttons button.cancel{
+    background-color: #c63637;
+}
+
+.collect .buttons button.done{
+    background-color: #211b15;
 }

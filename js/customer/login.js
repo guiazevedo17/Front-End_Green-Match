@@ -5,38 +5,37 @@ const Iusername = document.querySelector(".usernameLogin");
 const Ipassword = document.querySelector(".passwordLogin");
 
 function login() {
-  
-  fetch("http://localhost:8080/api/auth/signinClient", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      username: Iusername.value,
-      password: Ipassword.value,
-    }),
-  })
-    .then(function (res) {
-      if (res.ok) {
-        window.location = "../../customer.html";
-        window.alert("Usuario salve");
+  // fetch("http://localhost:8080/api/auth/signinClient", {
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     username: Iusername.value,
+  //     password: Ipassword.value,
+  //   }),
+  // })
+  //   .then(function (res) {
+  //     if (res.ok) {
+  //       window.location = "../../customer.html";
+  //       window.alert("Usuario salve");
 
-        //IusernameLogin.value = "";
-        //IpasswordLogin.value = "";
+  //       //IusernameLogin.value = "";
+  //       //IpasswordLogin.value = "";
         
-      } else {
-        window.alert("Usuario ou senha incorretos");
+  //     } else {
+  //       window.alert("Usuario ou senha incorretos");
         
-        //IusernameLogin.value = "";
-        //IpasswordLogin.value = "";
+  //       //IusernameLogin.value = "";
+  //       //IpasswordLogin.value = "";
         
-      }
-    })
-    .then(function (res) {
-      console.log(res);
-    });
-    
+  //     }
+  //   })
+  //   .then(function (res) {
+  //     console.log(res);
+  //   });
+  window.location = "../../customer.html";  
 }
 
 function openSignUp() {

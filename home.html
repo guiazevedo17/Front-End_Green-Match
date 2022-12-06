@@ -1,354 +1,359 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <title>Green Match</title>
-  </head>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/home.css" />
 
-  <body>
-    <nav>
-      <img src="assets/images/arvore.png" alt="" />
-      <h1>green match</h1>
+  <title>Green Match</title>
+</head>
 
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><input type="checkbox" id="signin"><div class="checkbox-wrapper">
+<body>
+  <nav>
+    <img src="assets/images/arvore.png" alt="" />
+    <h1>green match</h1>
+
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><input type="checkbox" id="signin">
+        <div class="checkbox-wrapper">
           <a href="customer/login.html" class="signinCliente">Cliente</a>
-		      <a href="scavengers/login.html" class="signinColetor">Coletor</a>
-        </div><label for="signin"><a class="signin">Entrar</a></label></li>
-      </ul>
-    </nav>
+          <a href="scavengers/login.html" class="signinColetor">Coletor</a>
+        </div><label for="signin"><a class="signin">Entrar</a></label>
+      </li>
+    </ul>
+  </nav>
 
-    <div class="popup-wrapper">
-      	<div class="signup">
-          	<button class="popup-close">x</button>
-        	
-			      <div class="popup-content">
+  <div class="popup-wrapper">
+    <div class="signup">
+      <button class="popup-close">x</button>
 
-          	  <div class="customer">
-            	  <h1>Cliente</h1>
+      <div class="popup-content">
 
-            	  <img src="assets/images/customer.png" width="" alt="" />
+        <div class="customer">
+          <h1>Cliente</h1>
 
-            	  <ul>
-              	  <li>Possui material reciclavel acumulado</li>
-              	  <li>benficio</li>
-              	  <li>benficio</li>
-            	  </ul>
+          <img src="assets/images/customer.png" width="" alt="" />
 
-            	  <button onclick="openSignUpCustomer()">reciclar</button>
-          	  </div>
+          <ul>
+            <li>Possui material reciclavel acumulado</li>
+            <li>benficio</li>
+            <li>benficio</li>
+          </ul>
 
-          	  <div class="div"></div>
+          <button onclick="openSignUpCustomer()">reciclar</button>
+        </div>
 
-          	  <div class="scavenger">
-            	  <h1>Coletor</h1>
+        <div class="div"></div>
 
-            	  <img src="assets/images/scavenger.png" alt="" />
+        <div class="scavenger">
+          <h1>Coletor</h1>
 
-            	  <ul>
-              	  <li>Possibilidade de renda extra</li>
-              	  <li>benficio</li>
-              	  <li>benficio</li>
-            	  </ul>
+          <img src="assets/images/scavenger.png" alt="" />
 
-            	  <button onclick="openSignUpScavenger()">coletar</button>
-          	  </div>
-            </div>
-          </div>
+          <ul>
+            <li>Possibilidade de renda extra</li>
+            <li>benficio</li>
+            <li>benficio</li>
+          </ul>
 
-      	<div class="signupCustomer">
-        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
-
-        	<button class="popup-close">x</button>
-
-        	<div class="popup-content">
-				    <h1>Nova Conta - CLIENTE</h1>
-						
-						<form>
-							<div class="background">
-
-								<div class="table">
-									
-									<label for="name">Nome</label>
-									<label for="lastName">Sobrenome</label>
-									<input type="text" name="" id="name" class="name">
-									<input type="text" name="" id="lastName" class="lastName">
-			
-									<label for="userName">Nome de usuário</label>
-									<label for="phone">Telefone</label>
-									<input type="text" name="" id="userName" class="userName">
-									<input type="tel" name="" id="phone" class="phone">
-			
-									<label for="email">E-mail</label>
-									<label for="emailConf">Confirmação E-mail</label>
-									<input type="email" name="" id="email" class="email">
-									<input type="email" name="" id="emailConf" class="emailConf">
-			
-									<label for="password">Senha</label>
-									<label for="passwordConf">Confirmação Senha</label>
-									<input type="password" name="" id="password" class="password">
-									<input type="password" name="" id="passwordConf" class="passwordConf">
-
-								</div>
-
-								<div class="bot">
-									
-									<label for="">Data de Nascimento</label>
-									<input type="date" name="" id="" class="birthDay">
-			
-									<label for="">Gênero</label>
-									<div class="gender">
-			
-										<input type="radio" name="gen" id="male"><label for="male">Masculino</label>
-										<input type="radio" name="gen" id="female"><label for="female">Femenino</label>
-										<input type="radio" name="gen" id="other"><label for="other">Outro</label>
-			
-									</div>
-
-								</div>		
-
-							</div>
-	
-							<button onclick="signup_customer()">cadastrar</button>
-
-						</form>
-        	</div>
-      	</div>
-
-      	<div class="signupScavenger">
-        	<button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
-
-        	<button class="popup-close">x</button>
-
-        	<div class="popup-content">
-         		<h1>Nova Conta - COLETOR</h1>
-
-							<div class="background">
-
-								<div class="table">
-									
-									<label for="name">Nome</label>
-									<label for="lastName">Sobrenome</label>
-									<input type="text" name="" id="name" class="name">
-									<input type="text" name="" id="lastName" class="lastName">
-			
-									<label for="userName">Nome de usuário</label>
-									<label for="phone">Telefone</label>
-									<input type="text" name="" id="userName" class="userName">
-									<input type="tel" name="" id="phone" class="phone">
-			
-									<label for="email">E-mail</label>
-									<label for="emailConf">Confirmação E-mail</label>
-									<input type="email" name="" id="email" class="email">
-									<input type="email" name="" id="emailConf" class="emailConf">
-			
-									<label for="password">Senha</label>
-									<label for="passwordConf">Confirmação Senha</label>
-									<input type="password" name="" id="password" class="password">
-									<input type="password" name="" id="passwordConf" class="passwordConf">
-
-								</div>
-
-								<div class="bot">
-									
-									<label for="">Data de Nascimento</label>
-									<input type="date" name="" id="" class="birthDay">
-			
-									<label for="">Gênero</label>
-									<div class="gender">
-			
-										<input type="radio" name="gen" id="male"><label for="male">Masculino</label>
-										<input type="radio" name="gen" id="female"><label for="female">Femenino</label>
-										<input type="radio" name="gen" id="other"><label for="other">Outro</label>
-			
-									</div>
-
-								</div>
-					
-							</div>
-	
-							<button class="registerClient" onclick="continueSignUpScavenger()">continuar</button>
-
-        	</div>
-      	</div>
-
-        <div class="signupScavenger2">
-        	<button class="returnSignupScavenger" onclick="returnSignUpScavenger()">&#8592;</button>
-
-        	<button class="popup-close">x</button>
-
-        	<div class="popup-content">
-         		<h1>Nova Conta - COLETOR</h1>
-
-            <form action="">
-
-              <div class="background">
-                
-                <select name="" id="">
-                  <option value="">Selecione o tipo de catador</option>
-                  <option value="">Independente</option>
-                  <option value="">Cooperativa</option>
-                </select>
-    
-                <h2>Quais materiais deseja coletar?</h2>
-                <ul class="materiais">
-                  <li><input type="checkbox" id="papel"><label for="papel">Papel</label></li>
-                  <li><input type="checkbox" id="plastico"><label for="plastico">Plastico</label></li>
-                  <li><input type="checkbox" id="metal"><label for="metal">Metal</label></li>
-                  <li><input type="checkbox" id="vidro"><label for="vidro">Vidro</label></li>
-                  <li><input type="checkbox" id="entulho"><label for="entulho">Entulho</label></li>
-                  <li><input type="checkbox" id="eletronico"><label for="eletronico">Eletrônico</label></li>
-                  <li><input type="checkbox" id="moveis"><label for="moveis">Móveis</label></li>
-                  <li><input type="checkbox" id="outros"><label for="outros">Outros</label></li>
-                </ul>
-    
-    
-                <h2>Qual melhor dia para realizar a coleta?</h2>
-                <ul class="dias">
-                  <li><input type="radio" id="segunda" name="dia"><label for="segunda">Segunda-Feira</label>
-                  </li>
-                  <li><input type="radio" id="terca" name="dia"><label for="terca">Terça-Feira</label></li>
-                  <li><input type="radio" id="quarta" name="dia"><label for="quarta">Quarta-Feira</label></li>
-                  <li><input type="radio" id="quinta" name="dia"><label for="quinta">Quinta-Feira</label></li>
-                  <li><input type="radio" id="sexta" name="dia"><label for="sexta">Sexta-Feira</label></li>
-                  <li><input type="radio" id="sabado" name="dia"><label for="sabado">Sábado</label></li>
-                  <li><input type="radio" id="domingo" name="dia"><label for="domingo">Domingo</label></li>
-                  <li><input type="radio" id="feriado" name="dia"><label for="feriado">Feriados</label></li>
-                </ul>
-    
-                <h2>Qual período mais adequado?</h2>
-                <ul class="periodo">
-                  <li><input type="radio" id="manha" name="periodo"><label for="manha">Manhã</label></li>
-                  <li><input type="radio" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
-                  <li><input type="radio" id="noite" name="periodo"><label for="noite">Noite</label></li>
-                </ul>
-
-              </div>
-             
- 
-             <button onclick="signup_scavenger()">cadastrar</button>
-             
-           </form> 
-
-
-        	</div>
-      	</div>
-	    </div>
+          <button onclick="openSignUpScavenger()">coletar</button>
+        </div>
+      </div>
     </div>
 
-    <main>
-      <section id="inicio">
-        <img src="assets/images/green_match.png" alt="" />
-        <div class="textAside">
-          <h1>Tem material reciclavel em casa ?</h1>
-          <h2>Reciclar agora ficou simples</h2>
-          <p>
-            Sabe aquelas latinhas, garrafas e monte de papeis que ficam
-            acumulando em casa e você nunca joga fora por não ter segurança de
-            que serão reciclados, então, é neles que estamos de olho.
-          </p>
-          <p>
-            A Green Match garante a <a href="#recycle">reciclagem</a> pra você
-            ligando você a um catador que trabalha especificamente com o tipo de
-            material que deseja descartar e o melhor no momento de sua
-            preferência.
-          </p>
-          <button class="signup" onclick="openSignUp()">
-            Cadastre-se e contribua com a RECICLAGEM
-          </button>
-        </div>
-      </section>
+    <div class="signupCustomer">
+      <button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
 
-      <section id="recycle">
-        <div class="textAside">
-          <h1>Reciclagem</h1>
-          <p>
-            A reciclagem é o processo de reaproveitamento de materiais
-            descartados. Seu objetivo é reintroduzi-los na cadeia produtiva a
-            fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a
-            produção de lixo, aumentando a preservação dos recursos naturais e
-            melhorando a qualidade de vida das pessoas.
-          </p>
-        </div>
+      <button class="popup-close">x</button>
 
-        <img src="assets/images/recycling.png" alt="" />
-      </section>
+      <div class="popup-content">
+        <h1>Nova Conta - CLIENTE</h1>
 
-      <section id="sobre">
-        <h1>Sobre Nós</h1>
+        <form>
+          <div class="background">
 
-        <img src="assets/images/office.png" alt="" />
+            <div class="table">
 
-        <div class="text">
-          <p>
-            Fundada em 2022 a partir de um projeto acadêmico a Green Match é
-            constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a
-            ideia de aplicar a Sustentabilidade no dia a dia das pessoas por
-            meio da <a href="#recycle">reciclagem</a>, que apesar de muito
-            comentada é pouco executada. Por conta disso dispertou nosso
-            interesse em fazer a diferença e exercitar diariamente isto que
-            deve-se tornar hábito na vida de todos.
-          </p>
-        </div>
-      </section>
+              <label for="name">Nome</label>
+              <label for="lastName">Sobrenome</label>
+              <input type="text" name="" id="name" class="name">
+              <input type="text" name="" id="lastName" class="lastName">
 
-      <section id="contato">
-        <h1>Contato</h1>
+              <label for="userName">Nome de usuário</label>
+              <label for="phone">Telefone</label>
+              <input type="text" name="" id="userName" class="userName">
+              <input type="tel" name="" id="phone" class="phone">
 
-        <div class="form">
-          <div class="single-input">
-            <input type="text" name="" id="nome" required />
-            <label for="nome">Nome</label>
-          </div>
+              <label for="email">E-mail</label>
+              <label for="emailConf">Confirmação E-mail</label>
+              <input type="email" name="" id="email" class="email">
+              <input type="email" name="" id="emailConf" class="emailConf">
 
-          <div class="single-input">
-            <input type="email" name="" id="mail" required />
-            <label for="mail">E-mail</label>
-          </div>
+              <label for="password">Senha</label>
+              <label for="passwordConf">Confirmação Senha</label>
+              <input type="password" name="" id="password" class="password">
+              <input type="password" name="" id="passwordConf" class="passwordConf">
 
-          <div class="single-input">
-            <input type="text" name="" id="mensagem" required />
-            <label for="mensagem">Mensagem</label>
-          </div>
-
-          <button>
-            <div class="svg-wrapper-1">
-              <div class="svg-wrapper">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path
-                    fill="currentColor"
-                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                  ></path>
-                </svg>
-              </div>
             </div>
-            <span>Enviar</span>
-          </button>
+
+            <div class="bot">
+
+              <label for="">Data de Nascimento</label>
+              <input type="date" name="" id="" class="birthDay">
+
+              <label for="">Gênero</label>
+              <div class="gender">
+
+                <input type="radio" name="gen" id="male"><label for="male">Masculino</label>
+                <input type="radio" name="gen" id="female"><label for="female">Femenino</label>
+                <input type="radio" name="gen" id="other"><label for="other">Outro</label>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <button onclick="signup_customer()">cadastrar</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="signupScavenger">
+      <button class="returnSignup" onclick="returnSignUp()">&#8592;</button>
+
+      <button class="popup-close">x</button>
+
+      <div class="popup-content">
+        <h1>Nova Conta - COLETOR</h1>
+
+        <div class="background">
+
+          <div class="table">
+
+            <label for="name">Nome</label>
+            <label for="lastName">Sobrenome</label>
+            <input type="text" name="" id="name" class="name">
+            <input type="text" name="" id="lastName" class="lastName">
+
+            <label for="userName">Nome de usuário</label>
+            <label for="phone">Telefone</label>
+            <input type="text" name="" id="userName" class="userName">
+            <input type="tel" name="" id="phone" class="phone">
+
+            <label for="email">E-mail</label>
+            <label for="emailConf">Confirmação E-mail</label>
+            <input type="email" name="" id="email" class="email">
+            <input type="email" name="" id="emailConf" class="emailConf">
+
+            <label for="password">Senha</label>
+            <label for="passwordConf">Confirmação Senha</label>
+            <input type="password" name="" id="password" class="password">
+            <input type="password" name="" id="passwordConf" class="passwordConf">
+
+          </div>
+
+          <div class="bot">
+
+            <label for="">Data de Nascimento</label>
+            <input type="date" name="" id="" class="birthDay">
+
+            <label for="">Gênero</label>
+            <ul class="gender">
+              <li>
+                <input type="radio" name="gen" id="maleS"><label for="maleS">Masculino</label>
+              </li>
+              <li>
+                <input type="radio" name="gen" id="femaleS"><label for="femaleS">Femenino</label>
+              </li>
+              <li>
+                <input type="radio" name="gen" id="otherS"><label for="otherS">Outro</label>
+              </li>
+
+            </ul>
+
+          </div>
+
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>&#169; Todos os direitos reservados</p>
-    </footer>
+        <button class="registerClient" onclick="continueSignUpScavenger()">continuar</button>
 
-    <script type="text/javascript" src="js/home.js"></script>
-  </body>
+      </div>
+    </div>
+
+    <div class="signupScavenger2">
+      <button class="returnSignupScavenger" onclick="returnSignUpScavenger()">&#8592;</button>
+
+      <button class="popup-close">x</button>
+
+      <div class="popup-content">
+        <h1>Nova Conta - COLETOR</h1>
+
+        <form action="">
+
+          <div class="background">
+
+            <select name="" id="">
+              <option value="">Selecione o tipo de catador</option>
+              <option value="">Independente</option>
+              <option value="">Cooperativa</option>
+            </select>
+
+            <h2>Quais materiais deseja coletar?</h2>
+            <ul class="materiais">
+              <li><input type="checkbox" id="papel"><label for="papel">Papel</label></li>
+              <li><input type="checkbox" id="plastico"><label for="plastico">Plastico</label></li>
+              <li><input type="checkbox" id="metal"><label for="metal">Metal</label></li>
+              <li><input type="checkbox" id="vidro"><label for="vidro">Vidro</label></li>
+              <li><input type="checkbox" id="entulho"><label for="entulho">Entulho</label></li>
+              <li><input type="checkbox" id="eletronico"><label for="eletronico">Eletrônico</label></li>
+              <li><input type="checkbox" id="moveis"><label for="moveis">Móveis</label></li>
+              <li><input type="checkbox" id="outros"><label for="outros">Outros</label></li>
+            </ul>
+
+
+            <h2>Qual melhor dia para realizar a coleta?</h2>
+            <ul class="dias">
+              <li><input type="checkbox" id="segunda"><label for="segunda">Segunda-Feira</label>
+              </li>
+              <li><input type="checkbox" id="terca"><label for="terca">Terça-Feira</label></li>
+              <li><input type="checkbox" id="quarta"><label for="quarta">Quarta-Feira</label></li>
+              <li><input type="checkbox" id="quinta"><label for="quinta">Quinta-Feira</label></li>
+              <li><input type="checkbox" id="sexta"><label for="sexta">Sexta-Feira</label></li>
+              <li><input type="checkbox" id="sabado"><label for="sabado">Sábado</label></li>
+              <li><input type="checkbox" id="domingo"><label for="domingo">Domingo</label></li>
+              <li><input type="checkbox" id="feriado"><label for="feriado">Feriados</label></li>
+            </ul>
+
+            <h2>Qual período mais adequado?</h2>
+            <ul class="periodo">
+              <li><input type="radio" id="manha" name="periodo"><label for="manha">Manhã</label></li>
+              <li><input type="radio" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
+              <li><input type="radio" id="noite" name="periodo"><label for="noite">Noite</label></li>
+            </ul>
+
+          </div>
+
+
+          <button onclick="signup_scavenger()">cadastrar</button>
+
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <main>
+    <section id="inicio">
+      <img src="assets/images/green_match.png" alt="" />
+      <div class="textAside">
+        <h1>Tem material reciclavel em casa ?</h1>
+        <h2>Reciclar agora ficou simples</h2>
+        <p>
+          Sabe aquelas latinhas, garrafas e monte de papeis que ficam
+          acumulando em casa e você nunca joga fora por não ter segurança de
+          que serão reciclados, então, é neles que estamos de olho.
+        </p>
+        <p>
+          A Green Match garante a <a href="#recycle">reciclagem</a> pra você
+          ligando você a um catador que trabalha especificamente com o tipo de
+          material que deseja descartar e o melhor no momento de sua
+          preferência.
+        </p>
+        <button class="signup" onclick="openSignUp()">
+          Cadastre-se e contribua com a RECICLAGEM
+        </button>
+      </div>
+    </section>
+
+    <section id="recycle">
+      <div class="textAside">
+        <h1>Reciclagem</h1>
+        <p>
+          A reciclagem é o processo de reaproveitamento de materiais
+          descartados. Seu objetivo é reintroduzi-los na cadeia produtiva a
+          fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a
+          produção de lixo, aumentando a preservação dos recursos naturais e
+          melhorando a qualidade de vida das pessoas.
+        </p>
+      </div>
+
+      <img src="assets/images/recycling.png" alt="" />
+    </section>
+
+    <section id="sobre">
+      <h1>Sobre Nós</h1>
+
+      <img src="assets/images/office.png" alt="" />
+
+      <div class="text">
+        <p>
+          Fundada em 2022 a partir de um projeto acadêmico a Green Match é
+          constituida por 4 alunos de Engenharia de Software da PUCCAMP, com a
+          ideia de aplicar a Sustentabilidade no dia a dia das pessoas por
+          meio da <a href="#recycle">reciclagem</a>, que apesar de muito
+          comentada é pouco executada. Por conta disso dispertou nosso
+          interesse em fazer a diferença e exercitar diariamente isto que
+          deve-se tornar hábito na vida de todos.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h1>Contato</h1>
+
+      <div class="form">
+        <div class="single-input">
+          <input type="text" name="" id="nome" required />
+          <label for="nome">Nome</label>
+        </div>
+
+        <div class="single-input">
+          <input type="email" name="" id="mail" required />
+          <label for="mail">E-mail</label>
+        </div>
+
+        <div class="single-input">
+          <input type="text" name="" id="mensagem" required />
+          <label for="mensagem">Mensagem</label>
+        </div>
+
+        <button>
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor"
+                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <span>Enviar</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&#169; Todos os direitos reservados</p>
+  </footer>
+
+  <script type="text/javascript" src="js/home.js"></script>
+</body>
+
 </html>
