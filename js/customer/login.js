@@ -4,38 +4,37 @@ const popupSignup = document.querySelector(".signupCustomer");
 const Iusername = document.querySelector(".usernameLogin");
 const Ipassword = document.querySelector(".passwordLogin");
 
-function login() {
-  // fetch("http://localhost:8080/api/auth/signinClient", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     username: Iusername.value,
-  //     password: Ipassword.value,
-  //   }),
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       window.location = "../../customer.html";
-  //       window.alert("Usuario salve");
+async function login() {
+  await fetch("http://localhost:8080/api/auth/signinClient", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      username: Iusername.value,
+      password: Ipassword.value,
+    }),
+  })
+    .then(function (res) {
+      if (res.ok) {
+        window.location = "../../customer.html";
+        window.alert("Usuario salve");
 
-  //       //IusernameLogin.value = "";
-  //       //IpasswordLogin.value = "";
+        //IusernameLogin.value = "";
+        //IpasswordLogin.value = "";
         
-  //     } else {
-  //       window.alert("Usuario ou senha incorretos");
+      } else {
+        window.alert("Usuario ou senha incorretos");
         
-  //       //IusernameLogin.value = "";
-  //       //IpasswordLogin.value = "";
+        //IusernameLogin.value = "";
+        //IpasswordLogin.value = "";
         
-  //     }
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
-  window.location = "../../customer.html";  
+      }
+    })
+    .then(function (res) {
+      console.log(res);
+    }); 
 }
 
 function openSignUp() {
@@ -56,8 +55,8 @@ popup.addEventListener("click", (event) => {
   }
 });
 
-function signup_customer() {
-  fetch("http://localhost:8080/api/auth/registerClient", {
+async function signup_customer() {
+  await fetch("http://localhost:8080/api/auth/registerClient", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -72,9 +71,9 @@ function signup_customer() {
                 birthDate: IbirthDay.value,
                 gender: "masculino",
                 roles: ["user"]*/
-      username: "jzanholo",
+      username: "guiazevedo2",
       password: "123456",
-      email: "joaozasadsnhasolo2002@gmail.com",
+      email: "2guiazevedo@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",

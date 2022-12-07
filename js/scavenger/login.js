@@ -2,40 +2,40 @@ const popup = document.querySelector(".popup-wrapper");
 const close = document.querySelector(".popup-close");
 const popupSignup = document.querySelector(".signupScavenger");
 const popupSignup2 = document.querySelector(".signupScavenger2");
-const Iusername = document.querySelector(".username");
-const Ipassword = document.querySelector(".password");
+const Iusername = document.querySelector(".usernameLogin");
+const Ipassword = document.querySelector(".passwordLogin");
 
-function login() {
-  // fetch("http://localhost:8080/api/auth/signinScavenger", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     username: Iusername.value,
-  //     password: Ipassword.value,
-  //   }),
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       window.location = "../../scavenger.html";
+async function login() {
+  await fetch("http://localhost:8080/api/auth/signinScavenger", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      username: Iusername.value,
+      password: Ipassword.value,
+    }),
+  })
+    .then(function (res) {
+      if (res.ok) {
+        window.location = "../../scavenger.html";
+        window.alert("Usuario salve");
         
-  //       IusernameLogin.value = "";
-  //       IpasswordLogin.value = "";
+        //IusernameLogin.value = "";
+        //IpasswordLogin.value = "";
         
-  //     } else {
-  //       window.alert("Usuario ou senha incorretos");
+      } else {
+        window.alert("Usuario ou senha incorretos");
         
-  //       IusernameLogin.value = "";
-  //       IpasswordLogin.value = "";
+        IusernameLogin.value = "";
+        IpasswordLogin.value = "";
         
-  //     }
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
-  window.location = "../../scavenger.html";
+      }
+    })
+    .then(function (res) {
+      console.log(res);
+    });
 }
 
 function openSignUp() {
@@ -67,30 +67,55 @@ popup.addEventListener("click", (event) => {
   }
 });
 
-function signup_scavenger() {
-  fetch("http://localhost:8080/api/auth/registerScavenger", {
+async function signup_scavenger() {
+  await fetch("http://localhost:8080/api/auth/registerScavenger", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
     method: "POST",
     body: JSON.stringify({
-      /*name: Iname.value + IlastName.value,
-                username: IuserName.value,
-                phone: Iphone.value,
-                email: Iemail.value,
-                password: Ipassword.value,
-                birthDate: IbirthDay.value,
-                gender: "masculino",
-                roles: ["user"]*/
-      username: "asdasdguiazeasdavedo",
-      password: "123456",
-      email: "joaozasadsnhasdolo2002@gmail.com",
+      /* 
+      -> pegar elementos marcados na checkbox
+
+      const materials = []
+      let materiais = document.getElementByName("material")
+
+      for(var i=0; i<material.lengh ;i++){
+        if(material[i].checked)
+          materials.push(material[i].value)
+      }
+
+      materials: materials(const) 
+
+      -> pegar elemento do radio
+
+      let radioBtns = document.querySelectorAll("input[name='fruit']");
+
+      let selected = document.querySelector("input[name='fruit']:checked").value;
+
+      radioBtns.forEach(radioBtn => {
+        radioBtn.addEventListener("change", findSelected);
+      });
+
+       */
+      username: "jozanholo",
+      password: "123456qwertyy",
+      email: "jozanholo@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
       gender: "masculino",
-      roles: ["user"],
+      materials: ["PET", "madeira", "vidro", "entuho", "bateria"],
+      dayWeek: [
+        "segunda-feira",
+        "terça-feira",
+        "quarta-feira",
+        "quinta-feira",
+        "sexta-feira",
+      ],
+      dayPeriod: ["manha", "tarde", "noite"],
+      roles: ["catador"],
     }),
   })
     .then(function (res) {

@@ -63,8 +63,8 @@ const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 const IbirthDay = document.querySelector(".birthDay");
 
-function signup_customer() {
-  fetch("http://localhost:8080/api/auth/registerClient", {
+async function signup_customer() {
+  await fetch("http://localhost:8080/api/auth/registerClient", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -79,9 +79,9 @@ function signup_customer() {
               birthDate: IbirthDay.value,
               gender: "masculino",
               roles: ["user"]*/
-      username: "asdavedo3",
+      username: "guiazevedo",
       password: "123456",
-      email: "3joaozasa2002@gmail.com",
+      email: "guiazevedo@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
@@ -120,17 +120,17 @@ const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
 const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
 
-function signup_scavenger() {
-  fetch("http://localhost:8080/api/auth/registerScavenger", {
+async function signup_scavenger() {
+  await fetch("http://localhost:8080/api/auth/registerScavenger", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
     method: "POST",
     body: JSON.stringify({
-      username: "sdaeddd2",
+      username: "jzanholo",
       password: "123456qwertyy",
-      email: "2-sdaae@gmail.com",
+      email: "jzanholo@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
