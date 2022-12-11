@@ -204,9 +204,9 @@ button:active {
   font-size: 2.2em;
 }
 
-.popup-wrapper .signupCustomer .popup-content form,
+.popup-wrapper .signupCustomer .popup-content .form,
 .popup-wrapper .signupScavenger .popup-content,
-.popup-wrapper .signupScavenger2 .popup-content form {
+.popup-wrapper .signupScavenger2 .popup-content .form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -214,7 +214,7 @@ button:active {
   justify-content: center;
 }
 
-.popup-wrapper .signupCustomer .popup-content form .background,
+.popup-wrapper .signupCustomer .popup-content .form .background,
 .popup-wrapper .signupScavenger .popup-content .background {
   display: grid;
   grid-template-areas:
@@ -226,7 +226,7 @@ button:active {
   margin: 7%;
 }
 
-.popup-wrapper .signupCustomer .popup-content form .background .table,
+.popup-wrapper .signupCustomer .popup-content .form .background .table,
 .popup-wrapper .signupScavenger .popup-content .background .table {
   grid-area: table;
   width: 95%;
@@ -237,7 +237,7 @@ button:active {
   margin-top: 5%;
 }
 
-.popup-wrapper .signupCustomer .popup-content form .background .bot,
+.popup-wrapper .signupCustomer .popup-content .form .background .bot,
 .popup-wrapper .signupScavenger .popup-content .background .bot {
   grid-area: bot;
   display: flex;
@@ -247,7 +247,7 @@ button:active {
   margin-bottom: 5%;
 }
 
-.popup-wrapper .signupCustomer .popup-content form .background .table input,
+.popup-wrapper .signupCustomer .popup-content .form .background .table input,
 .popup-wrapper .signupScavenger .popup-content .background .table input {
   margin-bottom: 10%;
 }
@@ -255,7 +255,7 @@ button:active {
 .popup-wrapper
   .signupCustomer
   .popup-content
-  form
+  .form
   .background
   .bot
   input[type="date"],
@@ -268,9 +268,9 @@ button:active {
   margin-bottom: 5%;
 }
 
-.popup-wrapper .signupCustomer .popup-content form .background .table > label,
+.popup-wrapper .signupCustomer .popup-content .form .background .table > label,
 .popup-wrapper .signupScavenger .popup-content .background .table > label,
-.popup-wrapper .signupCustomer .popup-content form .background .bot > label,
+.popup-wrapper .signupCustomer .popup-content .form .background .bot > label,
 .popup-wrapper .signupScavenger .popup-content .background .bot > label{
   font-weight: 500;
   font-size: 1.2em;
@@ -290,14 +290,14 @@ button:active {
     margin-bottom: 27%;
 }
 
-.popup-wrapper .signupScavenger2 .popup-content form .background h2{
+.popup-wrapper .signupScavenger2 .popup-content .form .background h2{
   font-weight: 500;
   font-size: 1.2em;
   margin-bottom: 3%;
   margin-top: 5%;
 }
 
-.popup-wrapper .signupScavenger2 .popup-content form .background{
+.popup-wrapper .signupScavenger2 .popup-content .form .background{
   width: 90%;
   border-radius: 20px 260px 30px 360px;
   background-color: rgba(144, 195, 32, 0.28);
@@ -331,7 +331,7 @@ button:active {
   margin: 0 auto;
 }
 
-.popup-wrapper .signupScavenger2 .popup-content form select {
+.popup-wrapper .signupScavenger2 .popup-content .form select {
   font-family: "Poppins";
   width: 80%;
   background-color: #1c5407;

@@ -62,6 +62,14 @@ const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 const IbirthDay = document.querySelector(".birthDay");
+const radioGender = document.querySelectorAll("input[name='gender']");
+let Igender;
+
+radioGender.forEach(radioBtn => {
+  radioBtn.addEventListener("change", (event) => {
+    Igender = document.querySelector("input[name='gender']:checked");
+  })
+})
 
 async function signup_customer() {
   await fetch("http://localhost:8080/api/auth/registerClient", {
@@ -71,42 +79,46 @@ async function signup_customer() {
     },
     method: "POST",
     body: JSON.stringify({
-      /*name: Iname.value + IlastName.value,
-              username: IuserName.value,
-              phone: Iphone.value,
-              email: Iemail.value,
-              password: Ipassword.value,
-              birthDate: IbirthDay.value,
-              gender: "masculino",
-              roles: ["user"]*/
-      username: "guiazevedo",
-      password: "123456",
-      email: "guiazevedo@gmail.com",
-      name: "guilherme azevedo",
-      phone: "11998946835",
-      birthDate: "14/07/2002",
-      gender: "masculino",
-      roles: ["user"],
+      name: Iname.value + IlastName.value,
+      username: IuserName.value,
+      phone: Iphone.value,
+      email: Iemail.value,
+      password: Ipassword.value,
+      birthDate: IbirthDay.value,
+      gender: Igender.value,
+      roles: ["user"]
     }),
   })
     .then(function (res) {
+      if (res.ok) {
+        popup.style.display = "none";
+        popupSignupCustomer.style.display = "none";
+
+        alert("Cliente Cadastrado com SUCESSO!");
+
+        Iname.value = "";
+        IlastName.value = "";
+        IuserName.value = "";
+        Iphone.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
+        IbirthDay.value = "";
+        Igender.value = "";
+      } else {
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
+
+        IuserName.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
+      }
+
       console.log(res);
     })
     .then(function (res) {
       console.log(res);
     });
-
-  /*
-    Iname.value = "";
-    IlastName.value = "";
-    IuserName.value = "";
-    Iphone.value = "";
-    Iemail.value = "";
-    IemailConf.value = "";
-    Ipassword.value = "";
-    IpasswordConf.value = "";
-    IbirthDay.value = "";
-  */
 }
 
 /* Cadastra Coletor */
@@ -119,47 +131,69 @@ const IemailConfScavenger = document.querySelector(".emailConfScavenger");
 const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
 const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
+const radioGenderS = document.querySelectorAll("input[name='genderS']");
+let IgenderScavenger;
 
-async function signup_scavenger() {
-  await fetch("http://localhost:8080/api/auth/registerScavenger", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      username: "jzanholo",
-      password: "123456qwertyy",
-      email: "jzanholo@gmail.com",
-      name: "guilherme azevedo",
-      phone: "11998946835",
-      birthDate: "14/07/2002",
-      gender: "masculino",
-      materials: ["PET", "madeira", "vidro", "entuho", "bateria"],
-      dayWeek: [
-        "segunda-feira",
-        "terça-feira",
-        "quarta-feira",
-        "quinta-feira",
-        "sexta-feira",
-      ],
-      dayPeriod: ["manha", "tarde", "noite"],
-      roles: ["catador"],
-    }),
+radioGenderS.forEach(radioBtnS => {
+  radioBtnS.addEventListener("change", (event) => {
+    IgenderScavenger = document.querySelector("input[name='genderS']:checked");
   })
-    .then(function (res) {
-      if(res.ok){
-        //clear
-        window.alert("Coletor cadastrado com sucesso!")
-        popup.style.display = "none";
-    }else {
-        window.alert("Usuario ou senha incorretos");
-        //clear
-    }
-    })
-    .then(function (res) {
-      console.log(res);
-    });
+})
+
+const materials = [];
+
+function signup_scavenger() {
+  //window.alert("Entrei");
+  console.log("materials - ");
+  // let materiais = document.getElementsByName("material");
+  // console.log("materiais - " +materiais);
+
+  // for (var i=0; i < materiais.lengh; i++) {
+  //   if (materiais[i].checked){
+  //     materials.push(materiais[i].value);
+  //     console.log("Teste " +materiais[i].value)
+  //   }
+  // }
+
+  // await fetch("http://localhost:8080/api/auth/registerScavenger", {
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     username: "jzanholo",
+  //     password: "123456qwertyy",
+  //     email: "jzanholo@gmail.com",
+  //     name: "guilherme azevedo",
+  //     phone: "11998946835",
+  //     birthDate: "14/07/2002",
+  //     gender: IgenderScavenger.value,
+  //     materials: materials,
+  //     dayWeek: [
+  //       "segunda-feira",
+  //       "terça-feira",
+  //       "quarta-feira",
+  //       "quinta-feira",
+  //       "sexta-feira",
+  //     ],
+  //     dayPeriod: ["manha", "tarde", "noite"],
+  //     roles: ["catador"],
+  //   }),
+  // })
+  //   .then(function (res) {
+  //     if (res.ok) {
+  //       popup.style.display = "none";
+  //       popupSignupScavenger2.style.display = "none";
+  //       console.log(materials);
+  //       window.alert("Coletor Cadastrado com SUCESSO!")
+  //     } else {
+  //       window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+  //     }
+  //   })
+  //   .then(function (res) {
+  //     console.log(res);
+  //   });
 
   /*
    InameScavenger.value = "";

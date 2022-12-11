@@ -19,16 +19,15 @@ async function login() {
     .then(function (res) {
       if (res.ok) {
         window.location = "../../customer.html";
-        window.alert("Usuario salve");
-
-        //IusernameLogin.value = "";
-        //IpasswordLogin.value = "";
+        
+        IusernameLogin.value = "";
+        IpasswordLogin.value = "";
         
       } else {
         window.alert("Usuario ou senha incorretos");
         
-        //IusernameLogin.value = "";
-        //IpasswordLogin.value = "";
+        IusernameLogin.value = "";
+        IpasswordLogin.value = "";
         
       }
     })
@@ -82,6 +81,14 @@ async function signup_customer() {
     }),
   })
     .then(function (res) {
+      if(res.ok){
+        popup.style.display = "none";
+        popupSignup.style.display = "none";
+        alert("Cliente Cadastrado com SUCESSO!");
+      } else {
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+      }
+
       console.log(res);
     })
     .then(function (res) {

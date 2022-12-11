@@ -6,36 +6,36 @@ const Iusername = document.querySelector(".usernameLogin");
 const Ipassword = document.querySelector(".passwordLogin");
 
 async function login() {
-  await fetch("http://localhost:8080/api/auth/signinScavenger", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      username: Iusername.value,
-      password: Ipassword.value,
-    }),
-  })
-    .then(function (res) {
-      if (res.ok) {
-        window.location = "../../scavenger.html";
-        window.alert("Usuario salve");
+  // await fetch("http://localhost:8080/api/auth/signinScavenger", {
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     username: Iusername.value,
+  //     password: Ipassword.value,
+  //   }),
+  // })
+  //   .then(function (res) {
+  //     if (res.ok) {
+  //       window.location = "../../scavenger.html";
         
-        //IusernameLogin.value = "";
-        //IpasswordLogin.value = "";
+  //       IusernameLogin.value = "";
+  //       IpasswordLogin.value = "";
         
-      } else {
-        window.alert("Usuario ou senha incorretos");
+  //     } else {
+  //       window.alert("Usuario ou senha incorretos");
         
-        IusernameLogin.value = "";
-        IpasswordLogin.value = "";
+  //       IusernameLogin.value = "";
+  //       IpasswordLogin.value = "";
         
-      }
-    })
-    .then(function (res) {
-      console.log(res);
-    });
+  //     }
+  //   })
+  //   .then(function (res) {
+  //     console.log(res);
+  //   });
+  window.location = "../scavenger.html";
 }
 
 function openSignUp() {
@@ -99,9 +99,9 @@ async function signup_scavenger() {
       });
 
        */
-      username: "jozanholo",
+      username: "jzanholo2",
       password: "123456qwertyy",
-      email: "jozanholo@gmail.com",
+      email: "2jzanholo@gmail.com",
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
@@ -119,6 +119,14 @@ async function signup_scavenger() {
     }),
   })
     .then(function (res) {
+      if(res.ok){
+        popup.style.display = "none";
+        popupSignup2.style.display = "none";
+        window.alert("Coletor Cadastrado com SUCESSO!")
+      } else {
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+      }
+
       console.log(res);
     })
     .then(function (res) {
