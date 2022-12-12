@@ -140,60 +140,82 @@ radioGenderS.forEach(radioBtnS => {
   })
 })
 
-const materials = [];
+async function signup_scavenger() {
+  const materials = [];
+  const days = [];
+  const periods = [];
 
-function signup_scavenger() {
-  //window.alert("Entrei");
-  console.log("materials - ");
-  // let materiais = document.getElementsByName("material");
-  // console.log("materiais - " +materiais);
+  let materiais = document.getElementsByName("material");
+  let dias = document.getElementsByName("dia");
+  let periodos = document.getElementsByName("periodo");
 
-  // for (var i=0; i < materiais.lengh; i++) {
-  //   if (materiais[i].checked){
-  //     materials.push(materiais[i].value);
-  //     console.log("Teste " +materiais[i].value)
-  //   }
-  // }
+  for(let i=0; i<materiais.length ;i++){
+    if(materiais[i].checked)
+      materials.push(materiais[i].value); 
+  }
 
-  // await fetch("http://localhost:8080/api/auth/registerScavenger", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     username: "jzanholo",
-  //     password: "123456qwertyy",
-  //     email: "jzanholo@gmail.com",
-  //     name: "guilherme azevedo",
-  //     phone: "11998946835",
-  //     birthDate: "14/07/2002",
-  //     gender: IgenderScavenger.value,
-  //     materials: materials,
-  //     dayWeek: [
-  //       "segunda-feira",
-  //       "terça-feira",
-  //       "quarta-feira",
-  //       "quinta-feira",
-  //       "sexta-feira",
-  //     ],
-  //     dayPeriod: ["manha", "tarde", "noite"],
-  //     roles: ["catador"],
-  //   }),
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       popup.style.display = "none";
-  //       popupSignupScavenger2.style.display = "none";
-  //       console.log(materials);
-  //       window.alert("Coletor Cadastrado com SUCESSO!")
-  //     } else {
-  //       window.alert("Nome de Usuário ou E-mail já Cadastrado!")
-  //     }
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
+  for(let i=0; i<dias.length ;i++){
+    if(dias[i].checked)
+      days.push(dias[i].value); 
+  }
+
+  for(let i=0; i<periodos.length ;i++){
+    if(periodos[i].checked)
+      periods.push(periodos[i].value); 
+  }
+
+  await fetch("http://localhost:8080/api/auth/registerScavenger", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      username: IuserNameScavenger.value,
+      password: "123456qwertyy",
+      email: IemailScavenger.value,
+      name: "guilherme azevedo",
+      phone: "11998946835",
+      birthDate: "14/07/2002",
+      gender: IgenderScavenger.value,
+      materials: materials,
+      dayWeek: days,
+      dayPeriod: periods,
+      roles: ["catador"],
+    }),
+  })
+    .then(function (res) {
+      if (res.ok) {
+        popup.style.display = "none";
+        popupSignupScavenger2.style.display = "none";
+
+        window.alert("Coletor Cadastrado com SUCESSO!")
+
+        for(let i=0; i<materiais.length ;i++){
+          if(materiais[i].checked){
+            materiais[i].checked = false;
+          }            
+        }
+
+        for(let i=0; i<dias.length ;i++){
+          if(dias[i].checked)
+             dias[i].checked = false;
+        }
+      
+        for(let i=0; i<periodos.length ;i++){
+          if(periodos[i].checked)
+            periodos[i].checked = false; 
+        }
+      } else {
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
+
+        IuserNameScavenger.value = "";
+        IemailScavenger.value = "";
+      }
+    })
+    .then(function (res) {
+      console.log(res);
+    });
 
   /*
    InameScavenger.value = "";

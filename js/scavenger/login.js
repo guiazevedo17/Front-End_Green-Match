@@ -19,7 +19,7 @@ async function login() {
   // })
   //   .then(function (res) {
   //     if (res.ok) {
-  //       window.location = "../../scavenger.html";
+  //       window.location = "../scavenger.html";
         
   //       IusernameLogin.value = "";
   //       IpasswordLogin.value = "";

@@ -155,12 +155,12 @@
 
             <label for="userName">Nome de usuário</label>
             <label for="phone">Telefone</label>
-            <input type="text" name="" id="userName" class="userName">
+            <input type="text" name="" id="userName" class="userNameScavenger">
             <input type="tel" name="" id="phone" class="phone">
 
             <label for="email">E-mail</label>
             <label for="emailConf">Confirmação E-mail</label>
-            <input type="email" name="" id="email" class="email">
+            <input type="email" name="" id="email" class="emailScavenger">
             <input type="email" name="" id="emailConf" class="emailConf">
 
             <label for="password">Senha</label>
@@ -211,7 +211,7 @@
           <div class="background">
 
             <select name="" id="">
-              <option value="">Selecione o tipo de catador</option>
+              <option value="">Selecione o tipo de coletor</option>
               <option value="">Independente</option>
               <option value="">Cooperativa</option>
             </select>
@@ -231,26 +231,25 @@
 
             <h2>Qual melhor dia para realizar a coleta?</h2>
             <ul class="dias">
-              <li><input type="checkbox" id="segunda"><label for="segunda">Segunda-Feira</label>
+              <li><input type="checkbox" name="dia" id="segunda" value="Segunda-Feira"><label for="segunda">Segunda-Feira</label>
               </li>
-              <li><input type="checkbox" id="terca"><label for="terca">Terça-Feira</label></li>
-              <li><input type="checkbox" id="quarta"><label for="quarta">Quarta-Feira</label></li>
-              <li><input type="checkbox" id="quinta"><label for="quinta">Quinta-Feira</label></li>
-              <li><input type="checkbox" id="sexta"><label for="sexta">Sexta-Feira</label></li>
-              <li><input type="checkbox" id="sabado"><label for="sabado">Sábado</label></li>
-              <li><input type="checkbox" id="domingo"><label for="domingo">Domingo</label></li>
-              <li><input type="checkbox" id="feriado"><label for="feriado">Feriados</label></li>
+              <li><input type="checkbox" name="dia" id="terca" value="Terça-Feira"><label for="terca">Terça-Feira</label></li>
+              <li><input type="checkbox" name="dia" id="quarta" value="Quarta-Feira"><label for="quarta">Quarta-Feira</label></li>
+              <li><input type="checkbox" name="dia" id="quinta" value="Quinta-Feira"><label for="quinta">Quinta-Feira</label></li>
+              <li><input type="checkbox" name="dia" id="sexta" value="Sexta-Feira"><label for="sexta">Sexta-Feira</label></li>
+              <li><input type="checkbox" name="dia" id="sabado" value="Sábado"><label for="sabado">Sábado</label></li>
+              <li><input type="checkbox" name="dia" id="domingo" value="Domingo"><label for="domingo">Domingo</label></li>
+              <li><input type="checkbox" name="dia" id="feriado" value="Feriados"><label for="feriado">Feriados</label></li>
             </ul>
 
             <h2>Qual período mais adequado?</h2>
             <ul class="periodo">
-              <li><input type="checkbox" id="manha" name="periodo"><label for="manha">Manhã</label></li>
-              <li><input type="checkbox" id="tarde" name="periodo"><label for="tarde">Tarde</label></li>
-              <li><input type="checkbox" id="noite" name="periodo"><label for="noite">Noite</label></li>
+              <li><input type="checkbox" name="periodo" id="manha" value="Manhã"><label for="manha">Manhã</label></li>
+              <li><input type="checkbox" name="periodo" id="tarde" value="Tarde"><label for="tarde">Tarde</label></li>
+              <li><input type="checkbox" name="periodo" id="noite" value="Noite"><label for="noite">Noite</label></li>
             </ul>
 
           </div>
-
 
           <button onclick="signup_scavenger()">cadastrar</button>
 
@@ -275,7 +274,7 @@
         </p>
         <p>
           A Green Match garante a <a href="#recycle">reciclagem</a> pra você
-          ligando você a um catador que trabalha especificamente com o tipo de
+          ligando você a um coletor que trabalha especificamente com o tipo de
           material que deseja descartar e o melhor no momento de sua
           preferência.
         </p>
