@@ -2,8 +2,25 @@ const popup = document.querySelector(".popup-wrapper");
 const close = document.querySelector(".popup-close");
 const popupSignup = document.querySelector(".signupScavenger");
 const popupSignup2 = document.querySelector(".signupScavenger2");
-const Iusername = document.querySelector(".usernameLogin");
-const Ipassword = document.querySelector(".passwordLogin");
+const IusernameLogin = document.querySelector(".usernameLogin");
+const IpasswordLogin = document.querySelector(".passwordLogin");
+const Iname = document.querySelector(".name");
+const IlastName = document.querySelector(".lastName");
+const IuserName = document.querySelector(".userName");
+const Iphone = document.querySelector(".phone");
+const Iemail = document.querySelector(".email");
+const IemailConf = document.querySelector(".emailConf");
+const Ipassword = document.querySelector(".password");
+const IpasswordConf = document.querySelector(".passwordConf");
+const IbirthDay = document.querySelector(".birthDay");
+const radioGender = document.querySelectorAll("input[name='gender']");
+let Igender;
+
+radioGender.forEach(radioBtn => {
+  radioBtn.addEventListener("change", (event) => {
+    Igender = document.querySelector("input[name='gender']:checked");
+  })
+})
 
 async function login() {
   // await fetch("http://localhost:8080/api/auth/signinScavenger", {
@@ -68,6 +85,26 @@ popup.addEventListener("click", (event) => {
 });
 
 async function signup_scavenger() {
+  const materials = [];
+  const days = [];
+  const periods = [];
+
+  let materiais = document.getElementsByName("material");
+  let dias = document.getElementsByName("dia");
+  let periodos = document.getElementsByName("periodo");
+
+  for (let i = 0; i < materiais.length; i++) {
+    if (materiais[i].checked) materials.push(materiais[i].value);
+  }
+
+  for (let i = 0; i < dias.length; i++) {
+    if (dias[i].checked) days.push(dias[i].value);
+  }
+
+  for (let i = 0; i < periodos.length; i++) {
+    if (periodos[i].checked) periods.push(periodos[i].value);
+  }
+
   await fetch("http://localhost:8080/api/auth/registerScavenger", {
     headers: {
       Accept: "application/json",
@@ -75,73 +112,58 @@ async function signup_scavenger() {
     },
     method: "POST",
     body: JSON.stringify({
-      /* 
-      -> pegar elementos marcados na checkbox
-
-      const materials = []
-      let materiais = document.getElementByName("material")
-
-      for(var i=0; i<material.lengh ;i++){
-        if(material[i].checked)
-          materials.push(material[i].value)
-      }
-
-      materials: materials(const) 
-
-      -> pegar elemento do radio
-
-      let radioBtns = document.querySelectorAll("input[name='fruit']");
-
-      let selected = document.querySelector("input[name='fruit']:checked").value;
-
-      radioBtns.forEach(radioBtn => {
-        radioBtn.addEventListener("change", findSelected);
-      });
-
-       */
-      username: "jzanholo2",
+      username: IuserName.value,
       password: "123456qwertyy",
-      email: "2jzanholo@gmail.com",
+      email: Iemail.value,
       name: "guilherme azevedo",
       phone: "11998946835",
       birthDate: "14/07/2002",
-      gender: "masculino",
-      materials: ["PET", "madeira", "vidro", "entuho", "bateria"],
-      dayWeek: [
-        "segunda-feira",
-        "terça-feira",
-        "quarta-feira",
-        "quinta-feira",
-        "sexta-feira",
-      ],
-      dayPeriod: ["manha", "tarde", "noite"],
+      gender: Igender.value,
+      materials: materials,
+      dayWeek: days,
+      dayPeriod: periods,
       roles: ["catador"],
     }),
   })
     .then(function (res) {
-      if(res.ok){
+      if (res.ok) {
         popup.style.display = "none";
         popupSignup2.style.display = "none";
-        window.alert("Coletor Cadastrado com SUCESSO!")
-      } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
-      }
 
-      console.log(res);
+        window.alert("Coletor Cadastrado com SUCESSO!");
+
+        Iname.value = "";
+        IlastName.value = "";
+        IuserName.value = "";
+        Iphone.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
+        IbirthDay.value = "";
+        Igender.checked = false;
+
+        for (let i = 0; i < materiais.length; i++) {
+          if (materiais[i].checked) {
+            materiais[i].checked = false;
+          }
+        }
+
+        for (let i = 0; i < dias.length; i++) {
+          if (dias[i].checked) dias[i].checked = false;
+        }
+
+        for (let i = 0; i < periodos.length; i++) {
+          if (periodos[i].checked) periodos[i].checked = false;
+        }
+      } else {
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
+
+        IuserName.value = "";
+        Iemail.value = "";
+      }
     })
     .then(function (res) {
       console.log(res);
     });
-
-  /*
-      Iname.value = "";
-      IlastName.value = "";
-      IuserName.value = "";
-      Iphone.value = "";
-      Iemail.value = "";
-      IemailConf.value = "";
-      Ipassword.value = "";
-      IpasswordConf.value = "";
-      IbirthDay.value = "";
-    */
 }

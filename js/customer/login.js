@@ -1,8 +1,26 @@
 const popup = document.querySelector(".popup-wrapper");
 const close = document.querySelector(".popup-close");
 const popupSignup = document.querySelector(".signupCustomer");
-const Iusername = document.querySelector(".usernameLogin");
-const Ipassword = document.querySelector(".passwordLogin");
+const IusernameLogin = document.querySelector(".usernameLogin");
+const IpasswordLogin = document.querySelector(".passwordLogin");
+
+const Iname = document.querySelector(".name");
+const IlastName = document.querySelector(".lastName");
+const IuserName = document.querySelector(".userName");
+const Iphone = document.querySelector(".phone");
+const Iemail = document.querySelector(".email");
+const IemailConf = document.querySelector(".emailConf");
+const Ipassword = document.querySelector(".password");
+const IpasswordConf = document.querySelector(".passwordConf");
+const IbirthDay = document.querySelector(".birthDay");
+const radioGender = document.querySelectorAll("input[name='gender']");
+let Igender;
+
+radioGender.forEach(radioBtn => {
+  radioBtn.addEventListener("change", (event) => {
+    Igender = document.querySelector("input[name='gender']:checked");
+  })
+})
 
 async function login() {
   await fetch("http://localhost:8080/api/auth/signinClient", {
@@ -12,8 +30,8 @@ async function login() {
     },
     method: "POST",
     body: JSON.stringify({
-      username: Iusername.value,
-      password: Ipassword.value,
+      username: IusernameLogin.value,
+      password: IpasswordLogin.value,
     }),
   })
     .then(function (res) {
@@ -62,31 +80,39 @@ async function signup_customer() {
     },
     method: "POST",
     body: JSON.stringify({
-      /*name: Iname.value + IlastName.value,
-                username: IuserName.value,
-                phone: Iphone.value,
-                email: Iemail.value,
-                password: Ipassword.value,
-                birthDate: IbirthDay.value,
-                gender: "masculino",
-                roles: ["user"]*/
-      username: "guiazevedo2",
-      password: "123456",
-      email: "2guiazevedo@gmail.com",
-      name: "guilherme azevedo",
-      phone: "11998946835",
-      birthDate: "14/07/2002",
-      gender: "masculino",
-      roles: ["user"],
+      name: Iname.value + IlastName.value,
+      username: IuserName.value,
+      phone: Iphone.value,
+      email: Iemail.value,
+      password: Ipassword.value,
+      birthDate: IbirthDay.value,
+      gender: Igender.value,
+      roles: ["user"]
     }),
   })
     .then(function (res) {
       if(res.ok){
         popup.style.display = "none";
         popupSignup.style.display = "none";
-        alert("Cliente Cadastrado com SUCESSO!");
+
+        window.alert("Cliente Cadastrado com SUCESSO!");
+
+        Iname.value = "";
+        IlastName.value = "";
+        IuserName.value = "";
+        Iphone.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
+        IbirthDay.value = "";
+        Igender.checked = false;
       } else {
         window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+
+        IuserName.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
       }
 
       console.log(res);
