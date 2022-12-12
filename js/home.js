@@ -65,11 +65,11 @@ const IbirthDay = document.querySelector(".birthDay");
 const radioGender = document.querySelectorAll("input[name='gender']");
 let Igender;
 
-radioGender.forEach((radioBtn) => {
+radioGender.forEach(radioBtn => {
   radioBtn.addEventListener("change", (event) => {
     Igender = document.querySelector("input[name='gender']:checked");
-  });
-});
+  })
+})
 
 async function signup_customer() {
   await fetch("http://localhost:8080/api/auth/registerClient", {
@@ -86,7 +86,7 @@ async function signup_customer() {
       password: Ipassword.value,
       birthDate: IbirthDay.value,
       gender: Igender.value,
-      roles: ["user"],
+      roles: ["user"]
     }),
   })
     .then(function (res) {
@@ -94,7 +94,7 @@ async function signup_customer() {
         popup.style.display = "none";
         popupSignupCustomer.style.display = "none";
 
-        window.alert("Cliente Cadastrado com SUCESSO!");
+        alert("Cliente Cadastrado com SUCESSO!");
 
         Iname.value = "";
         IlastName.value = "";
@@ -105,7 +105,7 @@ async function signup_customer() {
         Ipassword.value = "";
         IpasswordConf.value = "";
         IbirthDay.value = "";
-        Igender.checked = false;
+        Igender.value = "";
       } else {
         window.alert("Nome de Usuário ou E-mail já Cadastrado!");
 
@@ -134,11 +134,11 @@ const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
 const radioGenderS = document.querySelectorAll("input[name='genderS']");
 let IgenderScavenger;
 
-radioGenderS.forEach((radioBtnS) => {
+radioGenderS.forEach(radioBtnS => {
   radioBtnS.addEventListener("change", (event) => {
     IgenderScavenger = document.querySelector("input[name='genderS']:checked");
-  });
-});
+  })
+})
 
 async function signup_scavenger() {
   const materials = [];
@@ -149,16 +149,19 @@ async function signup_scavenger() {
   let dias = document.getElementsByName("dia");
   let periodos = document.getElementsByName("periodo");
 
-  for (let i = 0; i < materiais.length; i++) {
-    if (materiais[i].checked) materials.push(materiais[i].value);
+  for(let i=0; i<materiais.length ;i++){
+    if(materiais[i].checked)
+      materials.push(materiais[i].value); 
   }
 
-  for (let i = 0; i < dias.length; i++) {
-    if (dias[i].checked) days.push(dias[i].value);
+  for(let i=0; i<dias.length ;i++){
+    if(dias[i].checked)
+      days.push(dias[i].value); 
   }
 
-  for (let i = 0; i < periodos.length; i++) {
-    if (periodos[i].checked) periods.push(periodos[i].value);
+  for(let i=0; i<periodos.length ;i++){
+    if(periodos[i].checked)
+      periods.push(periodos[i].value); 
   }
 
   await fetch("http://localhost:8080/api/auth/registerScavenger", {
@@ -188,35 +191,34 @@ async function signup_scavenger() {
 
         window.alert("Coletor Cadastrado com SUCESSO!");
 
-        InameScavenger.value = "";
-        IlastNameScavenger.value = "";
-        IuserNameScavenger.value = "";
-        IphoneScavenger.value = "";
-        IemailScavenger.value = "";
-        IemailConfScavenger.value = "";
-        IpasswordScavenger.value = "";
-        IpasswordConfScavenger.value = "";
-        IbirthDayScavenger.value = "";
-        IgenderScavenger.checked = false;
+        Iname.value = "";
+        IlastName.value = "";
+        IuserName.value = "";
+        Iphone.value = "";
+        Iemail.value = "";
+        IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
+        IbirthDay.value = "";
+        Igender.checked = false;
 
-        for (let i = 0; i < materiais.length; i++) {
-          if (materiais[i].checked) {
+        for(let i=0; i<materiais.length ;i++){
+          if(materiais[i].checked){
             materiais[i].checked = false;
-          }
+          }            
         }
 
-        for (let i = 0; i < dias.length; i++) {
-          if (dias[i].checked) dias[i].checked = false;
+        for(let i=0; i<dias.length ;i++){
+          if(dias[i].checked)
+             dias[i].checked = false;
         }
-
-        for (let i = 0; i < periodos.length; i++) {
-          if (periodos[i].checked) periodos[i].checked = false;
+      
+        for(let i=0; i<periodos.length ;i++){
+          if(periodos[i].checked)
+            periodos[i].checked = false; 
         }
       } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
-
-        IuserNameScavenger.value = "";
-        IemailScavenger.value = "";
+        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
       }
     })
     .then(function (res) {
