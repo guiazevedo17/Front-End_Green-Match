@@ -16,3 +16,6 @@ async function getData() {
   document.getElementById("birthDate").innerHTML = data[0].birthDate;
 }
 
+function oi(){
+  window.alert("olá!");
+}

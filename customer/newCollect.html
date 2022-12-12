@@ -45,9 +45,20 @@
     <a href="../home.html">&#8592; sair</a>
   </div>
 
+  <section class="top">
+    <h1>Nova Coleta</h1>
+  </section>
+
+  <section class="top2">
+    <h1>Qual endereço de coleta ?</h1>
+  </section>
+
   <main>
-    <div class="box">
-      <h2>Quais materiais deseja que sejam coletados?</h2>
+    <div class="newCollect">
+
+      <div class="box">
+
+        <h2>Quais materiais deseja que sejam coletados?</h2>
       <ul class="materiais">
         <li>
           <input type="checkbox" name="material" id="papel" value="Papel"/><label for="papel">Papel</label>
@@ -126,11 +137,68 @@
         <label for="qntd">Peso aproximado (kg)</label>
       </div>
 
-      <button onclick="newCollect()">continuar</button>
+      </div>
+
+      <div class="bottom">
+        <button onclick="oi()">continuar</button>
+      </div>
+
+    </div>
+
+    <div class="newCollect2">
+
+      <button class="returnNewCollect" onclick="returnNewCollect()">
+        &#8592;
+      </button>
+
+      <div class="box2">
+
+        <input type="radio" name="address" id="address1" value="Casa 1">
+        <label for="address1">
+          
+          <div class="address">
+            <h3>Casa 1</h3>
+            <ul>
+              <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
+              <li><strong>Número: </strong>820</li>
+              <li><strong>Complemento: </strong>Apto 202</li>
+              <li><strong>Bairro: </strong>Parque das Universidades</li>
+              <li><strong>CEP: </strong>13087-571</li>
+              <li><strong>Cidade: </strong>Campinas <strong class="st">Estado: </strong>SP</li>
+            </ul>
+          </div>
+
+        </label>
+
+        <input type="radio" name="address" id="address2" value="Casa 2">
+        <label for="address2">
+          
+          <div class="address">
+            <h3>Casa 2</h3>
+            <ul>
+              <li><strong>Rua: </strong>Professor Doutor Euryclides</li>
+              <li><strong>Número: </strong>820</li>
+              <li><strong>Complemento: </strong>Apto 202</li>
+              <li><strong>Bairro: </strong>Parque das Universidades</li>
+              <li><strong>CEP: </strong>13087-571</li>
+              <li><strong>Cidade: </strong>Campinas <strong class="st">Estado: </strong>SP</li>
+            </ul>
+          </div>
+
+        </label>
+
+        
+
+      </div>
+
+      <div class="bottom">
+        <button onclick="newCollect()">finalizar</button>
+      </div>
+
     </div>
   </main>
 
-  <script type="text/javascript" src="../js/customer/chooseAddress.js"></script>
+  <script type="text/javascript" src="../js/customer/newCollect.js"></script>
 </body>
 
 </html>

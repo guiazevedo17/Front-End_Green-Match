@@ -1,14 +1,19 @@
-main .box{
-    display: flex;
+.newCollect{
+    /* display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    margin-bottom: 10%;
+    margin-bottom: 10%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-main .box h2{
+.newCollect h2{
     color: #90C320;
     font-size: 1.5em;
     margin-top: 5%;
@@ -16,11 +21,11 @@ main .box h2{
     text-align: center;
 }
 
-main .box h2:first-of-type{
+.newCollect h2:first-of-type{
     margin-top: 0;
 }
 
-.box ul.materiais, .box ul.dias{
+.newCollect ul.materiais, .newCollect ul.dias{
     width: 62%;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -28,7 +33,7 @@ main .box h2:first-of-type{
 	margin-left: 15%;
 }
 
-.box ul.periodo{
+.newCollect ul.periodo{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -36,11 +41,11 @@ main .box h2:first-of-type{
     flex-direction: row;
 }
 
-.box ul.periodo li{
+.newCollect ul.periodo li{
     padding-right:2%;
 }
 
-.box button{
+.newCollect button{
     padding: 1% 2%;
     color: white;
     background-color: #90C320;
@@ -49,6 +54,7 @@ main .box h2:first-of-type{
     text-transform: uppercase;
     font-size: 1.5em;
     margin: 4% auto;
+    cursor: pointer;
 }
 
 /**/
@@ -95,6 +101,119 @@ main .box h2:first-of-type{
     width: 30%;
 }
 
-button:hover{
+/* newCollect2 */
+.top2{
+    display: none;
+}
+
+.newCollect2{
+    /* + de 1 endereço 
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    padding: 5% 0 10% 0; */
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newCollect2 label{
+    width: 40%;
+}
+
+.address{
+    border: 3px solid green;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    padding: 1%;
+    border: 1px solid #90C320;
+    border-radius: 20px;
+    line-height: 1.2em;
+    /* - de 1 endereço */
+    width: 100%;
+    margin-bottom: 2%;
     cursor: pointer;
+}
+
+.address h3{
+    color: #90C320;
+    font-size: 2em;
+    margin: 4% 0;
+}
+
+.address ul li{
+    color: grey;
+    font-size: 1.15em;
+    line-height: 1.35em;
+}
+
+.address ul li strong{
+    font-weight: 500;
+    color: #136A5A;
+    font-size: 1.2em;
+}
+
+.address ul li strong.st{
+    margin-left: 3%;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 20vw; 
+    text-align: center;  
+    width: 80vw;
+    height: 10vh;
+    background-color: white; 
+}
+
+.bottom button{
+    padding: 1% 2%;
+    color: white;
+    background-color: #90C320;
+    border: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.returnNewCollect{
+    border: 0;
+    background-color: white;
+    color: #136A5A;
+    font-size: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 20vw;
+    cursor: pointer;
+}
+
+.newCollect2 input[type="radio"]{
+    display: none;
+}
+
+.newCollect2 input[type="radio"]:checked + label .address{
+    background-color: rgb(250, 250, 250);
+    border: 3px solid #136A5A;
+}
+
+.newCollect2 input[type="radio"]:checked + label .address h3{
+    font-size: 2.2em;
+}
+
+.newCollect2 input[type="radio"]:checked + label .address ul li{
+    color: rgb(77, 77, 77);
 }
