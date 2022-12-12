@@ -3,6 +3,8 @@ const Iweight = document.querySelector(".weight");
 const IperiodoS = document.querySelectorAll("input[name='periodo']");
 let Iperiodo;
 
+const timeElapsed = Date.now();
+const today = new Date(timeElapsed);
 function returnNewCollect() {
   window.location = "newCollect.html";
 }
@@ -30,15 +32,17 @@ function newCollect() {
 
   for (let i = 0; i < dias.length; i++) {
     if (dias[i].checked) days.push(dias[i].value);
-  }
+  } 
   
-  fetch("http://localhost:8080/api/auth/coleta", {
+
+  fetch("http://localhost:8080/api/auth/newCollect", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
     method: "POST",
     body: JSON.stringify({
+      name_collect: today.toLocaleDateString(),
       obs: Iobs.value,
       weight: Iweight.value,
       materials: materials,
@@ -47,6 +51,9 @@ function newCollect() {
     }),
   })
     .then(function (res) {
+      if(res.ok){
+        window.alert("Pedido de coleta enviado com sucesso");
+      }
       console.log(res);
     })
     .then(function (res) {
