@@ -77,7 +77,8 @@ function newCollect() {
   })
     .then(function (res) {
       if (res.ok) {
-        window.alert("Pedido de coleta enviado com sucesso");
+        window.alert("Coleta Solicitada com SUCESSO!");
+        window.location = "customer.html";
       }
       console.log(res);
     })
@@ -102,14 +103,14 @@ async function getAddress() {
 
   for (i = 0; i < length; i++) {
 
-    addr += "<input type='radio' name='address' id='address" + i + "' value='xoxo' >";
+    addr += "<input type='radio' name='address' id='address" + i + "' value='"+ data[i].address_name +"' >";
     addr += "<label for=" + "address" + i + ">";
 
     addr += "<div class=" + "address" + ">";
     addr += "<h3>" + data[i].address_name + "</h3>";
     addr += "<ul>";
     addr += "<li><strong>Rua: </strong>" + data[i].street + "</li>";
-    //addr+="<li><strong>Número: </strong>"+data.number+"</li>";
+    addr+="<li><strong>Número: </strong>"+data[i].number+"</li>";
     addr += "<li><strong>Complemento: </strong>" + data[i].complement + "</li>";
     addr += "<li><strong>Bairro: </strong>" + data[i].district + "</li>";
     addr += "<li><strong>CEP: </strong>" + data[i].cep + "</li>";

@@ -18,7 +18,7 @@ async function getAddress() {
         addr+="<h3>"+data[i].address_name+"</h3>";
         addr+="<ul>";
             addr+="<li><strong>Rua: </strong>"+data[i].street+"</li>";
-            //addr+="<li><strong>Número: </strong>"+data.number+"</li>";
+            addr+="<li><strong>Número: </strong>"+data[i].number+"</li>";
             addr+="<li><strong>Complemento: </strong>"+data[i].complement+"</li>";
             addr+="<li><strong>Bairro: </strong>"+data[i].district+"</li>";
             addr+="<li><strong>CEP: </strong>"+data[i].cep+"</li>";

@@ -8,11 +8,10 @@ const city = document.querySelector(".city");
 const state = document.querySelector(".state");
 
 function returnAddress(){
-    window.location = "address.html";
+  window.location = "address.html";
 }
 
 function newAddress(){
-    alert("Entrei newAddress");
     fetch("http://localhost:8080/api/auth/newAddress", {
     headers: {
       Accept: "application/json",
@@ -33,6 +32,7 @@ function newAddress(){
     .then(function (res) {
       if (res.ok) {
         window.alert("Endereço Cadastrado com SUCESSO!");
+        window.location = "address.html";
       } else {
         window.alert("FALHA no Cadastro de Endereço!");
       }
@@ -41,5 +41,4 @@ function newAddress(){
     .then(function (res) {
       console.log(res);
     });
-    alert("vou sair newAddress");
 }

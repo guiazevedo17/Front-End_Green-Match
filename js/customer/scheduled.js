@@ -1,7 +1,7 @@
-getRequesteds();
+getScheduleds();
 
-async function getRequesteds() {
-    const response = await fetch("http://localhost:8080/api/auth/collectByUser");
+async function getScheduleds() {
+    const response = await fetch("http://localhost:8080/api/auth/"); // ROTA para Coletas AGENDADAS
     console.log(response);
   
     const data = await response.json();
@@ -13,21 +13,22 @@ async function getRequesteds() {
     var collect = "";
   
     for (i = 0; i < length; i++) {
-  
+
       collect += "<div class='collect'>"
         collect += "<div class='image'>"
-          collect += "<img src='../assets/icons/requested.png'/>"
+          collect += "<img src='../assets/icons/scheduled.png'/>"
         collect += "</div>"
 
         collect += "<div class='content'>"
           collect += "<h1>Coleta - "+data[i].name_collect+"</h1>"
           collect += "<ul>"
             collect += "<li>Materiais: <span>"+data[i].materials+"</span></li>"
-            collect += "<li> Dias: <span>"+data[i].dayWeek+"</span></li>"
+            collect += "<li>Dias: <span>"+data[i].dayWeek+"</span></li>"
             collect += "<li>Período: <span>"+data[i].dayPeriod+"</span></li>"
             collect += "<li>Observação: <span>"+data[i].obs+"</span></li>"
             collect += "<li>Peso: <span>"+data[i].weight+"</span><span>kg</span></li>"
-            collect += "<li>Endereço: <span>"+data[i].adress+"</span></li>"
+            collect += "<li>Endereço: <span>"+data[i].address+"</span></li>"
+            collect += "<li>Coletor: <span>"+data[i].username_scavenger+"</span></li>"
           collect += "</ul>"
         collect += "</div>"
 
@@ -36,9 +37,14 @@ async function getRequesteds() {
             collect += "<span>cancelar</span>"
             collect += "<img src='../assets/icons/cancel.png'/>"
           collect += "</button>"
+
+          collect += "<button class='done'>"
+            collect += "<span>finalizar</span>"
+            collect += "<img src='../assets/icons/done.png'/>"
+          collect += "</button>"
         collect += "</div>"
       collect += "</div>"
-      
+
     }
   
     document.getElementById("main").innerHTML = collect;

@@ -57,7 +57,7 @@ main .box{
     border-radius: 20px;
     line-height: 1.2em;
     /* - de 1 endereço */
-    width: 40%;
+    width: 50%;
     margin-bottom: 2%;
 }
 
@@ -65,6 +65,10 @@ main .box{
     color: #90C320;
     font-size: 2em;
     margin: 4% 0;
+}
+
+.address ul{
+    width: 70%;
 }
 
 .address ul li{
