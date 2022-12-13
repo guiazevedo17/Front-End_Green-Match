@@ -1,8 +1,6 @@
 getData();
 
 async function getData() {
-  
-
   const response = await fetch("http://localhost:8080/api/auth/meusDados");
   console.log(response);
 
@@ -16,3 +14,9 @@ async function getData() {
   document.getElementById("birthDate").innerHTML = data[0].birthDate;
 }
 
+function oi(){
+  window.alert("olá!");
+}
+
+const newCollect = document.querySelector(".newCollect");
+const newCollect2 = document.querySelector(".newCollect2");

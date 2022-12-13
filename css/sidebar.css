@@ -71,7 +71,7 @@ body{
     margin-top: 10%;
 }
 
-.top{
+.top, .top2{
     grid-area: top;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ body{
     background-color: white; 
 }
 
-.top h1{
+.top h1, .top2 h1{
     color: #90C320;
     font-size: 3.3em;
 }
