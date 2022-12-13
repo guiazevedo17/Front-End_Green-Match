@@ -1,8 +1,6 @@
 getData();
 
 async function getData() {
-  
-
   const response = await fetch("http://localhost:8080/api/auth/meusDados");
   console.log(response);
 
@@ -19,3 +17,6 @@ async function getData() {
 function oi(){
   window.alert("olá!");
 }
+
+const newCollect = document.querySelector(".newCollect");
+const newCollect2 = document.querySelector(".newCollect2");

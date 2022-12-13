@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .newCollect h2{
@@ -59,29 +60,36 @@
 
 /**/
 .single-input{
-    width: 70%;
+    width: 100%;
 	position: relative;
 	margin-top: 8%;
+    display: flex;
+    justify-content: center;
 }
 
 .single-input label{
 	position: absolute;
 	bottom: 40%;
-	left: 0;
+	left: 10%;
 	cursor: text;
 	transition: all 0.5s ease-in-out;
 	font-size: max(20px, 1.5vw);
 }
 
 .single-input input{
-	width: 100%;
-	
+	width: 80%;
 	margin-bottom: 2%;	
 	border: 0;
 	border-bottom: 2px solid #444444;
 	outline: 0;
 	font-size: max(18px ,1.2vw);
 	transition: all 0.5s ease-in-out;
+}
+
+#peso{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .single-input input:focus,
@@ -97,13 +105,13 @@
 	color: #90C320;
 }
 
-#peso{
-    width: 30%;
-}
-
 /* newCollect2 */
 .top2{
     display: none;
+}
+
+.box2{
+    width: 100%;
 }
 
 .newCollect2{
@@ -118,10 +126,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .newCollect2 label{
-    width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .address{
@@ -138,7 +150,7 @@
     border-radius: 20px;
     line-height: 1.2em;
     /* - de 1 endereço */
-    width: 100%;
+    width: 50%;
     margin-bottom: 2%;
     cursor: pointer;
 }
@@ -147,6 +159,11 @@
     color: #90C320;
     font-size: 2em;
     margin: 4% 0;
+}
+
+.address ul{
+    width: 70%;
+    margin: 0 auto;
 }
 
 .address ul li{

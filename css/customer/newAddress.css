@@ -39,6 +39,7 @@
   font-size: 2em;
   text-transform: uppercase;
   padding: 1.5% 3%;
+  cursor: pointer;
 }
 
 .registerAddress input:focus{
