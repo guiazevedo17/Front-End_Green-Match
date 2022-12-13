@@ -1,3 +1,5 @@
+getAddress();
+
 const top1 = document.querySelector(".top");
 const top2 = document.querySelector(".top2");
 const newCollect1 = document.querySelector(".newCollect");
@@ -14,12 +16,12 @@ IperiodS.forEach((periodS) => {
   });
 });
 
-const IaddressES = document.querySelectorAll("input[name='address']");
-let Iaddress;
+const addressES1 = document.querySelectorAll("input[name='address']");
+let address2;
 
-IaddressES.forEach((addressES) => {
+addressES1.forEach((addressES) => {
   addressES.addEventListener("change", (event) => {
-    Iaddress = document.querySelector("input[name='address']:checked");
+    address2 = document.querySelector("input[name='address']:checked");
   });
 });
 
@@ -28,7 +30,6 @@ const today = new Date(timeElapsed);
 
 
 function chooseAddress() {
-  getAddress();
   top1.style.display = "none";
   newCollect1.style.display = "none";
   top2.style.display = "flex"
@@ -59,45 +60,46 @@ function newCollect() {
     if (dias[i].checked) days.push(dias[i].value);
   }
 
-  fetch("http://localhost:8080/api/auth/newCollect", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      name_collect: today.toLocaleDateString(),
-      address: "exemplo",
-      obs: Iobs.value,
-      weight: Iweight.value,
-      materials: materials,
-      dayWeek: days,
-      dayPeriod: Iperiod.value,
-    }),
-  })
-    .then(function (res) {
-      if (res.ok) {
-        window.alert("Coleta Solicitada com SUCESSO!");
-        window.location = "customer.html";
-      }
-      console.log(res);
-    })
-    .then(function (res) {
-      console.log(res);
-    });
+  console.log(addressES1);
+  // console.log(IperiodS);
+  // console.log(Iperiod.value);
+  // console.log("---------");
+  // console.log(IaddressES);
+  // console.log(Iaddress);
+
+  // fetch("http://localhost:8080/api/auth/newCollect", {
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     name_collect: today.toLocaleDateString(),
+  //     address: "exemplo",
+  //     obs: Iobs.value,
+  //     weight: Iweight.value,
+  //     materials: materials,
+  //     dayWeek: days,
+  //     dayPeriod: Iperiod.value,
+  //   }),
+  // })
+  //   .then(function (res) {
+  //     if (res.ok) {
+  //       window.alert("Coleta Solicitada com SUCESSO!");
+  //       window.location = "customer.html";
+  //     }
+  //     console.log(res);
+  //   })
+  //   .then(function (res) {
+  //     console.log(res);
+  //   });
 }
 
 /* GET */
-
 async function getAddress() {
   const response = await fetch("http://localhost:8080/api/auth/AddressByUsername");
-  console.log(response);
-
   const data = await response.json();
-  console.log(data);
-
   length = data.length;
-  console.log(length);
 
   var addr = "";
 
@@ -114,7 +116,7 @@ async function getAddress() {
     addr += "<li><strong>Complemento: </strong>" + data[i].complement + "</li>";
     addr += "<li><strong>Bairro: </strong>" + data[i].district + "</li>";
     addr += "<li><strong>CEP: </strong>" + data[i].cep + "</li>";
-    addr += "<li><strong>Cidade: </strong>" + data[i].city + " <strong class=" + "st" + ">Estado: </strong>" + data[i].state + "</li>";
+    addr += "<li><strong>Cidade: </strong>" + data[i].city + " <strong class='st'>Estado: </strong>" + data[i].state + "</li>";
     addr += "</ul>";
     addr += "</div>";
 
@@ -122,4 +124,5 @@ async function getAddress() {
   }
 
   document.getElementById("box2").innerHTML = addr;
+  
 }
