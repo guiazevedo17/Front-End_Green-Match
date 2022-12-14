@@ -75,6 +75,8 @@ function newCollect() {
       if (res.ok) {
         window.alert("Coleta Solicitada com SUCESSO!");
         window.location = "../customer.html";
+      } else {
+        window.alert("FALHA na Solicitação de Coleta!");
       }
       console.log(res);
     })

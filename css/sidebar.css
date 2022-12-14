@@ -96,3 +96,8 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+.nothing{
+    color: grey;
+    font-size: 1.6em;
+}

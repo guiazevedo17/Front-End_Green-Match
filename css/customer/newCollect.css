@@ -16,7 +16,7 @@
 
 .newCollect h2{
     color: #90C320;
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-top: 5%;
     margin-bottom: 3%;
     text-align: center;
@@ -29,7 +29,7 @@
 .newCollect ul.materiais, .newCollect ul.dias{
     width: 62%;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 1fr 0.5fr;
 	text-align: left;
 	margin-left: 15%;
 }
@@ -112,6 +112,10 @@
 
 .box2{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .newCollect2{
@@ -218,7 +222,7 @@
 }
 
 .newCollect2 input[type="radio"]{
-    /* display: none; */
+    display: none;
 }
 
 .newCollect2 input[type="radio"]:checked + label .address{

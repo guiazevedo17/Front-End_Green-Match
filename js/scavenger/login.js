@@ -13,14 +13,7 @@ const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 const IbirthDay = document.querySelector(".birthDay");
-const radioGender = document.querySelectorAll("input[name='gender']");
-let Igender;
-
-radioGender.forEach(radioBtn => {
-  radioBtn.addEventListener("change", (event) => {
-    Igender = document.querySelector("input[name='gender']:checked");
-  })
-})
+const Igender = document.querySelector("input[name='gender']:checked");
 
 const Iwork = document.querySelector(".work");
 
@@ -44,7 +37,7 @@ async function login() {
         IpasswordLogin.value = "";
         
       } else {
-        window.alert("Usuario ou senha incorretos");
+        window.alert("Usuário ou Senha INVÁLIDO(A)!");
         
         IusernameLogin.value = "";
         IpasswordLogin.value = "";
@@ -159,10 +152,13 @@ async function signup_scavenger() {
           if (periodos[i].checked) periodos[i].checked = false;
         }
       } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
+        window.alert("Nome de Usuário, E-mail ou Senha INVÁLIDO(A)!");
 
         IuserName.value = "";
         Iemail.value = "";
+        IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
       }
     })
     .then(function (res) {

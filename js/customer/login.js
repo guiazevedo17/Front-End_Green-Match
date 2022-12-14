@@ -42,7 +42,7 @@ async function login() {
         IpasswordLogin.value = "";
         
       } else {
-        window.alert("Usuario ou senha incorretos");
+        window.alert("Usuário ou Senha INVÁLIDO(A)!");
         
         IusernameLogin.value = "";
         IpasswordLogin.value = "";
@@ -108,11 +108,13 @@ async function signup_customer() {
         IbirthDay.value = "";
         Igender.checked = false;
       } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+        window.alert("Nome de Usuário, E-mail ou Senha INVÁLIDO(A)!")
 
         IuserName.value = "";
         Iemail.value = "";
         IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
       }
 
       console.log(res);
@@ -121,15 +123,4 @@ async function signup_customer() {
       console.log(res);
     });
 
-  /*
-      Iname.value = "";
-      IlastName.value = "";
-      IuserName.value = "";
-      Iphone.value = "";
-      Iemail.value = "";
-      IemailConf.value = "";
-      Ipassword.value = "";
-      IpasswordConf.value = "";
-      IbirthDay.value = "";
-    */
 }

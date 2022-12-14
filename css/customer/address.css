@@ -61,10 +61,26 @@ main .box{
     margin-bottom: 2%;
 }
 
+.address button.delete{
+    background-color: #136A5A;
+    border-radius: 40px;
+    border: 0;
+    /* padding: 1.2% 1.5%; */
+    padding: 1.5% 2%;
+    cursor: pointer;
+    margin-left: 90.5%;
+}
+
+.address button.delete img{
+    width: 25px;
+    height: 25px;
+}
+
 .address h3{
     color: #90C320;
     font-size: 2em;
     margin: 4% 0;
+    margin-bottom: 6%;
 }
 
 .address ul{

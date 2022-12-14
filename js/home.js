@@ -52,6 +52,11 @@ popup.addEventListener("click", (event) => {
   }
 });
 
+function dateByString() { // formata a data para padrão dd/mm/aaaa
+  let formatted = IbirthDay.value;
+  return formatted.split('-').reverse().join('/');
+}
+
 /* Cadastra Cliente */
 const Iname = document.querySelector(".name");
 const IlastName = document.querySelector(".lastName");
@@ -61,17 +66,11 @@ const Iemail = document.querySelector(".email");
 const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
-const IbirthDay = document.querySelector(".birthDay");
-const radioGender = document.querySelectorAll("input[name='gender']");
-let Igender;
-
-radioGender.forEach(radioBtn => {
-  radioBtn.addEventListener("change", (event) => {
-    Igender = document.querySelector("input[name='gender']:checked");
-  })
-})
+let IbirthDay = document.querySelector(".birthDay");
+const Igender = document.querySelector("input[name='gender']:checked");
 
 async function signup_customer() {
+
   await fetch("http://localhost:8080/api/auth/registerClient", {
     headers: {
       Accept: "application/json",
@@ -84,7 +83,7 @@ async function signup_customer() {
       phone: Iphone.value,
       email: Iemail.value,
       password: Ipassword.value,
-      birthDate: IbirthDay.value,
+      birthDate: IbirthDay = dateByString(),
       gender: Igender.value,
       roles: ["user"]
     }),
@@ -105,13 +104,16 @@ async function signup_customer() {
         Ipassword.value = "";
         IpasswordConf.value = "";
         IbirthDay.value = "";
-        Igender.value = "";
+        Igender.checked = false;
+
       } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!");
+        window.alert("Nome de Usuário, E-mail ou Senha INVÁLIDO(A)!");
 
         IuserName.value = "";
         Iemail.value = "";
         IemailConf.value = "";
+        Ipassword.value = "";
+        IpasswordConf.value = "";
       }
 
       console.log(res);
@@ -130,15 +132,8 @@ const IemailScavenger = document.querySelector(".emailScavenger");
 const IemailConfScavenger = document.querySelector(".emailConfScavenger");
 const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
-const IbirthDayScavenger = document.querySelector(".birthDayScavenger");
-const radioGenderS = document.querySelectorAll("input[name='genderS']");
-let IgenderScavenger;
-
-radioGenderS.forEach(radioBtnS => {
-  radioBtnS.addEventListener("change", (event) => {
-    IgenderScavenger = document.querySelector("input[name='genderS']:checked");
-  })
-})
+let IbirthDayScavenger = document.querySelector(".birthDayScavenger");
+const IgenderScavenger = document.querySelector("input[name='genderS']:checked");
 
 const Iwork = document.querySelector(".work");
 
@@ -174,11 +169,11 @@ async function signup_scavenger() {
     method: "POST",
     body: JSON.stringify({
       username: IuserNameScavenger.value,
-      password: "123456qwertyy",
+      password: IpasswordScavenger.value,
       email: IemailScavenger.value,
-      name: "guilherme azevedo",
-      phone: "11998946835",
-      birthDate: "14/07/2002",
+      name: InameScavenger + " " + IlastNameScavenger,
+      phone: IphoneScavenger,
+      birthDate: IbirthDayScavenger = dateByString(),
       gender: IgenderScavenger.value,
       work: Iwork.value,
       materials: materials,
@@ -194,16 +189,16 @@ async function signup_scavenger() {
 
         window.alert("Coletor Cadastrado com SUCESSO!");
 
-        Iname.value = "";
-        IlastName.value = "";
-        IuserName.value = "";
-        Iphone.value = "";
-        Iemail.value = "";
-        IemailConf.value = "";
-        Ipassword.value = "";
-        IpasswordConf.value = "";
-        IbirthDay.value = "";
-        Igender.checked = false;
+        InameScavenger.value = "";
+        IlastNameScavenger.value = "";
+        IuserNameScavenger.value = "";
+        IphoneScavenger.value = "";
+        IemailScavenger.value = "";
+        IemailConfScavenger.value = "";
+        IpasswordScavenger.value = "";
+        IpasswordConfScavenger.value = "";
+        IbirthDayScavenger.value = "";
+        IgenderScavenger.checked = false;
 
         for(let i=0; i<materiais.length ;i++){
           if(materiais[i].checked){
@@ -221,22 +216,17 @@ async function signup_scavenger() {
             periodos[i].checked = false; 
         }
       } else {
-        window.alert("Nome de Usuário ou E-mail já Cadastrado!")
+        window.alert("Nome de Usuário, E-mail ou Senha INVÁLIDO(A)!");
+
+        IuserName.value = "";
+        Iemail.value = "";
+        IemailConfScavenger.value = "";
+        IpasswordScavenger.value = "";
+        IpasswordConfScavenger.value = "";
+        Ipassword.value = "";
       }
     })
     .then(function (res) {
       console.log(res);
     });
-
-  /*
-   InameScavenger.value = "";
-    IlastNameScavenger.value = "";
-    IuserNameScavenger.value = "";
-    IphoneScavenger.value = "";
-    IemailScavenger.value = "";
-    IemailConfScavenger.value = "";
-    IpasswordScavenger.value = "";
-    IpasswordConfScavenger.value = "";
-    IbirthDayScavenger.value = "";
-  */
 }
