@@ -59,7 +59,7 @@ function cancelRequest(id){
   })
     .then(function (res) {
       if (res.ok) {
-        window.alert("Coleta Cencelada com SUCESSO!");
+        window.alert("Coleta Cancelada com SUCESSO!");
         window.location = "requested.html";
       }
       console.log(res);
