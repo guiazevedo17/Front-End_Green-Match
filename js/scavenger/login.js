@@ -22,37 +22,38 @@ radioGender.forEach(radioBtn => {
   })
 })
 
+const Iwork = document.querySelector(".work");
+
 async function login() {
-  // await fetch("http://localhost:8080/api/auth/signinScavenger", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     username: Iusername.value,
-  //     password: Ipassword.value,
-  //   }),
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       window.location = "../scavenger.html";
+  await fetch("http://localhost:8080/api/auth/signinClient", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      username: IusernameLogin.value,
+      password: IpasswordLogin.value,
+    }),
+  })
+    .then(function (res) {
+      if (res.ok) {
+        window.location = "../scavenger.html";
         
-  //       IusernameLogin.value = "";
-  //       IpasswordLogin.value = "";
+        IusernameLogin.value = "";
+        IpasswordLogin.value = "";
         
-  //     } else {
-  //       window.alert("Usuario ou senha incorretos");
+      } else {
+        window.alert("Usuario ou senha incorretos");
         
-  //       IusernameLogin.value = "";
-  //       IpasswordLogin.value = "";
+        IusernameLogin.value = "";
+        IpasswordLogin.value = "";
         
-  //     }
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
-  window.location = "../scavenger.html";
+      }
+    })
+    .then(function (res) {
+      console.log(res);
+    });
 }
 
 function openSignUp() {
@@ -113,12 +114,13 @@ async function signup_scavenger() {
     method: "POST",
     body: JSON.stringify({
       username: IuserName.value,
-      password: "123456qwertyy",
+      password: Ipassword.value,
       email: Iemail.value,
-      name: "guilherme azevedo",
-      phone: "11998946835",
-      birthDate: "14/07/2002",
+      name: Iname.value + " " + IlastName.value,
+      phone: Iphone.value,
+      birthDate: IbirthDay.value,
       gender: Igender.value,
+      work: Iwork.value,
       materials: materials,
       dayWeek: days,
       dayPeriod: periods,

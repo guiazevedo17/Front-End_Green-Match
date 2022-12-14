@@ -80,7 +80,7 @@ async function signup_customer() {
     },
     method: "POST",
     body: JSON.stringify({
-      name: Iname.value + IlastName.value,
+      name: Iname.value + " " + IlastName.value,
       username: IuserName.value,
       phone: Iphone.value,
       email: Iemail.value,

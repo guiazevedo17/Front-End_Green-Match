@@ -79,7 +79,7 @@ async function signup_customer() {
     },
     method: "POST",
     body: JSON.stringify({
-      name: Iname.value + IlastName.value,
+      name: Iname.value + " " + IlastName.value,
       username: IuserName.value,
       phone: Iphone.value,
       email: Iemail.value,
@@ -140,6 +140,8 @@ radioGenderS.forEach(radioBtnS => {
   })
 })
 
+const Iwork = document.querySelector(".work");
+
 async function signup_scavenger() {
   const materials = [];
   const days = [];
@@ -178,6 +180,7 @@ async function signup_scavenger() {
       phone: "11998946835",
       birthDate: "14/07/2002",
       gender: IgenderScavenger.value,
+      work: Iwork.value,
       materials: materials,
       dayWeek: days,
       dayPeriod: periods,

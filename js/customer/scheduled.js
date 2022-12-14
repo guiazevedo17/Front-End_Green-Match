@@ -1,7 +1,7 @@
 getScheduleds();
 
 async function getScheduleds() {
-    const response = await fetch("http://localhost:8080/api/auth/"); // ROTA para Coletas AGENDADAS
+    const response = await fetch("http://localhost:8080/api/auth/AllCollectScheduled"); // ROTA para Coletas AGENDADAS
     console.log(response);
   
     const data = await response.json();
@@ -46,6 +46,7 @@ async function getScheduleds() {
       collect += "</div>"
 
     }
-  
+    
+    
     document.getElementById("main").innerHTML = collect;
   }

@@ -1,7 +1,7 @@
 getScheduleds();
 
 async function getScheduleds() {
-    const response = await fetch("http://localhost:8080/api/auth/"); //ROTA para coletas AGENDADAS
+    const response = await fetch("http://localhost:8080/api/auth/AllCollectScheduled"); //ROTA para coletas AGENDADAS
     console.log(response);
   
     const data = await response.json();

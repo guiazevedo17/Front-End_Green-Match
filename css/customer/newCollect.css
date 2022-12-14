@@ -218,7 +218,7 @@
 }
 
 .newCollect2 input[type="radio"]{
-    display: none;
+    /* display: none; */
 }
 
 .newCollect2 input[type="radio"]:checked + label .address{

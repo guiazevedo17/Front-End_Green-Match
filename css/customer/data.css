@@ -20,11 +20,11 @@ main .box{
 main .box span p.dado{
     color: #90C320;
     margin-bottom: 3%;
-    font-size: 1em;
+    font-size: 1.4em;
 }
 
 main .box span{
-    color: #263238;
-    font-size: 1.3em;
+    color: #535e57;
+    font-size: 1.2em;
     text-align: center;
 }
