@@ -23,7 +23,7 @@ radioGender.forEach(radioBtn => {
 })
 
 async function login() {
-  await fetch("http://localhost:8080/api/auth/signinClient", {
+  await fetch("http://localhost:8080/api/auth/signin", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
