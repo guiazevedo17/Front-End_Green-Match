@@ -15,7 +15,7 @@ async function getAddress() {
     for(i=0; i<length ;i++){
       
         addr+="<div class="+"address"+">";
-            addr+="<h3>"+data[i].address_name+"</h3>";
+            addr+="<h3>"+data[i].addressName+"</h3>";
             addr+="<ul>";
                 addr+="<li><strong>Rua: </strong>"+data[i].street+"</li>";
                 addr+="<li><strong>Número: </strong>"+data[i].number+"</li>";
@@ -29,15 +29,14 @@ async function getAddress() {
             addr += "</button>"
         addr+="</div>";
     }
-  
-    document.getElementById("box").innerHTML = addr;
+    
+    if(length>0)
+      document.getElementById("box").innerHTML = addr;
 }
 
 function deleteAddress(id){
-  console.log(id);
-  alert('Deletando Endereço request');
 
-  fetch("http://localhost:8080/api/auth/", {
+  fetch("http://localhost:8080/api/auth/deleteAddressById", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -47,8 +46,8 @@ function deleteAddress(id){
   })
     .then(function (res) {
       if (res.ok) {
-        window.alert("Coleta Cancelada com SUCESSO!");
-        window.location = "requested.html";
+        window.alert("Endereço Deletado com SUCESSO!");
+        window.location = "address.html";
       }
       console.log(res);
     })

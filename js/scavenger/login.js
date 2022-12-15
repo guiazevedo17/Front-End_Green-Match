@@ -13,7 +13,14 @@ const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 const IbirthDay = document.querySelector(".birthDay");
-const Igender = document.querySelector("input[name='gender']:checked");
+const radioGender = document.querySelectorAll("input[name='gender']");
+let Igender;
+
+radioGender.forEach(radioBtn => {
+  radioBtn.addEventListener("change", (event) => {
+    Igender = document.querySelector("input[name='gender']:checked");
+  })
+})
 
 const Iwork = document.querySelector(".work");
 

@@ -1,7 +1,7 @@
 getScheduleds();
 
 async function getScheduleds() {
-  const response = await fetch("http://localhost:8080/api/auth/AllCollectScheduled"); //ROTA para coletas AGENDADAS
+  const response = await fetch("http://localhost:8080/api/auth/AllCollectSchaduledScavenger"); //ROTA para coletas AGENDADAS
   console.log(response);
   
   const data = await response.json();
@@ -27,9 +27,6 @@ async function getScheduleds() {
               collect += "<li>Período: <span>"+data[i].dayPeriod+"</span></li>"
               collect += "<li>Observação: <span>"+data[i].obs+"</span></li>"
               collect += "<li>Peso: <span>"+data[i].weight+"</span><span>kg</span></li>"
-              collect += "<li>Cidade: <span>"+data[i].name_collect+"</span></li>"
-              collect += "<li>Bairro: <span>"+data[i].name_collect+"</span></li>"
-              collect += "<li>Endereço: <span>"+data[i].name_collect+"</span></li>"
           collect += "</ul>"
       collect += "</div>"
 
@@ -47,54 +44,51 @@ async function getScheduleds() {
     collect += "</div>"
       
   }
-  
-  document.getElementById("main").innerHTML = collect;
+
+  if(length>0)
+     document.getElementById("main").innerHTML = collect;
 }
 
 function cancelScheduled(id){
-  console.log(id);
-  alert('CANCELANDO Scheduled Scavenger');
   
-  // fetch("http://localhost:8080/api/auth/", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: id,
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       window.alert("Coleta Cancelada com SUCESSO!");
-  //       window.location = "requested.html";
-  //     }
-  //     console.log(res);
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
+  fetch("http://localhost:8080/api/auth/cancelSchaduled", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: id,
+  })
+    .then(function (res) {
+      if (res.ok) {
+        window.alert("Coleta Cancelada com SUCESSO!");
+        window.location = "scheduled.html";
+      }
+      console.log(res);
+    })
+    .then(function (res) {
+      console.log(res);
+    });
 }
 
 function completeScheduled(id){
-  console.log(id);
-  alert('COMPLETANDO Scheduled Scavenger');
 
-  // fetch("http://localhost:8080/api/auth/", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: id,
-  // })
-  //   .then(function (res) {
-  //     if (res.ok) {
-  //       window.alert("Coleta Cencelada com SUCESSO!");
-  //       window.location = "requested.html";
-  //     }
-  //     console.log(res);
-  //   })
-  //   .then(function (res) {
-  //     console.log(res);
-  //   });
+  fetch("http://localhost:8080/api/auth/completeSchaduled", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: id,
+  })
+    .then(function (res) {
+      if (res.ok) {
+        window.alert("Coleta Finalizada com SUCESSO!");
+        window.location = "scheduled.html";
+      }
+      console.log(res);
+    })
+    .then(function (res) {
+      console.log(res);
+    });
 }

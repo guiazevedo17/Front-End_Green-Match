@@ -1,7 +1,7 @@
 getHistoric();
 
 async function getHistoric() {
-    const response = await fetch("http://localhost:8080/api/auth/"); // ROTA para HISTORICO de coletas
+    const response = await fetch("http://localhost:8080/api/auth/AllCollectHistoricCustumer"); // ROTA para HISTORICO de coletas
     console.log(response);
   
     const data = await response.json();
@@ -28,7 +28,7 @@ async function getHistoric() {
                     collect += "<li>Observação: <span>"+data[i].obs+"</span></li>"
                     collect += "<li>Peso: <span>"+data[i].weight+"</span><span>kg</span></li>"
                     collect += "<li>Endereço: <span>"+data[i].address+"</span></li>"
-                    collect += "<li>Coletor: <span>"+data[i].username_scavenger+"</span></li>"
+                    collect += "<li>Coletor: <span>"+data[i].usernameScavenger+"</span></li>"
                 collect += "</ul>"
             collect += "</div>"
 
@@ -37,5 +37,6 @@ async function getHistoric() {
 
     }
   
-    document.getElementById("main").innerHTML = collect;
+    if(length>0)
+        document.getElementById("main").innerHTML = collect;
   }

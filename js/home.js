@@ -52,8 +52,8 @@ popup.addEventListener("click", (event) => {
   }
 });
 
-function dateByString() { // formata a data para padrão dd/mm/aaaa
-  let formatted = IbirthDay.value;
+function dateByString(date) { // formata a data para padrão dd/mm/aaaa
+  let formatted = date.value;
   return formatted.split('-').reverse().join('/');
 }
 
@@ -67,7 +67,14 @@ const IemailConf = document.querySelector(".emailConf");
 const Ipassword = document.querySelector(".password");
 const IpasswordConf = document.querySelector(".passwordConf");
 let IbirthDay = document.querySelector(".birthDay");
-const Igender = document.querySelector("input[name='gender']:checked");
+const radioGender = document.querySelectorAll("input[name='gender']");
+let Igender;
+
+radioGender.forEach(radioBtn => {
+  radioBtn.addEventListener("change", (event) => {
+    Igender = document.querySelector("input[name='gender']:checked");
+  })
+})
 
 async function signup_customer() {
 
@@ -83,7 +90,7 @@ async function signup_customer() {
       phone: Iphone.value,
       email: Iemail.value,
       password: Ipassword.value,
-      birthDate: IbirthDay = dateByString(),
+      birthDate: IbirthDay = dateByString(IbirthDay),
       gender: Igender.value,
       roles: ["user"]
     }),
@@ -133,7 +140,14 @@ const IemailConfScavenger = document.querySelector(".emailConfScavenger");
 const IpasswordScavenger = document.querySelector(".passwordScavenger");
 const IpasswordConfScavenger = document.querySelector(".passwordConfScavenger");
 let IbirthDayScavenger = document.querySelector(".birthDayScavenger");
-const IgenderScavenger = document.querySelector("input[name='genderS']:checked");
+const radioGenderScavenger = document.querySelectorAll("input[name='genderS']");
+let IgenderScavenger;
+
+radioGenderScavenger.forEach(radioBtnScavenger => {
+  radioBtnScavenger.addEventListener("change", (event) => {
+    IgenderScavenger = document.querySelector("input[name='genderS']:checked");
+  })
+})
 
 const Iwork = document.querySelector(".work");
 
@@ -171,9 +185,9 @@ async function signup_scavenger() {
       username: IuserNameScavenger.value,
       password: IpasswordScavenger.value,
       email: IemailScavenger.value,
-      name: InameScavenger + " " + IlastNameScavenger,
-      phone: IphoneScavenger,
-      birthDate: IbirthDayScavenger = dateByString(),
+      name: InameScavenger.value + " " + IlastNameScavenger.value,
+      phone: IphoneScavenger.value,
+      birthDate: IbirthDayScavenger = dateByString(IbirthDayScavenger),
       gender: IgenderScavenger.value,
       work: Iwork.value,
       materials: materials,

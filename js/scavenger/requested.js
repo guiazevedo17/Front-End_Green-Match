@@ -24,9 +24,6 @@ async function getRequesteds() {
               collect += "<li>Período: <span name='period"+[i]+"'>"+data[i].dayPeriod+"</span></li>"
               collect += "<li>Observação: <span name='obs"+[i]+"'>"+data[i].obs+"</span></li>"
               collect += "<li>Peso: <span name='weight"+[i]+"'>"+data[i].weight+"</span><span>kg</span></li>"
-              collect += "<li>Cidade: <span name='city"+[i]+"'>"+data[i].name_collect+"</span></li>"
-              collect += "<li>Bairro: <span name='district"+[i]+"'>"+data[i].name_collect+"</span></li>"
-              collect += "<li>Endereço: <span name='addr"+[i]+"'>"+data[i].name_collect+"</span></li>"
           collect += "</ul>"
       collect += "</div>"
 
@@ -40,14 +37,11 @@ async function getRequesteds() {
       
   }
   
-  document.getElementById("main").innerHTML = collect;
+  if(length>0)
+    document.getElementById("main").innerHTML = collect;
 }
 
 function acceptRequest(id){
-
-  console.log(id);
-  alert(id);
-  alert('aceitando request');
 
   fetch("http://localhost:8080/api/auth/acceptRequest", {
     headers: {
@@ -60,7 +54,7 @@ function acceptRequest(id){
     .then(function (res) {
       if (res.ok) {
         window.alert("Coleta Cencelada com SUCESSO!");
-        window.location = "requested.html";
+        window.location = "scavenger.html";
       }
       console.log(res);
     })

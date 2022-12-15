@@ -1,7 +1,7 @@
 getRequesteds();
 
 async function getRequesteds() {
-  const response = await fetch("http://localhost:8080/api/auth/collectByUser");
+  const response = await fetch("http://localhost:8080/api/auth/collectRequestedByUser");
   console.log(response);
   
   const data = await response.json();
@@ -46,8 +46,6 @@ async function getRequesteds() {
 }
 
 function cancelRequest(id){
-  console.log(id);
-  alert('cancelando request');
 
   fetch("http://localhost:8080/api/auth/deleteById", {
     headers: {

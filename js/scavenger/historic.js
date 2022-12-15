@@ -1,7 +1,7 @@
-getScheduleds();
+getHistoric();
 
-async function getScheduleds() {
-    const response = await fetch("http://localhost:8080/api/auth/"); //ROTA para coletas AGENDADAS
+async function getHistoric() {
+    const response = await fetch("http://localhost:8080/api/auth/AllCollectHistoricScavenger"); //ROTA para coletas AGENDADAS
     console.log(response);
   
     const data = await response.json();
@@ -27,9 +27,6 @@ async function getScheduleds() {
                     collect += "<li>Período: <span>"+data[i].dayPeriod+"</span></li>"
                     collect += "<li>Observação: <span>"+data[i].obs+"</span></li>"
                     collect += "<li>Peso: <span>"+data[i].weight+"</span><span>kg</span></li>"
-                    collect += "<li>Cidade: <span>"+data[i].name_collect+"</span></li>"
-                    collect += "<li>Bairro: <span>"+data[i].name_collect+"</span></li>"
-                    collect += "<li>Endereço: <span>"+data[i].name_collect+"</span></li>"
                 collect += "</ul>"
             collect += "</div>"
 
@@ -38,5 +35,6 @@ async function getScheduleds() {
 
     }
   
-    document.getElementById("main").innerHTML = collect;
+    if(length > 0)
+        document.getElementById("main").innerHTML = collect;
   }

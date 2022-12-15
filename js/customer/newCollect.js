@@ -96,11 +96,11 @@ async function getAddress() {
 
   for (i = 0; i < length; i++) {
 
-    addr += "<input type='radio' name='address' id='address" + i + "' value='"+ data[i].address_name +"' >";
+    addr += "<input type='radio' name='address' id='address" + i + "' value='"+ data[i].addressName +"' >";
     addr += "<label for=" + "address" + i + ">";
 
     addr += "<div class=" + "address" + ">";
-    addr += "<h3>" + data[i].address_name + "</h3>";
+    addr += "<h3>" + data[i].addressName + "</h3>";
     addr += "<ul>";
     addr += "<li><strong>Rua: </strong>" + data[i].street + "</li>";
     addr+="<li><strong>Número: </strong>"+data[i].number+"</li>";

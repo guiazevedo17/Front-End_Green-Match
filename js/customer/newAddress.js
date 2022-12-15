@@ -1,4 +1,4 @@
-const address_name = document.querySelector(".name");
+const addressName = document.querySelector(".name");
 const cep = document.querySelector(".cep");
 const street = document.querySelector(".street");
 const number = document.querySelector(".number");
@@ -19,7 +19,7 @@ function newAddress(){
     },
     method: "POST",
     body: JSON.stringify({
-      address_name: address_name.value,
+      addressName: addressName.value,
       street: street.value,
       number: number.value,
       complement: complement.value,
@@ -31,10 +31,10 @@ function newAddress(){
   })
     .then(function (res) {
       if (res.ok) {
-        window.alert("Endereço Cadastrado com SUCESSO!");
+        alert("Endereço Cadastrado com SUCESSO!");
         window.location = "address.html";
       } else {
-        window.alert("FALHA no Cadastro de Endereço!");
+        alert("FALHA no Cadastro de Endereço!");
       }
       console.log(res);
     })
